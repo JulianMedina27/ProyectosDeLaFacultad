@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../img/FondoPlataformaDeCursosAlternativo.jpg) ;
+}
+
+/* Contenedo del Inicio de sesion y el logotipo*/
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.contenedor-imagen{
+    width: 60%; 
+    margin-bottom: 20px;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        flex-direction: column; /* Cambia a disposición vertical */
+        align-items: center; /* Centra los elementos */
+    }
+    .contenedor-imagen{
+        width: 100%;
+    }
+}
+
+.logotipo{
+    max-width: 100%;
+}
+
+/* Contenedor de la caja Inicio Sesion*/
+.contenedor-IniciarSesion {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+}
+
+/* Modelando los elementos de la caja */
+.contenedor-IniciarSesion h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contenedor-IniciarSesion label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.contenedor-IniciarSesion input[type="text"],
+.contenedor-IniciarSesion input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contenedor-IniciarSesion input[type="submit"] { 
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contenedor-IniciarSesion input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.contenedor-IniciarSesion a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.contenedor-IniciarSesion a:hover {
+    text-decoration: underline;
+}
+
+.boton-registro {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.boton-registro a {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.boton-registro a:hover {
+    background-color: #0056b3;
+}
