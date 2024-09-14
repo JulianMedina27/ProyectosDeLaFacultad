@@ -1,0 +1,220 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Krub", sans-serif;
+    background-image: url(../img/FondoPlataformaDeCursosAlternativo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Navegacion Principal */
+.nav-background{
+    background-color: white;
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    white-space: nowrap;
+    
+}
+
+.navegacion-principal a{
+    padding: 1em; /* si solo hay un valor se aplica el padding hacia las 4 direcciones*/
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 700;
+    text-align: center;
+    width: max-content;
+}
+
+.sombreado {
+    background-color: #fff; /* Color de fondo de la barra de navegación */
+    padding: 15px; /* Espacio dentro de la barra */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra en la parte baja */
+    position: relative; /* Asegura que el box-shadow se muestre correctamente */
+    z-index: 100; /* Asegura que la barra esté encima de otros elementos */
+}
+
+@media (min-width: 1024px) {
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+
+.contenedor{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.search{
+    width: 80%;
+    display: flex;
+    text-align: center;
+    padding: 14px;
+    border-radius: 28px;
+    background: #f6f6f6;
+    transition: background 0.25s;
+}
+@media (min-width: 1024px) {
+   .search{
+    width: 70%;
+   }
+}
+
+.search:focus-within{
+    background: #f1f1f1;
+}
+
+.search-input{
+    font-size: 16px;
+    font-family: 'Lexend', sans-serif;
+    color: #333333;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 100%;
+}
+
+.search-input::placeholder,
+.search-icon{
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+.logo{
+    height: auto;
+    margin: 0 20px;
+    width: 150px;
+}
+
+
+
+footer {
+    background-color: #c5c5c5;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    clear: both;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h2 {
+    margin-top: 0;
+}
+
+.footer-section p {
+    margin: 0;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-icon {
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.social-icon img {
+    width: 24px;
+    height: 24px;
+}
+.selector {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    margin: 50px;
+}
+
+.frame {
+    width: 20rem;
+    height: 20rem;
+    border: 2px solid #333;
+    overflow: hidden;
+    align-items: left;
+    display: flex;
+    background-color: rgb(187, 183, 183);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input#bg1:checked ~ .frame .background {
+    background-image: url('./img/fondo1.jpg');
+}
+
+input#bg2:checked ~ .frame .background {
+    background-image: url('./img/fondo2.jpg');
+}
+
+input#bg3:checked ~ .frame .background {
+    background-image: url('./img/fondo3.jpg');
+}
+
+.option {
+    width: 100px;
+    height: 60px;
+    margin: 10px;
+    cursor: pointer;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-size: cover;
+    background-position: center;
+}
+
+.option:hover {
+    border-color: #000;
+}
+.seccion{
+    padding: 4%;
+}
