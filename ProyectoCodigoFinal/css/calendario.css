@@ -51,9 +51,15 @@ margin-left: 2em;
     text-align: center; 
     font-size: 1em;
     background-color: orange;
+    border-radius: 5%;
     margin: 0.5em;
 }
 .texto-mes
 {
     margin-left: 1em;
+}
+
+.footer
+{
+    clear: both; /* Esto asegura que no haya contenido flotante sobre el footer */
 }
