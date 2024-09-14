@@ -295,6 +295,38 @@ footer {
 .imagen-pago:last-child {
     margin-right: 0; 
   }
+
+  .menu-item {
+    position: relative; 
+}
+
+.menu-vertical {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    list-style: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.menu-vertical li {
+    margin: 0;
+}
+
+.menu-item:hover .menu-vertical {
+    display: block;
+}
+
+.menu-vertical a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+
+.menu-vertical a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
 /*
 .degradado{
     position: absolute;

@@ -1,0 +1,24 @@
+.imagen-curso
+{
+    width: 100%;
+    height: auto;
+}
+
+.imagen
+{
+    margin: 2em;
+    margin-left: 5em;
+}
+
+.cuerpo-principal
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.contenido-curso
+{
+    width: 50%;
+    text-align: justify;
+    line-height: 1.5;
+}

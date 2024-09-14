@@ -59,7 +59,3 @@ margin-left: 2em;
     margin-left: 1em;
 }
 
-.footer
-{
-    clear: both; /* Esto asegura que no haya contenido flotante sobre el footer */
-}
