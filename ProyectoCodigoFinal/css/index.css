@@ -16,26 +16,27 @@ body {
 /* Contenedo del Inicio de sesion y el logotipo*/
 .contenedor {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     width: 80%;
     max-width: 1200px;
 }
 
-.contenedor-imagen{
-    width: 60%; 
-    margin-bottom: 20px;
-}
-
-@media (max-width: 1024px) {
-    .container {
-        flex-direction: column; /* Cambia a disposición vertical */
+@media (min-width: 1024px) {
+    .contenedor {
+        flex-direction: row; /* Cambia a disposición vertical */
         align-items: center; /* Centra los elementos */
     }
     .contenedor-imagen{
         width: 100%;
     }
 }
+.contenedor-imagen{
+    width: 60%; 
+    margin-bottom: 20px;
+}
+
 
 .logotipo{
     max-width: 100%;
