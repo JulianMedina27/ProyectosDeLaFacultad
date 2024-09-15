@@ -1,24 +1,72 @@
 .imagen-curso
 {
-    width: 100%;
+    width: 80%;
     height: auto;
 }
 
 .imagen
 {
     margin: 2em;
-    margin-left: 5em;
+    margin-left: 3em;
+    margin-right: -6em;
 }
 
 .cuerpo-principal
 {
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
 }
 
 .contenido-curso
 {
-    width: 50%;
+    width: 40%;
     text-align: justify;
     line-height: 1.5;
+    background-color: rgba(7, 152, 236, 0.3); /* Fondo negro con 50% de transparencia */
+    margin: 0.5em;
+
+}
+
+.boton
+{
+    height: 2em;
+    border-radius: 15%;
+    font-size: 1.5em;
+    font-weight: bolder;
+    margin-left: 0em;
+    background-color: green;
+}
+
+.resaltado
+{
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+.contendor-menus
+{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 2em;
+}
+
+.contenido-clases
+{
+    background-color: white;
+}
+
+.contenido-clases label
+{
+    display: block;
+    padding: 2em;
+    font-size: 1.5em;
+    background: black;
+    color: white;
+    cursor:pointer;
+    margin-bottom: 0.5em;
+    transition:all 300ms ease;
+}
+.contenido-clases label:hover
+{
+    background-color: rgba(3, 26, 39, 0.452);
 }
