@@ -216,9 +216,9 @@ footer {
     justify-content: center;
     align-items: center;
 }
-.frame {
-    width: 80%; /* Ajusta el tamaño según sea necesario */
-    height: 75%; /* Ajusta el tamaño según sea necesario */
+.frame {            /* Estilo del frame de la giftcard */
+    width: 80%;
+    height: 75%;
     overflow: hidden;
     display: block;
     background-color: rgb(207, 206, 206);
@@ -229,23 +229,23 @@ footer {
 .frame-texto {
     width: 100%;
     display: flex;
-    flex-direction: column; /* Apila los elementos verticalmente */
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
-    text-align: center; /* Centra el texto horizontalmente */
+    text-align: center;
 }
 
 .frame-texto h1 {
     margin: 0;
-    font-size: 24px; /* Tamaño del texto del h1, ajusta según sea necesario */
+    font-size: 24px;
 }
 
 
 .frame-destinario {
-    font-size: 2rem; /* Tamaño del texto para "destinatario", ajusta según sea necesario */
+    font-size: 2rem;
     margin: 0;
-    padding-top: 10px; /* Espacio entre "GIFT CARD para" y "destinatario" */
+    padding-top: 10px;
     display: flex;
 
 }
@@ -255,17 +255,14 @@ footer {
     right: 0;
     background-color: black;
     color: white;
-    padding: 2% 7%; /* Ajusta el espacio interno alrededor del texto */
-    border-radius: 0 0 0 5px; /* Opcional: bordes redondeados solo en la parte inferior izquierda */
-    font-size: larger; /* Tamaño de la fuente del texto */
+    padding: 2% 7%;
+    border-radius: 0 0 0 5px;
+    font-size: larger;
     z-index: 10; 
 }
-.titulo{
-    text-align: center;
-    margin-bottom: 5%;
-}
 
-.aside-perso {
+
+.aside-perso {              /* Zona de personalizacion de la giftcard */
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -275,8 +272,12 @@ footer {
     border-radius: 20px;
     align-items: center;
     position: relative;
-    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
-    overflow: hidden; /* Oculta contenido que se desborda */
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.titulo{
+    text-align: center;
+    margin-bottom: 5%;
 }
 .destinatario {         /* Barra para poner el nombre del destinario*/
     width: 100%;     
@@ -305,8 +306,8 @@ footer {
 }
 
 
-.opciones h2{
-    font-weight: lighter; /* Cambia esto al peso que desees, por ejemplo, normal, bold, bolder, etc. */
+.opciones h2{                   /* Cambia el estilo del texto que esta dentro del aside */
+    font-weight: lighter;
     font-size: medium;
     margin-top: 5%;
     margin-bottom: 5%;
@@ -314,7 +315,7 @@ footer {
     
 }
 
-.circulos {
+.circulos {                 /* Estilos para cambiar el color */
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -330,7 +331,7 @@ footer {
 .circulo-container {
     position: relative;
     display: flex;
-    flex-direction: column; /* Apila el círculo y el input verticalmente */
+    flex-direction: column;
     align-items: left;
 }
 
@@ -353,12 +354,12 @@ input[type="radio"]:checked + label.color-option {
 
 .circulo-container input[type="radio"] {
     position: absolute;
-    top: 100%; /* Mueve el input debajo del círculo */
-    left: 50%; /* Centra el input horizontalmente */
-    transform: translateX(-50%); /* Ajusta la posición horizontalmente para centrar */
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
     margin-top: 10%; 
 }
-.fuente {
+.fuente {       /* Estilos para cambiar la fuente */
     display: flex;
     justify-content: center;
     gap: 3%;
@@ -399,7 +400,7 @@ input[type="radio"]:checked + label.color-option {
     transition: background 0.25s;
     align-content: right;
 }
-.ubicacion {
+.ubicacion { /* Estilos para cambiar la ubicacion*/
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -459,7 +460,7 @@ border-color: gray;
     top: 100%;
     margin-left: 40%;
 }
-.fondo {
+.fondo {                    /* Estilos para cambiar los fondos */
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -533,11 +534,11 @@ border-color: gray;
     }
 
     .aside-perso {
-        width: 90%; /* Aumenta el ancho en pantallas más pequeñas */
-        padding: 10px; /* Ajusta el padding para pantallas más pequeñas */
+        width: 90%;
+        padding: 10px;
     }
     .ubicacion-option{
-        max-width: 3em; /* Ajusta el tamaño máximo en pantallas más pequeñas */
+        max-width: 3em;
     
     }
     .fondo-option {
@@ -559,8 +560,8 @@ border-color: gray;
     }
 
     .frame {
-        width: 90%; /* Ajusta el tamaño en pantallas pequeñas */
-        height: auto; /* Ajusta la altura en pantallas pequeñas */
+        width: 90%;
+        height: auto; 
     }
 }
 
@@ -574,15 +575,15 @@ border-color: gray;
     }
     
     .frame {
-        width: 95%; /* Ajusta el tamaño en pantallas muy pequeñas */
-        height: auto; /* Ajusta la altura en pantallas muy pequeñas */
+        width: 95%;
+        height: auto;
     }
     .aside-perso {
-        width: 90%; /* Aumenta el ancho en pantallas más pequeñas */
-        padding: 10px; /* Ajusta el padding para pantallas más pequeñas */
+        width: 100%;
+        padding: 10px;
     }
     .ubicacion-option{
-        max-width: 3em; /* Ajusta el tamaño máximo en pantallas más pequeñas */
+        max-width: 3em; 
     
     }
     .fondo-option {
@@ -590,7 +591,6 @@ border-color: gray;
     }
 }
 
-/* Dispositivos de más de 1024px */
 @media (min-width: 1024px) {
     .navegacion-principal {
         flex-direction: row;
