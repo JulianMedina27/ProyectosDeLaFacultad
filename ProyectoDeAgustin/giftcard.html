@@ -26,17 +26,23 @@
         
         <section class="seccion">
             <div class="selector">
-        
                 <div class="frame">
-                    <div class="background" id="background"> <h1 class="interior-h1"> hola</h1></div>
+                    <div class="frame-texto">
+                        <h1>GIFT CARD para</h1>
+                        <p class="frame-destinario">Destinatario</p>
+                    </div>
+                    <div class="fondo-negro">
+                        <span>$0000-</span>
+                    </div>
                 </div>
+                <div class="frame-destinario">Vista previa</div>
             </div>
             <aside class="aside-perso">
-                <div class="personalizacion">
+                <div class="titulo">
                     <h1>Personalización de Giftcard</h1>
                 </div>
                 <div class="destinatario">
-                    <input class="search-input" type="text" placeholder="Nombre Destinatario">
+                    <input class="destinario-input" type="text" placeholder="Nombre Destinatario">
              </div>
 
                 <div class="opciones">
@@ -96,12 +102,63 @@
                             </div>
                     </div>
                     <div class="opciones">
-                        <h2>Monto $</h2>
+                        <h2>Monto</h2>
                     <div class="monto">
                         
                         <input class="search-input" type="text" placeholder="$">
                     </div>
                 </div>
+
+                <div class="opciones">
+                    <h2>Ubicación</h2>
+                </div>
+                <div class="ubicacion">
+                    <div class="ubicacion-container">
+                        <input type="radio" id="ubicacion1" name="ubi" value="#cccccc" checked>
+                        <label for="ubicacion1" class="ubicacion-option cuadrado cuadrado-izquierda"></label>
+                    </div>
+                    <div class="ubicacion-container">
+                        <input type="radio" id="ubicacion2" name="ubi" value="#cccccc" >
+                        <label for="ubicacion2" class="ubicacion-option cuadrado cuadrado-derecha"></label>
+                    </div>
+                    <div class="ubicacion-container">
+                        <input type="radio" id="ubicacion3" name="ubi" value="#cccccc" >
+                        <label for="ubicacion3" class="ubicacion-option cuadrado cuadrado-izquierda-arriba"></label>
+                    </div>
+                    <div class="ubicacion-container">
+                        <input type="radio" id="ubicacion4" name="ubi" value="#cccccc" >
+                        <label for="ubicacion4" class="ubicacion-option cuadrado cuadrado-derecha-arriba"></label>
+                    </div>
+                </div>
+                <div class="opciones">
+                    <h2>Fondo</h2>
+                </div>
+                <div class="fondo">
+                <div class="fondo-container">
+                    <input type="radio" id="fondo1" name="fondo" value="#cccccc" checked>
+                    <label for="fondo1" class="fondo-option cuadrado"></label>
+                </div>
+                <div class="fondo-container">
+                    <input type="radio" id="fondo2" name="fondo" value="#cccccc" >
+                    <label for="fondo2" class="fondo-option cuadrado"></label>
+                </div>
+                <div class="fondo-container">
+                    <input type="radio" id="fondo3" name="fondo" value="#cccccc" >
+                    <label for="fondo3" class="fondo-option cuadrado"></label>
+                </div>
+                <div class="fondo-container">
+                    <input type="radio" id="fondo4" name="fondo" value="#cccccc" >
+                    <label for="fondo4" class="fondo-option cuadrado"></label>
+                </div>
+                <div class="fondo-container">
+                    <input type="radio" id="fondo5" name="fondo" value="#cccccc" >
+                    <label for="fondo5" class="fondo-option cuadrado"></label>
+                </div>
+            </div>
+            <div class="boton-container">
+            <button id="confirmar">Confirmar</button>
+              </div>
+
             </aside>
         </section>
     </div>

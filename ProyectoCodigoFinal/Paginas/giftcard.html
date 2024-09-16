@@ -26,56 +26,139 @@
         
         <section class="seccion">
             <div class="selector">
-        
                 <div class="frame">
-                    <div class="background" id="background"> <h1 class="interior-h1"> hola</h1></div>
+                    <div class="frame-texto">
+                        <h1>GIFT CARD para</h1>
+                        <p class="frame-destinario">Destinatario</p>
+                    </div>
+                    <div class="fondo-negro">
+                        <span>$0000-</span>
+                    </div>
                 </div>
+                <div class="frame-destinario">Vista previa</div>
             </div>
             <aside class="aside-perso">
-                <div class="personalizacion">
+                <div class="titulo">
                     <h1>Personalización de Giftcard</h1>
                 </div>
                 <div class="destinatario">
-                    <input class="search-input" type="text" placeholder="Nombre Destinatario">
-                </div>
+                    <input class="destinario-input" type="text" placeholder="Nombre Destinatario">
+             </div>
+
                 <div class="opciones">
-                    <h1>Color</h1>
+                    <h2>Color</h2>
+                    </div>
                     <div class="circulos">
-                        <input type="radio" id="color-grey" name="color" value="#cccccc" checked>
-                        <label for="color-grey" class="color-option grey"></label>
+                        <div class="circulo-container">
+                            <input type="radio" id="color-grey" name="color" value="#cccccc" checked>
+                            <label for="color-grey" class="color-option grey"></label>
+                        </div>
+                        <div class="circulo-container">
+                            <input type="radio" id="color-red" name="color" value="red">
+                            <label for="color-red" class="color-option red"></label>
+                        </div>
+                        <div class="circulo-container">
+                            <input type="radio" id="color-blue" name="color" value="#5178D0">
+                            <label for="color-blue" class="color-option blue"></label>
+                        </div>
+                        <div class="circulo-container">
+                            <input type="radio" id="color-green" name="color" value="#5EA226">
+                            <label for="color-green" class="color-option green"></label>
+                        </div>
+                        <div class="circulo-container">
+                            <input type="radio" id="color-violet" name="color" value="violet">
+                            <label for="color-violet" class="color-option violet"></label>
+                        </div>
+                    </div>
+              
+
+                    <div class="opciones">
+                        <h2>Tamaño de la fuente</h2>
+                        </div>
+                        <div class="fuente">
+                            <div class="fuente-container">
+                                <input type="radio" id="20px" name="fuente" checked>
+                                <label for="20px"><h4>20px</h4></label>
+                            </div>
+                            
+                            <div class="fuente-container">
+                                <input type="radio" id="28px" name="fuente">
+                                <label for="28px"><h4>28px</h4></label>
+                            </div>
+                            
+                            <div class="fuente-container">
+                                <input type="radio" id="32px" name="fuente">
+                                <label for="32px"><h3>32px</h3></label>
+                            </div>
+                            
+                            <div class="fuente-container">
+                                <input type="radio" id="48px" name="fuente">
+                                <label for="48px"> <h3>48px</h3> </label>
+                            </div>
+                
+                            <div class="fuente-container">
+                                <input type="radio" id="60px" name="fuente">
+                                <label for="60px"> <h2>60px</h2> </label>
+                            </div>
+                    </div>
+                    <div class="opciones">
+                        <h2>Monto</h2>
+                    <div class="monto">
                         
-                        <input type="radio" id="color-red" name="color" value="red">
-                        <label for="color-red" class="color-option red"></label>
-                        
-                        <input type="radio" id="color-blue" name="color" value="#5178D0">
-                        <label for="color-blue" class="color-option blue"></label>
-                        
-                        <input type="radio" id="color-green" name="color" value="#5EA226">
-                        <label for="color-green" class="color-option green"></label>
-                        
-                        <input type="radio" id="color-pink" name="color" value="#EF0BD8">
-                        <label for="color-pink" class="color-option pink"></label>
+                        <input class="search-input" type="text" placeholder="$">
+                    </div>
+                </div>
+
+                <div class="opciones">
+                    <h2>Ubicación</h2>
+                </div>
+                <div class="ubicacion">
+                    <div class="ubicacion-container">
+                        <input type="radio" id="ubicacion1" name="ubi" value="#cccccc" checked>
+                        <label for="ubicacion1" class="ubicacion-option cuadrado cuadrado-izquierda"></label>
+                    </div>
+                    <div class="ubicacion-container">
+                        <input type="radio" id="ubicacion2" name="ubi" value="#cccccc" >
+                        <label for="ubicacion2" class="ubicacion-option cuadrado cuadrado-derecha"></label>
+                    </div>
+                    <div class="ubicacion-container">
+                        <input type="radio" id="ubicacion3" name="ubi" value="#cccccc" >
+                        <label for="ubicacion3" class="ubicacion-option cuadrado cuadrado-izquierda-arriba"></label>
+                    </div>
+                    <div class="ubicacion-container">
+                        <input type="radio" id="ubicacion4" name="ubi" value="#cccccc" >
+                        <label for="ubicacion4" class="ubicacion-option cuadrado cuadrado-derecha-arriba"></label>
                     </div>
                 </div>
                 <div class="opciones">
-                    <h1>Tamaño de la fuente</h1>
-                    <div class="fuente"></div>
-                        <input type="radio" id="20px" checked>
-                        <label for="20px" class="option prim"> 20px</label>
-                        
-                        <input type="radio" id="28px">
-                        <label for="28px" class="option segun"> 28px</label>
-                        
-                        <input type="radio" id="32px" >
-                        <label for="32px" class="option terc"> 32px</label>
-                        
-                        <input type="radio" id="48px">
-                        <label for="48px" class="option cuart"> 48px</label>
-                        
-                        <input type="radio" id="60px">
-                        <label for="60px" class="option quint"> 60px</label>
-                    </div>
+                    <h2>Fondo</h2>
                 </div>
+                <div class="fondo">
+                <div class="fondo-container">
+                    <input type="radio" id="fondo1" name="fondo" value="#cccccc" checked>
+                    <label for="fondo1" class="fondo-option cuadrado"></label>
+                </div>
+                <div class="fondo-container">
+                    <input type="radio" id="fondo2" name="fondo" value="#cccccc" >
+                    <label for="fondo2" class="fondo-option cuadrado"></label>
+                </div>
+                <div class="fondo-container">
+                    <input type="radio" id="fondo3" name="fondo" value="#cccccc" >
+                    <label for="fondo3" class="fondo-option cuadrado"></label>
+                </div>
+                <div class="fondo-container">
+                    <input type="radio" id="fondo4" name="fondo" value="#cccccc" >
+                    <label for="fondo4" class="fondo-option cuadrado"></label>
+                </div>
+                <div class="fondo-container">
+                    <input type="radio" id="fondo5" name="fondo" value="#cccccc" >
+                    <label for="fondo5" class="fondo-option cuadrado"></label>
+                </div>
+            </div>
+            <div class="boton-container">
+            <button id="confirmar">Confirmar</button>
+              </div>
+
             </aside>
         </section>
     </div>
