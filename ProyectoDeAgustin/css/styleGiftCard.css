@@ -178,11 +178,12 @@ footer {
 .aside-perso {      /* Estilo para el aside */
     display: inline;
     flex-direction: column;
-    width: 30%;
+    width: 20%;
     padding: 20px;
     gap: 20px;
     background-color: white;
     border-radius: 20px;
+    align-items: center;
 }
 .destinatario {         /* Barra para poner el nombre del destinario*/
     width: 80%;     
@@ -194,15 +195,34 @@ footer {
     transition: background 0.25s;
 }
 
-input[type="radio"] {
-    display: flex;
+
+.opciones h2 {
+    font-weight: lighter; /* Cambia esto al peso que desees, por ejemplo, normal, bold, bolder, etc. */
+    font-size: medium;
+    margin-top: 5%;
+    
 }
 
 .circulos {
     display: flex;
     justify-content: left;
     gap: 10px;
-    margin-bottom: 10px;
+    margin-top: 1%;
+    margin-bottom: 10%;
+}
+.circulos label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    padding: 5%;
+
+}
+.circulo-container {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Apila el círculo y el input verticalmente */
+    align-items: left;
 }
 
 .color-option {
@@ -210,35 +230,74 @@ input[type="radio"] {
     height: 2.5em;
     border-radius: 50%;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
 }
 
 .color-option.grey { background: gray; }
 .color-option.red { background: red; }
 .color-option.blue { background: cornflowerblue; }
 .color-option.green { background: green; }
-.color-option.pink { background: violet; }
+.color-option.violet { background: violet; }
 
-/* Estilo para el punto seleccionado */
 input[type="radio"]:checked + label.color-option {
-    border: 3px solid #000;
+    border: 1px solid #000;
 }
-.fuente{
+
+.circulo-container input[type="radio"] {
+    position: absolute;
+    top: 100%; /* Mueve el input debajo del círculo */
+    left: 50%; /* Centra el input horizontalmente */
+    transform: translateX(-50%); /* Ajusta la posición horizontalmente para centrar */
+    margin-top: 10%; /* Espacio entre el círculo y el input */
+}
+.fuente {
     display: flex;
     justify-content: left;
-    gap: 10px;
-    margin-bottom: 10px;
+    gap: 3%;
+    margin-bottom: 5%;
+    margin-top: 8%;
 }
-.fuente-option{
-    width: 2.5em;
-    height: 2.5em;
-    border-radius: 50%;
+.fuente-container{
+    position: relative;
+    display: flex;
+    flex-direction: column; /* Apila el círculo y el input verticalmente */
+    align-items: left;
+
+}
+
+.fuente input[type="radio"] {
+    display: flex;
+    transform: translateY(50%);
+    position: absolute;
+    top: 50%;
+    margin-left: 30%;
+}
+
+.fuente label {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
     cursor: pointer;
+    text-align: center;
+    height: 50%;
 }
-.fuente-option.prim { background: gray; }
-.fuente-option.segun { background: red; }
-.fuente-option.terc { background: cornflowerblue; }
-.fuente-option.cuart { background: green; }
-.fuente-option.quint { background: violet; }
+.monto {         /* Barra para poner el nombre del destinario*/
+    width: 100%;     
+    display: flex;
+    text-align: right;
+    padding: 14px;
+    border-radius: 15px;
+    background: #f6f6f6;
+    transition: background 0.25s;
+    align-content: right;
+}
+
+
+
+
+
+
 
 @media (max-width: 768px) {
     .navegacion-principal {
@@ -254,7 +313,7 @@ input[type="radio"]:checked + label.color-option {
     }
 
     .circulos {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
 
