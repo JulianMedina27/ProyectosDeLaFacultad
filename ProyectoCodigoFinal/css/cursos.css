@@ -42,31 +42,102 @@
     font-size: 1.5em;
     font-weight: bolder;
 }
-.contendor-menus
+.contendor-acordeon
 {
-    width: 100%;
-    max-width: 800px;
+    width: 50%;
     margin: auto;
     margin-top: 2em;
+  
+
 }
 
-.contenido-clases
+.acordeon
 {
     background-color: white;
 }
 
-.contenido-clases label
+.acordeon label
 {
     display: block;
-    padding: 2em;
+    padding: 1em;
     font-size: 1.5em;
     background: black;
     color: white;
     cursor:pointer;
     margin-bottom: 0.5em;
     transition:all 300ms ease;
+    text-align: center;
+   
 }
-.contenido-clases label:hover
+.acordeon label:hover
 {
     background-color: rgba(3, 26, 39, 0.452);
+}
+
+.acordeon .contenido-acordeon
+{
+    padding: 0;
+    margin: 0 2em;
+    max-height: 0;
+    overflow: hidden;
+    transition:all 300ms ease;
+    
+}
+
+.btn-acordeon:checked ~ .contenido-acordeon
+{
+    max-height: 600px;
+    padding: 1em 0;
+    
+}
+.btn-acordeon
+{
+    display: none;
+}
+
+.menu-detalles
+{
+    width: 50%;
+    margin-left: 40em;
+
+}
+
+.elementos-acordeon
+{
+
+    font-size: 1.5em;
+}
+
+.profesor-imagen-ubicacion
+{
+    background-color: cadetblue;
+    height: 10em;
+
+}
+.profesor-imagen
+{
+    border-radius: 50%;
+    width: 45%;
+}
+.contenedor-descripcion-profesor
+{
+   
+    background-color: cadetblue;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5em;
+    margin-bottom: 5em;
+    padding: 2em;
+
+}
+.prueba
+{
+
+}
+
+.descripcion-profesor
+{
+   
 }
