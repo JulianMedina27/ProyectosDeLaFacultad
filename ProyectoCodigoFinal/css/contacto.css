@@ -25,7 +25,7 @@ body {
 }
 
 .navegacion-principal a{
-    padding: 1em; /* si solo hay un valor se aplica el padding hacia las 4 direcciones*/
+    padding: 1em; 
     color: black;
     text-decoration: none;
     font-size: 1em;
@@ -35,11 +35,11 @@ body {
 }
 
 .sombreado {
-    background-color: #fff; /* Color de fondo de la barra de navegación */
-    padding: 15px; /* Espacio dentro de la barra */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra en la parte baja */
-    position: relative; /* Asegura que el box-shadow se muestre correctamente */
-    z-index: 100; /* Asegura que la barra esté encima de otros elementos */
+    background-color: #fff; 
+    padding: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    position: relative; 
+    z-index: 100; 
 }
 
 @media (min-width: 1024px) {
