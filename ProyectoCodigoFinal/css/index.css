@@ -11,6 +11,8 @@ body {
     align-items: center;
     height: 100vh;
     background-image: url(../img/FondoPlataformaDeCursosAlternativo.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* Contenedo del Inicio de sesion y el logotipo*/
@@ -27,6 +29,7 @@ body {
     .contenedor {
         flex-direction: row; 
         align-items: center; 
+        column-gap: 2rem;
     }
     .contenedor-imagen{
         width: 100%;
@@ -56,6 +59,7 @@ body {
     font-size: 1.8rem;
     margin-bottom: 20px;
     color: #333;
+    text-align: center;
 }
 
 .contenedor-IniciarSesion label {
@@ -65,7 +69,7 @@ body {
     color: #333;
 }
 
-.contenedor-IniciarSesion input[type="text"],
+.contenedor-IniciarSesion input[type="email"],
 .contenedor-IniciarSesion input[type="password"] {
     width: 100%;
     padding: 10px;
@@ -87,6 +91,12 @@ body {
 
 .contenedor-IniciarSesion input[type="submit"]:hover {
     background-color: #218838;
+}
+
+
+.contenedor-IniciarSesion p {
+    margin: 1rem 0;
+    text-align: center;
 }
 
 .contenedor-IniciarSesion a {
@@ -116,4 +126,56 @@ body {
 
 .boton-registro a:hover {
     background-color: #0056b3;
+}
+
+/* contenedor restablecer contraseña */
+
+.contenedor-restablecer{
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+.contenedor-restablecer input[type="email"]{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contenedor-restablecer input[type="submit"] { 
+    width: 100%;
+    padding: 12px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.contenedor-restablecer input[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.contenedor-restablecer p {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.contenedor-restablecer h2 {
+    text-align: center;
+}
+
+.contenedor-restablecer a {
+    color: #007BFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.contenedor-restablecer a:hover {
+    text-decoration: underline;
 }
