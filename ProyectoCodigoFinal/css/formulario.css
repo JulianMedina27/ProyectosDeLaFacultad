@@ -11,22 +11,21 @@ body {
     box-sizing: border-box;
 }
 
-/* Navegacion Principal */
-.nav-background{
+.nav-background {
     background-color: white;
 }
 
-.navegacion-principal{
+.navegacion-principal {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1em;
     white-space: nowrap;
-    
+
 }
 
-.navegacion-principal a{
-    padding: 1em; 
+.navegacion-principal a {
+    padding: 1em;
     color: black;
     text-decoration: none;
     font-size: 1em;
@@ -36,27 +35,27 @@ body {
 }
 
 .sombreado {
-    background-color: #fff; 
-    padding: 15px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     position: relative;
-    z-index: 100; 
+    z-index: 100;
 }
 
 @media (min-width: 1024px) {
-    .navegacion-principal{
+    .navegacion-principal {
         flex-direction: row;
         justify-content: space-between;
     }
 }
 
 
-.contenedor{
+.contenedor {
     max-width: 100%;
     margin: 0 auto;
 }
 
-.search{
+.search {
     width: 80%;
     display: flex;
     text-align: center;
@@ -65,17 +64,18 @@ body {
     background: #f6f6f6;
     transition: background 0.25s;
 }
+
 @media (min-width: 1024px) {
-   .search{
-    width: 70%;
-   }
+    .search {
+        width: 70%;
+    }
 }
 
-.search:focus-within{
+.search:focus-within {
     background: #f1f1f1;
 }
 
-.search-input{
+.search-input {
     font-size: 16px;
     font-family: 'Lexend', sans-serif;
     color: #333333;
@@ -87,18 +87,18 @@ body {
 }
 
 .search-input::placeholder,
-.search-icon{
+.search-icon {
     color: rgba(0, 0, 0, 0.5);
 }
 
 
-.logo{
+.logo {
     height: auto;
     margin: 0 20px;
     width: 150px;
 }
 
-.inscripcion{
+.inscripcion {
     display: block;
     margin: 5%;
     margin-right: 0;
@@ -109,7 +109,7 @@ body {
 
 
 
-.barra_insc{
+.barra_insc {
     width: 30%;
     display: inline-block;
     text-align: center;
@@ -119,19 +119,20 @@ body {
     transition: background 0.25s;
     margin: 1%;
     margin-left: 0;
-    border:1px solid;
-}
-@media (min-width: 1024px) {
-   .barra_insc{
-    width: 30%;
-   }
+    border: 1px solid;
 }
 
-.barra_insc:focus-within{
+@media (min-width: 1024px) {
+    .barra_insc {
+        width: 30%;
+    }
+}
+
+.barra_insc:focus-within {
     background: #f1f1f1;
 }
 
-.barra_insc-input{
+.barra_insc-input {
     font-size: 16px;
     font-family: 'Lexend', sans-serif;
     color: #333333;
@@ -141,15 +142,15 @@ body {
     background: transparent;
     width: 100%;
     height: 100%;
-    
+
 }
 
 .barra_insc-input::placeholder,
-.barra_insc-icon{
+.barra_insc-icon {
     color: rgba(0, 0, 0, 0.5);
 }
 
-.botones_margin{
+.botones_margin {
     margin-top: 5%;
     margin-right: 7%;
 }
@@ -167,11 +168,13 @@ body {
     height: 35px;
     transition: background 0.3s;
     padding-bottom: 8px;
-    
+
 }
+
 .botones_aside:hover {
     background-color: #949292;
 }
+
 .container {
     display: flex;
     align-items: flex-start;
@@ -202,6 +205,7 @@ body {
     transition: background 0.3s;
 
 }
+
 .agregar_boton:hover {
     background-color: #949292;
 }
@@ -209,8 +213,9 @@ body {
 .agregar_texto {
     font-size: 16px;
 }
+
 .fondo-negro {
-    display:flex;
+    display: flex;
     background-color: black;
     color: white;
     padding: 4px;
@@ -221,12 +226,14 @@ body {
     margin-bottom: 4%;
     align-items: center;
 }
+
 .boton-container {
     display: flex;
     justify-content: left;
     margin-top: 1%;
     margin-left: 50%;
 }
+
 #confirmar {
     padding: 10px 20px;
     font-size: 16px;
@@ -237,8 +244,9 @@ body {
     cursor: pointer;
     display: flex;
     align-content: center;
-    
+
 }
+
 #confirmar:hover {
     background-color: rgb(58, 58, 58);
 }
@@ -306,42 +314,43 @@ footer {
     width: 24px;
     height: 24px;
 }
-.medios-pago
-{
+
+.medios-pago {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    
-    
+
+
 }
-.imagen-pago
-{
+
+.imagen-pago {
     width: 10%;
     height: auto;
     margin-right: 1em;
 }
-.imagen-pago:last-child {
-    margin-right: 0; 
-  }
 
-  .menu-item {
-    position: relative; 
+.imagen-pago:last-child {
+    margin-right: 0;
+}
+
+.menu-item {
+    position: relative;
 }
 
 .menu-horizontal {
     display: flex;
-    gap: 20px; /* Añadimos espacio entre los elementos del menú */
+    gap: 20px;
 }
 
 .menu-item {
-    position: relative; /* Necesario para la posición absoluta del submenú */
+    position: relative;
 }
 
 .menu-vertical {
     display: none;
     position: absolute;
-    top: 100%; 
+    top: 100%;
     left: 0;
     list-style: none;
     background-color: rgba(0, 0, 0, 0.5);
@@ -353,7 +362,7 @@ footer {
 }
 
 .menu-item:hover .menu-vertical {
-    display: block; /* Muestra el submenú al hacer hover solo sobre "Detalles Cursos" */
+    display: block;
 }
 
 .menu-vertical a {
@@ -368,43 +377,42 @@ footer {
 }
 
 @media (max-width: 480px) {
-    /* Ajusta el tamaño de los contenedores */
-    .inscripcion, .fondo-negro, .barra_insc, .botones_margin {
-        width: 100%; /* Asegura que los elementos ocupen todo el ancho disponible */
+
+    .inscripcion,
+    .fondo-negro,
+    .barra_insc,
+    .botones_margin {
+        width: 100%;
     }
 
     .barra_insc {
-        width: 90%; /* Ajusta el ancho para que no ocupe toda la pantalla */
+        width: 90%;
         margin-left: 5%;
         margin-right: 5%;
     }
 
     .barra_insc-input {
-        font-size: 14px; /* Reduce ligeramente el tamaño de fuente para que sea más legible en pantallas pequeñas */
-        width: 100%; /* Asegúrate de que el input no exceda el contenedor */
+        font-size: 14px;
+        width: 100%;
     }
 
-    /* Aumenta el tamaño del botón "Agregar personas" para mejor accesibilidad en móvil */
     .agregar_boton {
         font-size: 20px;
         padding: 5px 10px;
     }
 
-    /* Ajuste del botón confirmar */
     #confirmar {
-        width: 100%; /* El botón ocupará todo el ancho disponible */
-        margin: 10px 0; /* Margen para separar del resto del contenido */
+        width: 100%;
+        margin: 10px 0;
     }
 
-    /* Ajusta el tamaño del precio */
     .fondo-negro {
-        width: 40%; /* Que ocupe todo el ancho en pantallas pequeñas */
-        justify-content: center; /* Centrar el texto del precio */
+        width: 40%;
+        justify-content: center;
     }
 
-    /* Ajustes en los botones laterales */
     .botones_margin {
-        margin-top: 5%; /* Reducir el margen superior en pantallas pequeñas */
+        margin-top: 5%;
         margin-right: 0;
         text-align: center;
     }
@@ -412,12 +420,11 @@ footer {
     .botones_aside {
         width: 30px;
         height: 30px;
-        font-size: 32px; /* Reducir el tamaño de los botones */
+        font-size: 32px;
     }
 
-    /* Ajuste de alineación en el footer */
     footer {
-        text-align: center; /* Centramos el texto del footer */
+        text-align: center;
         padding: 10px;
     }
 }
@@ -431,38 +438,33 @@ footer {
     cursor: pointer;
 }
 
-/* Ocultamos el menú horizontal en pantallas pequeñas */
 @media (max-width: 480px) {
     .menu-horizontal {
         display: none;
         flex-direction: column;
         width: 100%;
         text-align: center;
-        background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para el menú desplegable */
+        background-color: rgba(0, 0, 0, 0.8);
     }
 
-    /* Mostramos el botón hamburguesa en pantallas pequeñas */
     .menu-hamburguesa {
         display: block;
     }
 
-    /* Cuando el menú está abierto, mostramos los elementos */
     .menu-horizontal.menu-abierto {
         display: flex;
     }
 
-    /* Ajustes visuales para los enlaces del menú */
     .menu-item {
         padding: 10px 0;
     }
 
     .menu-link {
-        color: white; /* Cambia el color de los enlaces en el menú desplegable */
+        color: white;
     }
 
-    /* Ajuste del submenú vertical */
     .menu-vertical {
-        background-color: rgba(0, 0, 0, 0.8); /* Fondo del submenú */
+        background-color: rgba(0, 0, 0, 0.8);
         padding: 0;
     }
 }
@@ -472,10 +474,9 @@ footer {
     flex-direction: column;
     width: 100%;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para el menú desplegable */
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Mostramos el botón hamburguesa en pantallas pequeñas */
 .menu-hamburguesa {
     display: block;
     font-size: 28px;
@@ -485,34 +486,32 @@ footer {
     cursor: pointer;
 }
 
-/* Cuando el menú está abierto, mostramos los elementos */
 .menu-horizontal.menu-abierto {
     display: flex;
 }
 
-/* Ajustes visuales para los enlaces del menú */
 .menu-item {
     padding: 10px 0;
 }
 
 .menu-link {
-    color: white; /* Cambia el color de los enlaces en el menú desplegable */
+    color: white;
 }
 
-/* Ajuste del submenú vertical */
+
 .menu-vertical {
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo del submenú */
+    background-color: rgba(0, 0, 0, 0.8);
     padding: 0;
-    position: relative; /* Asegura que esté en el flujo del documento */
-    z-index: 10; /* Asegura que esté por encima de otros elementos */
+    position: relative;
+    z-index: 10;
 }
 
-/* Estilos para cada "alumno" */
+
 .alumno {
-    margin-bottom: 20px; /* Separación entre los alumnos */
+    margin-bottom: 20px;
 }
 
-/* Responsive para pantallas pequeñas */
+
 @media (max-width: 480px) {
     .barra_insc {
         width: 90%;
@@ -524,8 +523,8 @@ footer {
         width: 100%;
     }
 
-    /* Separación vertical entre alumnos */
+
     .alumno {
-        margin-bottom: 30px; /* Espaciado mayor para pantallas pequeñas */
+        margin-bottom: 30px;
     }
 }

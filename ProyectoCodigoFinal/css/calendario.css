@@ -1,17 +1,16 @@
-.calendario
-{
-width: 90%;
-height: 5em;
-list-style: none;
-display: grid;
-grid-template-columns: repeat(7,2fr);
-gap: 0;
-margin: 0;
-padding: 0;
-margin-left: 5em;
+.calendario {
+    width: 90%;
+    height: 5em;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(7, 2fr);
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    margin-left: 5em;
 }
-.elemento1
-{
+
+.elemento1 {
     grid-column-start: 7;
     border: 0.1em;
     border-style: solid;
@@ -20,8 +19,8 @@ margin-left: 5em;
     font-size: 1.5em;
 
 }
-.dias
-{
+
+.dias {
     border: 0.1em;
     border-style: solid;
     border-color: black;
@@ -29,12 +28,12 @@ margin-left: 5em;
     position: relative;
     font-size: 1.5em;
 }
-.dias-nombres
-{
+
+.dias-nombres {
     width: 90%;
     list-style: none;
     display: inline-grid;
-    grid-template-columns: repeat(7,2fr);
+    grid-template-columns: repeat(7, 2fr);
     gap: 0;
     margin: 0;
     background-color: #308791;
@@ -42,20 +41,20 @@ margin-left: 5em;
     padding: 0;
     margin-left: 2.5em;
 }
-.texto
-{
+
+.texto {
     position: absolute;
-    bottom: 5px; 
+    bottom: 5px;
     left: 0;
     right: 0;
-    text-align: center; 
+    text-align: center;
     font-size: 1em;
     background-color: orange;
     border-radius: 5%;
     margin: 0.5em;
 }
-.texto-mes
-{
+
+.texto-mes {
     margin-left: 5em;
 }
 
@@ -63,45 +62,47 @@ margin-left: 5em;
     .calendario {
         width: 100%;
         margin-left: 0;
-        grid-template-columns: repeat(7, 1fr); /* Ajusta el ancho de las columnas */
+        grid-template-columns: repeat(7, 1fr);
     }
 
-    .elemento1, .dias {
-        height: 6em; /* Reduce la altura para que quepa mejor */
-        font-size: 1.2em; /* Ajusta el tamaño de la fuente */
+    .elemento1,
+    .dias {
+        height: 6em;
+        font-size: 1.2em;
     }
 
     .dias-nombres {
         width: 100%;
         margin-left: 0;
-        font-size: 1.5em; /* Reduce el tamaño de los nombres de los días */
+        font-size: 1.5em;
     }
 
     .texto {
-        font-size: 0.9em; /* Ajusta el texto dentro de cada celda */
+        font-size: 0.9em;
     }
 
     .texto-mes {
-        margin-left: 1em; /* Ajusta el margen del título del mes */
+        margin-left: 1em;
     }
 }
 
 @media only screen and (max-width: 480px) {
     .calendario {
-        grid-template-columns: repeat(7, 1fr); /* Asegura que cada columna ocupe el 100% */
+        grid-template-columns: repeat(7, 1fr);
     }
 
-    .elemento1, .dias {
-        height: 5em; /* Reduce aún más la altura */
-        font-size: 1em; /* Ajusta el tamaño de la fuente */
+    .elemento1,
+    .dias {
+        height: 5em;
+        font-size: 1em;
     }
 
     .dias-nombres {
-        font-size: 1em; /* Reduce aún más el tamaño de los nombres de los días */
+        font-size: 1em;
     }
 
     .texto {
-        font-size: 0.6em; /* Reduce el tamaño del texto en celdas */
+        font-size: 0.6em;
         padding: 0;
     }
 }
