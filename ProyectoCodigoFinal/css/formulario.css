@@ -367,7 +367,7 @@ footer {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-@media (max-width: 414px) {
+@media (max-width: 480px) {
     /* Ajusta el tamaño de los contenedores */
     .inscripcion, .fondo-negro, .barra_insc, .botones_margin {
         width: 100%; /* Asegura que los elementos ocupen todo el ancho disponible */
@@ -398,7 +398,7 @@ footer {
 
     /* Ajusta el tamaño del precio */
     .fondo-negro {
-        width: 30%; /* Que ocupe todo el ancho en pantallas pequeñas */
+        width: 40%; /* Que ocupe todo el ancho en pantallas pequeñas */
         justify-content: center; /* Centrar el texto del precio */
     }
 
@@ -421,6 +421,7 @@ footer {
         padding: 10px;
     }
 }
+
 .menu-hamburguesa {
     display: none;
     font-size: 28px;
@@ -431,7 +432,7 @@ footer {
 }
 
 /* Ocultamos el menú horizontal en pantallas pequeñas */
-@media (max-width: 414px) {
+@media (max-width: 480px) {
     .menu-horizontal {
         display: none;
         flex-direction: column;
@@ -466,13 +467,53 @@ footer {
     }
 }
 
+.menu-horizontal {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para el menú desplegable */
+}
+
+/* Mostramos el botón hamburguesa en pantallas pequeñas */
+.menu-hamburguesa {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+/* Cuando el menú está abierto, mostramos los elementos */
+.menu-horizontal.menu-abierto {
+    display: flex;
+}
+
+/* Ajustes visuales para los enlaces del menú */
+.menu-item {
+    padding: 10px 0;
+}
+
+.menu-link {
+    color: white; /* Cambia el color de los enlaces en el menú desplegable */
+}
+
+/* Ajuste del submenú vertical */
+.menu-vertical {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo del submenú */
+    padding: 0;
+    position: relative; /* Asegura que esté en el flujo del documento */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
 /* Estilos para cada "alumno" */
 .alumno {
     margin-bottom: 20px; /* Separación entre los alumnos */
 }
 
 /* Responsive para pantallas pequeñas */
-@media (max-width: 414px) {
+@media (max-width: 480px) {
     .barra_insc {
         width: 90%;
         margin-left: 5%;

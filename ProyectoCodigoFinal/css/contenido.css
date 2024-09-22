@@ -329,6 +329,7 @@ footer {
 
 .menu-item:hover .menu-vertical {
     display: block; /* Muestra el submenú al hacer hover solo sobre "Detalles Cursos" */
+    
 }
 
 .menu-vertical a {
@@ -393,4 +394,92 @@ footer {
     .menu-item a {
         margin: 5px 0;
     }
+    .card {
+        width: 100%;
+    }
+}
+
+.menu-hamburguesa {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+/* Ocultamos el menú horizontal en pantallas pequeñas */
+@media (max-width: 480px) {
+    .menu-horizontal {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para el menú desplegable */
+    }
+
+    /* Mostramos el botón hamburguesa en pantallas pequeñas */
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    /* Cuando el menú está abierto, mostramos los elementos */
+    .menu-horizontal.menu-abierto {
+        display: flex;
+    }
+
+    /* Ajustes visuales para los enlaces del menú */
+    .menu-item {
+        padding: 10px 0;
+    }
+
+    .menu-link {
+        color: white; /* Cambia el color de los enlaces en el menú desplegable */
+    }
+
+    /* Ajuste del submenú vertical */
+    .menu-vertical {
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo del submenú */
+        padding: 0;
+    }
+}
+
+.menu-horizontal {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para el menú desplegable */
+}
+
+/* Mostramos el botón hamburguesa en pantallas pequeñas */
+.menu-hamburguesa {
+    display: block;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+/* Cuando el menú está abierto, mostramos los elementos */
+.menu-horizontal.menu-abierto {
+    display: flex;
+}
+
+/* Ajustes visuales para los enlaces del menú */
+.menu-item {
+    padding: 10px 0;
+}
+
+.menu-link {
+    color: white; /* Cambia el color de los enlaces en el menú desplegable */
+}
+
+/* Ajuste del submenú vertical */
+.menu-vertical {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo del submenú */
+    padding: 0;
+    position: relative; /* Asegura que esté en el flujo del documento */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
 }

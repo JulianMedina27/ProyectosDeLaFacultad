@@ -132,7 +132,7 @@
     padding: 2em;
 
 }
-@media only screen and (max-width: 414px) {
+@media only screen and (max-width: 480px) {
     /* Ajustes para pantalla pequeña */
     .cuerpo-principal {
       flex-direction: column;
@@ -152,7 +152,7 @@
       flex-direction: column;
     }
     .profesor-imagen {
-      width: 50%;
+      width: 40%;
     }
 
     .boton
@@ -172,7 +172,7 @@
 }
 
 /* Ocultamos el menú horizontal en pantallas pequeñas */
-@media (max-width: 414px) {
+@media (max-width: 480px) {
     .menu-horizontal {
         display: none;
         flex-direction: column;

@@ -13,17 +13,22 @@
     <div class="nav-background">
         <nav class="navegacion-principal contenedor sombreado">
             <a href="contenido.html">
-                <img class="logo" src="img/uñemy.com.png" alt="logoTipo">
+                <img class="logo" src="./img/uñemy.com.png" alt="logoTipo">
             </a>
             <div class="search">
                 <span class="search-icon material-symbols-outlined">search</span>
                 <input class="search-input" type="search" placeholder="Buscar">
             </div>
-            <div class="menu-horizontal">
+    
+            <!-- Botón de menú hamburguesa -->
+            <button class="menu-hamburguesa" id="menu-hamburguesa">
+                ☰
+            </button>
+    
+            <!-- Menú horizontal -->
+            <div class="menu-horizontal" id="menu-horizontal">
                 <div class="menu-item">
-                    <a href="#" class="menu-link">
-                        Detalles Cursos
-                    </a>
+                    <a href="#" class="menu-link">Detalles Cursos</a>
                     <ul class="menu-vertical">
                         <li><a href="./Paginas/CursoJava.html">Cursos de Java</a></li>
                         <li><a href="./Paginas/CursoPhyton.html">Cursos de Phyton</a></li>
@@ -136,5 +141,14 @@
             </div>
         </div>
     </footer>
+
+
 </body>
+<script>
+  document.getElementById("menu-hamburguesa").addEventListener("click", function() {
+  var menu = document.getElementById("menu-horizontal");
+  menu.classList.toggle("menu-abierto");
+});
+</script>
+
 </html>

@@ -576,7 +576,7 @@ border-color: gray;
     
     .frame {
         width: 95%;
-        height: auto;
+        height: 30em;
     }
     .aside-perso {
         width: 100%;
@@ -589,6 +589,7 @@ border-color: gray;
     .fondo-option {
         max-width: 3em;
     }
+    
 }
 
 @media (min-width: 1024px) {

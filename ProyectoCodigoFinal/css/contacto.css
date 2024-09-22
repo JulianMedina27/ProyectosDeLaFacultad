@@ -258,6 +258,66 @@ footer {
     margin-right: 0; 
   }
 
+  @media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Ajusta el tamaño de fuente para pantallas más pequeñas */
+    }
+    h1
+    {
+        font-size: 2em;
+    }
+    .navegacion-principal {
+        flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+        padding: 1em 0;
+    }
+
+    .search {
+        width: 90%; /* Aumenta el ancho de la barra de búsqueda */
+        margin: 0 auto; /* Centra la barra de búsqueda */
+    }
+
+    .contenedor-contacto {
+        padding: 1em; /* Añade un poco de padding */
+    }
+
+    .contenedor-contacto_principal {
+        flex-direction: column; /* Cambia a columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .contenedor-contacto_datos {
+        margin-left: 0; /* Elimina el margen en pantallas pequeñas */
+        align-items: center; /* Centra el contenido */
+    }
+
+    form {
+        width: 90%; /* Aumenta el ancho del formulario */
+        margin-left: 0; /* Elimina el margen */
+        padding: 1em; /* Añade padding para el formulario */
+    }
+
+    input, textarea {
+        font-size: 15px; /* Ajusta el tamaño de la fuente de los inputs */
+    }
+
+    footer {
+        padding: 10px; /* Reduce el padding del footer */
+    }
+
+    .footer-container {
+        flex-direction: column; /* Cambia a columna */
+        align-items: center; /* Centra los elementos */
+    }
+
+    .footer-section {
+        min-width: 100%; /* Asegura que las secciones ocupen todo el ancho */
+        margin: 10px 0; /* Añade margen vertical */
+    }
+
+    .imagen-pago {
+        width: 20%; /* Ajusta el ancho de las imágenes de pago */
+    }
+}
 
 
     
