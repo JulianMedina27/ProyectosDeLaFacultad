@@ -150,7 +150,7 @@ body {
 }
 
 .botones_margin{
-    margin-top: 11%;
+    margin-top: 5%;
     margin-right: 7%;
 }
 
@@ -329,10 +329,20 @@ footer {
     position: relative; 
 }
 
+.menu-horizontal {
+    display: flex;
+    gap: 20px; /* Añadimos espacio entre los elementos del menú */
+}
+
+.menu-item {
+    position: relative; /* Necesario para la posición absoluta del submenú */
+}
+
 .menu-vertical {
     display: none;
     position: absolute;
     top: 100%; 
+    left: 0;
     list-style: none;
     background-color: rgba(0, 0, 0, 0.5);
     padding: 10px;
@@ -343,7 +353,7 @@ footer {
 }
 
 .menu-item:hover .menu-vertical {
-    display: block;
+    display: block; /* Muestra el submenú al hacer hover solo sobre "Detalles Cursos" */
 }
 
 .menu-vertical a {
@@ -355,4 +365,126 @@ footer {
 
 .menu-vertical a:hover {
     background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 414px) {
+    /* Ajusta el tamaño de los contenedores */
+    .inscripcion, .fondo-negro, .barra_insc, .botones_margin {
+        width: 100%; /* Asegura que los elementos ocupen todo el ancho disponible */
+    }
+
+    .barra_insc {
+        width: 90%; /* Ajusta el ancho para que no ocupe toda la pantalla */
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .barra_insc-input {
+        font-size: 14px; /* Reduce ligeramente el tamaño de fuente para que sea más legible en pantallas pequeñas */
+        width: 100%; /* Asegúrate de que el input no exceda el contenedor */
+    }
+
+    /* Aumenta el tamaño del botón "Agregar personas" para mejor accesibilidad en móvil */
+    .agregar_boton {
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+
+    /* Ajuste del botón confirmar */
+    #confirmar {
+        width: 100%; /* El botón ocupará todo el ancho disponible */
+        margin: 10px 0; /* Margen para separar del resto del contenido */
+    }
+
+    /* Ajusta el tamaño del precio */
+    .fondo-negro {
+        width: 30%; /* Que ocupe todo el ancho en pantallas pequeñas */
+        justify-content: center; /* Centrar el texto del precio */
+    }
+
+    /* Ajustes en los botones laterales */
+    .botones_margin {
+        margin-top: 5%; /* Reducir el margen superior en pantallas pequeñas */
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .botones_aside {
+        width: 30px;
+        height: 30px;
+        font-size: 32px; /* Reducir el tamaño de los botones */
+    }
+
+    /* Ajuste de alineación en el footer */
+    footer {
+        text-align: center; /* Centramos el texto del footer */
+        padding: 10px;
+    }
+}
+.menu-hamburguesa {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+/* Ocultamos el menú horizontal en pantallas pequeñas */
+@media (max-width: 414px) {
+    .menu-horizontal {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para el menú desplegable */
+    }
+
+    /* Mostramos el botón hamburguesa en pantallas pequeñas */
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    /* Cuando el menú está abierto, mostramos los elementos */
+    .menu-horizontal.menu-abierto {
+        display: flex;
+    }
+
+    /* Ajustes visuales para los enlaces del menú */
+    .menu-item {
+        padding: 10px 0;
+    }
+
+    .menu-link {
+        color: white; /* Cambia el color de los enlaces en el menú desplegable */
+    }
+
+    /* Ajuste del submenú vertical */
+    .menu-vertical {
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo del submenú */
+        padding: 0;
+    }
+}
+
+/* Estilos para cada "alumno" */
+.alumno {
+    margin-bottom: 20px; /* Separación entre los alumnos */
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 414px) {
+    .barra_insc {
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .barra_insc-input {
+        width: 100%;
+    }
+
+    /* Separación vertical entre alumnos */
+    .alumno {
+        margin-bottom: 30px; /* Espaciado mayor para pantallas pequeñas */
+    }
 }

@@ -132,12 +132,77 @@
     padding: 2em;
 
 }
-.prueba
-{
+@media only screen and (max-width: 414px) {
+    /* Ajustes para pantalla pequeña */
+    .cuerpo-principal {
+      flex-direction: column;
+    }
+    .contenido-curso {
+      width: 70%;
+      margin-right: 1em;
+    }
+    .imagen-curso {
+      width: 70%;
+    }
+    .menu-detalles {
+      width: 90%;
+      margin-left: 1em;
+    }
+    .contenedor-descripcion-profesor {
+      flex-direction: column;
+    }
+    .profesor-imagen {
+      width: 50%;
+    }
 
+    .boton
+    {
+        margin-left: 1em;
+    }
+  }
+
+  
+  .menu-hamburguesa {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
 }
 
-.descripcion-profesor
-{
-   
+/* Ocultamos el menú horizontal en pantallas pequeñas */
+@media (max-width: 414px) {
+    .menu-horizontal {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para el menú desplegable */
+    }
+
+    /* Mostramos el botón hamburguesa en pantallas pequeñas */
+    .menu-hamburguesa {
+        display: block;
+    }
+
+    /* Cuando el menú está abierto, mostramos los elementos */
+    .menu-horizontal.menu-abierto {
+        display: flex;
+    }
+
+    /* Ajustes visuales para los enlaces del menú */
+    .menu-item {
+        padding: 10px 0;
+    }
+
+    .menu-link {
+        color: white; /* Cambia el color de los enlaces en el menú desplegable */
+    }
+
+    /* Ajuste del submenú vertical */
+    .menu-vertical {
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo del submenú */
+        padding: 0;
+    }
 }

@@ -8,7 +8,7 @@ grid-template-columns: repeat(7,2fr);
 gap: 0;
 margin: 0;
 padding: 0;
-margin-left: 2em;
+margin-left: 5em;
 }
 .elemento1
 {
@@ -40,7 +40,7 @@ margin-left: 2em;
     background-color: #308791;
     font-size: 2em;
     padding: 0;
-    margin-left: 1em;
+    margin-left: 2.5em;
 }
 .texto
 {
@@ -56,6 +56,6 @@ margin-left: 2em;
 }
 .texto-mes
 {
-    margin-left: 1em;
+    margin-left: 5em;
 }
 
