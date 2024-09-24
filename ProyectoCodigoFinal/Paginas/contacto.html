@@ -6,6 +6,7 @@
     <title>Contacto</title>
     <link rel="stylesheet" href="../css/contacto.css">
     <link rel="stylesheet" href="../css/contenido.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
 </head>
@@ -46,51 +47,63 @@
                         <a href="giftcard.html">GiftCard</a>
                     </div>
                     <div class="menu-item">
-                        <a href="#">Usuario</a>
+                        <a href="Usuario.html">Usuario</a>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
     
-<div class="contenedor-contacto">
-    <h1 id="texto-contacto">CONTACTANOS</h1>
-</div>
-
-<div class="contenedor-contacto_principal">
-   
-    <div class="contenedor-contacto_datos">
-       <p> <i class="fa-solid fa-phone"></i> (+54 11) 7023-2354</p>
-       <p> <i class="fa-solid fa-envelope"></i> cursosunemy@gmail.com</p>
-       <p><i class="fa-solid fa-headset"></i> Horarios de atencion <br><br>Lunes a Viernes de 10:00 a 19:00hs<br> Sábados de 10:00 a 14:00hs
-        </p>
-   
+<main>
+    <div class="contenedor-contacto">
+        <h1 id="texto-contacto">CONTACTANOS</h1>
     </div>
     
-
-    <form>
+    <div class="contenedor-contacto_principal">
+       
+        <div class="contenedor-contacto_datos">
+           <p> <i class="fa-solid fa-phone"></i> (+54 11) 7023-2354</p>
+           <p> <i class="fa-solid fa-envelope"></i> cursosunemy@gmail.com</p>
+           <p><i class="fa-solid fa-headset"></i> Horarios de atencion <br><br>Lunes a Viernes de 10:00 a 19:00hs<br> Sábados de 10:00 a 14:00hs
+            </p>
+       
+        </div>
+        
     
+        <form>
         
-        <label for="Nombre">Nombre</label>
-        <input type="text" id="Nombre" name="Nombre" placeholder="ingrese tu nombre" required>
+            
+            <label for="Nombre">Nombre</label>
+            <input type="text" id="Nombre" name="Nombre" placeholder="ingrese tu nombre" required>
+            
+            <label for="Correo electronico">Correo electronico</label>
+            <input type="email" id="Correo electronico" name="Correo electronico"placeholder="ingrese tu correo electronico" required>
+            
+            <label for="Telefono">Telefono</label>
+            <input type="text" id="Telefono" name="Telefono" placeholder="ingrese tu telefono" required> 
+            
+            <label for="Mensaje">Mensaje</label>
+            <textarea name="Mensaje" id="Mensae" cols="30" rows="10" placeholder="Mensaje"></textarea>
+            
+            <input type="submit" value="Enviar Mensaje" id="boton">
         
-        <label for="Correo electronico">Correo electronico</label>
-        <input type="email" id="Correo electronico" name="Correo electronico"placeholder="ingrese tu correo electronico" required>
         
-        <label for="Telefono">Telefono</label>
-        <input type="text" id="Telefono" name="Telefono" placeholder="ingrese tu telefono" required> 
         
-        <label for="Mensaje">Mensaje</label>
-        <textarea name="Mensaje" id="Mensae" cols="30" rows="10" placeholder="Mensaje"></textarea>
-        
-        <input type="submit" value="Enviar Mensaje" id="boton">
+        </form>
+      
     
     
+    </div>
+    <div>
+        
+        
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13125.456632530742!2d-58.5628052!3d-34.6707576!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcc62cc3ef7083%3A0x8867107f425fade5!2sUniversidad%20Nacional%20de%20La%20Matanza!5e0!3m2!1ses-419!2sar!4v1727198851886!5m2!1ses-419!2sar"  
+            style="border:0;" allowfullscreen=""
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="google-maps"></iframe>
+        
+    </div>
     
-    </form>
-  
-
-</div>
+</main>
 
 <footer >
     <div class="footer-container">
@@ -124,8 +137,6 @@
         </div>
     </div>
 </footer>
-
-
 
 </body>
 

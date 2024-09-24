@@ -14,12 +14,18 @@
     flex-direction: row;
 }
 
+h2
+{
+    font-family: "Noto Serif", serif;
+}
+
 .contenido-curso {
     width: 40%;
     text-align: justify;
     line-height: 1.5;
     background-color: rgba(7, 152, 236, 0.3);
     margin: 0.5em;
+    font-family: "Ubuntu", sans-serif;
 
 }
 
@@ -30,6 +36,7 @@
     font-weight: bolder;
     margin-left: 0em;
     background-color: green;
+    cursor: pointer;
 }
 
 .resaltado {

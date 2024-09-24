@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscripcion</title>
+    <title>Usuario</title>
     <link rel="stylesheet" href="../css/contenido.css">
-    <link rel="stylesheet" href="../css/cursos.css">
+    <link rel="stylesheet" href="../css/usuario.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
@@ -45,19 +45,41 @@
                         <a href="giftcard.html">GiftCard</a>
                     </div>
                     <div class="menu-item">
-                        <a href="#">Usuario</a>
+                        <a href="Usuario.html">Usuario</a>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
-    <h2>Inscripcion</h2>
-    <form action=""></form>
+
     <main>
-
+        <section class="fondo">
+            <div class="fondo-usuario">
+                <div class="perfil-foto">
+                    <img src="../img/perfil-usuario.jpg" alt="" class="perfil-usuario">
+                </div>
+                <div>
+                    <div class="perfil-container">
+                        <h2>Perfil del Usuario</h2>
+                        <form action="/guardar-perfil" method="get">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" value="Nombre">
+                
+                            <label for="apellido">Apellido:</label>
+                            <input type="text" id="apellido" name="apellido" value="Apellido">
+                
+                            <label for="dni">DNI:</label>
+                            <input type="text" id="dni" name="dni" value="12345678">
+                
+                            
+                        </form>
+                    </div>
+                    <button class="boton-cambios">Guardar Cambios</button>
+                </div>
+            </div>
+        </section>
+       
     </main>
-
-    
     <footer>
         <div class="footer-container">
             <div class="footer-section about">
@@ -85,10 +107,9 @@
                     <img src="../img/mp-logo.png" alt="mercadopago" class="imagen-pago" >
                     <img src="../img/paypal-logo.png" alt="paypal" class="imagen-pago">
                 </div>
-            
-
             </div>
         </div>
     </footer>
+
 </body>
 </html>
