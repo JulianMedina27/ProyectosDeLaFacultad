@@ -227,6 +227,36 @@ footer {
     clear: both;
 }
 
+.sobre-nosotros {
+    width: 25%;
+    margin-top: 20px;
+}
+
+.fila {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.nombre {
+    width: 70%;
+    text-align: left;
+}
+
+.nombre--titulo{
+    font-weight: bold;
+}
+
+.dni--titulo{
+    font-weight: bold;
+}
+
+.dni {
+    width: 30%;
+    text-align: right;
+}
+
 .footer-container {
     display: flex;
     justify-content: space-between;
@@ -248,16 +278,6 @@ footer {
 
 .footer-section p {
     margin: 0;
-}
-
-.desarrolladores{
-    margin-top: 2rem;
-    text-align: left;
-}
-
-.desarrolladores span{
-    margin-left: 2rem;
-    justify-content: flex-end;
 }
 
 .footer-section ul {
