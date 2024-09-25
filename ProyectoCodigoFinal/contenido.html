@@ -10,43 +10,52 @@
 </head>
 
 <body>
-    <div class="nav-background">
-        <nav class="navegacion-principal contenedor sombreado">
-            <a href="contenido.html">
-                <img class="logo" src="img/uñemy.com.png" alt="logoTipo">
-            </a>
-            <div class="search">
-                <span class="search-icon material-symbols-outlined">search</span>
-                <input class="search-input" type="search" placeholder="Buscar">
-            </div>
-
-            <div class="menu-horizontal">
-                <div class="menu-item">
-                    <a href="#" >
-                        Detalles Cursos
+    <header>
+        <div class="nav-background">
+            <nav class="navegacion-principal contenedor sombreado">
+                <a href="contenido.html">
+                    <img class="logo" src="./img/uñemy.com.png" alt="logoTipo">
+                </a>
+                <div class="search">
+                    <span class="search-icon material-symbols-outlined">search</span>
+                    <input class="search-input" type="search" placeholder="Buscar">
+                </div>
+        
+                <!-- Botón de menú hamburguesa -->
+                <button class="menu-hamburguesa" id="menu-hamburguesa">
+                    ☰
+                </button>
+        
+                <!-- Menú horizontal -->
+                <div class="menu-horizontal" id="menu-horizontal">
+                    <div class="menu-item">
+                        <a href="#" class="menu-link">Detalles Cursos</a>
                         <ul class="menu-vertical">
                             <li><a href="./Paginas/CursoJava.html">Cursos de Java</a></li>
-                            <li><a href="./Paginas/CursoPhyton.html">Cursos de Phyton</a> </li>
+                            <li><a href="./Paginas/CursoPhyton.html">Cursos de Phyton</a></li>
                             <li><a href="./Paginas/CursoHTMLyCSS.html">Cursos de HTML y CSS</a></li>
-        
                         </ul>
-                    </a>
-                 <a href="./Paginas/contacto.html">Contacto</a>
-                 <a href="./Paginas/Calendario.html">Calendario</a>
-                 <a href="./Paginas/giftcard.html"> GiftCard</a>
-                 <a href="#">Usuario</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="./Paginas/contacto.html">Contacto</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="./Paginas/Calendario.html">Calendario</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="./Paginas/giftcard.html">GiftCard</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="./Paginas/Usuario.html">Usuario</a>
+                    </div>
                 </div>
-            
-                
-            </div>
-    
-        </nav>
-    </div>
+            </nav>
+        </div>
+    </header>
 
     <section>
-        <article class="Contendor-imagenes">
+        <article class="contendor-imagenes">
             <a href="./Paginas/CursoJava.html"> <img src="./img/java.jpg" alt="imagen-principal" class="imagen-principal"> </a>
-            <a href="./Paginas/CursoPhyton.html"> <img src="./img/phyton.jpeg" alt="imagen-principal" class="imagen-principal"> </a>
             <a href="./Paginas/CursoHTMLyCSS.html"> <img src="./img/imagen-curso-html-css-50.jpg" alt="imagen-principal" class="imagen-principal"> </a>
         </article>
     </section>
@@ -158,4 +167,11 @@
         </div>
     </footer>
 </body>
+
+<script>
+    document.getElementById("menu-hamburguesa").addEventListener("click", function() {
+        var menu = document.getElementById("menu-horizontal");
+        menu.classList.toggle("menu-abierto");
+    });
+</script>
 </html>
