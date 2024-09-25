@@ -4,27 +4,29 @@ body {
     background-image: url(../img/FondoPlataformaDeCursosAlternativo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
     margin: 0;
     padding: 0;
     width: 100%;
     box-sizing: border-box;
 }
 
-.nav-background {
+/* Navegacion Principal */
+.nav-background{
     background-color: white;
 }
 
-.navegacion-principal {
+.navegacion-principal{
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1em;
     white-space: nowrap;
-
+    
 }
 
-.navegacion-principal a {
-    padding: 1em;
+.navegacion-principal a{
+    padding: 1em; 
     color: black;
     text-decoration: none;
     font-size: 1em;
@@ -34,27 +36,27 @@ body {
 }
 
 .sombreado {
-    background-color: #fff;
-    padding: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff; 
+    padding: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
     position: relative;
-    z-index: 100;
+    z-index: 100; 
 }
 
 @media (min-width: 1024px) {
-    .navegacion-principal {
+    .navegacion-principal{
         flex-direction: row;
         justify-content: space-between;
     }
 }
 
 
-.contenedor {
+.contenedor{
     max-width: 100%;
     margin: 0 auto;
 }
 
-.search {
+.search{
     width: 80%;
     display: flex;
     text-align: center;
@@ -63,18 +65,17 @@ body {
     background: #f6f6f6;
     transition: background 0.25s;
 }
-
 @media (min-width: 1024px) {
-    .search {
-        width: 70%;
-    }
+   .search{
+    width: 70%;
+   }
 }
 
-.search:focus-within {
+.search:focus-within{
     background: #f1f1f1;
 }
 
-.search-input {
+.search-input{
     font-size: 16px;
     font-family: 'Lexend', sans-serif;
     color: #333333;
@@ -86,66 +87,60 @@ body {
 }
 
 .search-input::placeholder,
-.search-icon {
+.search-icon{
     color: rgba(0, 0, 0, 0.5);
 }
 
 
-.logo {
+.logo{
     height: auto;
     margin: 0 20px;
     width: 150px;
 }
-
-.contendor-imagenes {
+.Contendor-imagenes
+{
     display: flex;
-    width: 100%;
-    height: 100vh;
-}
-
-.prueba {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
 }
-
-.imagen-principal {
+.imagen-principal{
 
     margin-top: 1em;
-    width: 100%;
-    height: 60%;
+    width: 95%;
+    height: 25em;
     border: 0.5em;
     border-color: rgb(230, 230, 230);
     border-style: solid;
-    box-sizing: border-box;
-
-
+    margin-left: 0.5rem;
+    
+   
 }
-
-.cursos {
+.cursos{
     text-align: center;
     font-size: 40px;
     color: black;
     margin-top: 100px;
     font-weight: 100;
 }
-
 .container {
     width: 100%;
     max-width: 1200px;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    margin-bottom: 50px;
+    margin-bottom: 50px; 
     justify-content: space-between;
 }
-
-.container .card {
+.container .card{
     width: 27%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     text-align: right;
-    margin: 2% 1% 2% 1%;
+    margin: 2% 1% 2% 1%; 
     transition: all 0.25s;
     padding-right: 1%;
     background-color: rgb(240, 230, 230);
@@ -154,23 +149,19 @@ body {
 
 
 }
-
-.container .card:hover {
+.container .card:hover{
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgb(0, 0, 0, 0.2);
 
 }
 
-.container .card img {
+.container .card img{
     width: 100%;
     height: 60%;
     padding: 2%;
 }
-
-.container .card h5,
-h4,
-h3 {
-    font-weight: 800;
+.container .card h5,h4,h3{
+    font-weight: 800; 
     padding: 0 1rem;
     font-size: 1rem;
     font-weight: 300;
@@ -178,9 +169,8 @@ h3 {
     margin-right: 0;
 
 }
-
-.container h2 {
-    font-weight: 300;
+.container h2{
+    font-weight: 300; 
     padding: 5%;
     font-size: 1.4rem;
     font-weight: 700;
@@ -189,7 +179,7 @@ h3 {
 
 }
 
-.container .card a {
+.container .card a{
     font-weight: 200;
     font-size: 1.5rem;
     text-decoration: none;
@@ -201,8 +191,7 @@ h3 {
     background-color: rgb(94, 92, 92);
     margin-top: 10%;
 }
-
-.container .card aside {
+.container .card aside{
     text-align: left;
     width: 10%;
     display: inline;
@@ -215,18 +204,17 @@ h3 {
     margin-top: 100px;
     font-weight: 100;
 }
-
 .imagen-hero {
-    margin-top: 1em;
-    width: 25%;
-    height: auto;
-    border: 0.2em;
-    border-color: rgb(230, 230, 230);
-    border-style: solid;
-    margin-left: 0.5rem;
-    display: inline;
-    align-items: center;
-}
+        margin-top: 1em;
+        width: 25%;
+        height: auto;
+        border: 0.2em;
+        border-color: rgb(230, 230, 230);
+        border-style: solid;
+        margin-left: 0.5rem;
+        display: inline;
+        align-items: center;
+    }
 
 footer {
     background-color: #c5c5c5;
@@ -262,6 +250,16 @@ footer {
     margin: 0;
 }
 
+.desarrolladores{
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.desarrolladores span{
+    margin-left: 2rem;
+    justify-content: flex-end;
+}
+
 .footer-section ul {
     list-style: none;
     padding: 0;
@@ -290,48 +288,36 @@ footer {
     width: 24px;
     height: 24px;
 }
-
-.medios-pago {
+.medios-pago
+{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
-
+    
+    
 }
-
-.imagen-pago {
+.imagen-pago
+{
     width: 10%;
     height: auto;
     margin-right: 1em;
 }
-
 .imagen-pago:last-child {
-    margin-right: 0;
-}
+    margin-right: 0; 
+  }
 
-.menu-item {
-    position: relative;
-}
-
-.menu-horizontal {
-    display: flex;
-    gap: 20px;
-}
-
-.menu-item {
-    position: relative;
+  .menu-item {
+    position: relative; 
 }
 
 .menu-vertical {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 100%; 
     list-style: none;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 0;
-    margin: 0;
+    padding: 10px;
 }
 
 .menu-vertical li {
@@ -352,7 +338,6 @@ footer {
 .menu-vertical a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
-
 /*
 .degradado{
     position: absolute;
@@ -361,7 +346,6 @@ footer {
     height: 100%;
 }
 */
-
 
 @media (max-width: 768px) {
     .container {
@@ -373,7 +357,6 @@ footer {
         width: 90%;
         margin: 10px 0;
     }
-
     .card {
         width: 90%;
         margin: 10px 0;
@@ -399,63 +382,11 @@ footer {
 
     .menu-horizontal {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
     }
 
     .menu-item a {
         margin: 5px 0;
     }
-
-    .card {
-        width: 100%;
-    }
 }
-
-.menu-hamburguesa {
-    display: none;
-    font-size: 28px;
-    background: none;
-    border: none;
-    color: black;
-    cursor: pointer;
-}
-
-@media (max-width: 480px) {
-    .menu-horizontal {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-    
-    .menu-hamburguesa {
-        display: block;
-        font-size: 28px;
-        background: none;
-        border: none;
-        color: black;
-        cursor: pointer;
-    }
-    
-    .menu-horizontal.menu-abierto {
-        display: flex;
-    }
-    
-    .menu-item {
-        padding: 10px 0;
-    }
-    
-    .menu-link {
-        color: white;
-    }
-    
-    .menu-vertical {
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 0;
-        position: relative;
-        z-index: 10;
-    }
-}
-
