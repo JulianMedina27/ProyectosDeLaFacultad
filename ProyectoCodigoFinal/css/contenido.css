@@ -97,25 +97,22 @@ body {
     margin: 0 20px;
     width: 150px;
 }
-.Contendor-imagenes
-{
+
+.contendor-imagenes {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
     width: 100%;
+    height: 100vh;
 }
-.imagen-principal{
+.imagen-principal {
 
     margin-top: 1em;
-    width: 95%;
-    height: 25em;
+    width: 100%;
+    height: 60%;
     border: 0.5em;
     border-color: rgb(230, 230, 230);
     border-style: solid;
-    margin-left: 0.5rem;
-    
-   
+    box-sizing: border-box;
+
 }
 .cursos{
     text-align: center;
@@ -176,17 +173,29 @@ body {
 
 }
 
-.container .card a{
+.detalles {
     font-weight: 200;
-    font-size: 1.5rem;
+    font-size: 1rem;
+    color: #ebb2b2;
     text-decoration: none;
-    border-style: solid;
-    border-color: rgb(94, 92, 92);
-    border-radius: 8%;
-    border-width: 0.5rem;
-    color: #ffffff;
-    background-color: rgb(94, 92, 92);
-    margin-top: 10%;
+    background-color: transparent;
+    border: none;
+    padding: 0.5rem;
+}
+.inscribirse {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #808283;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    display: inline-block;
+    box-sizing: content-box;
+    text-align: center;
+    width: 90%;
+    
+    
 }
 .container .card aside{
     text-align: left;
@@ -340,7 +349,8 @@ footer {
     top: 100%; 
     list-style: none;
     background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
+    margin: 0;
+    padding: 0;
 }
 
 .menu-vertical li {
@@ -361,6 +371,12 @@ footer {
 .menu-vertical a:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
+
+.menu-horizontal
+{
+    display: flex;
+    flex-direction: row;
+}
 /*
 .degradado{
     position: absolute;
@@ -376,40 +392,90 @@ footer {
         align-items: center;
     }
 
-    .card {
-        width: 90%;
-        margin: 10px 0;
     }
     .card {
         width: 90%;
         margin: 10px 0;
     }
 
-    .Contendor-imagenes {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .Contendor-imagenes img {
-        width: 100%;
-        max-width: 300px;
-        margin: 10px 0;
-    }
-}
 
 @media (max-width: 480px) {
     .search-input {
         width: 80%;
         margin: 0 auto;
     }
+}
 
+.menu-hamburguesa {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
     .menu-horizontal {
-        display: flex;
+        display: none;
         flex-direction: column;
-        align-items: center;
+        width: 100%;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .menu-hamburguesa {
+        display: block;
+        font-size: 28px;
+        background: none;
+        border: none;
+        color: black;
+        cursor: pointer;
+    }
+    
+    .menu-horizontal.menu-abierto {
+        display: flex;
+    }
+    
+    .menu-item {
+        padding: 10px 0;
+    }
+    
+    .menu-link {
+        color: white;
+    }
+    
+    .menu-vertical {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 0;
+        position: relative;
+        z-index: 10;
     }
 
-    .menu-item a {
-        margin: 5px 0;
+    .contendor-imagenes
+    {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .imagen-principal
+    {
+        width: 100%;
+        height: auto;
+    }
+    .inscribirse {
+        font-size: 0.8rem;
+        padding: 0.5rem;
+        max-width: 90%;
+        text-align: center;
+        background-color: #666b6d;
+    }
+    .card h2, .card h5{
+        font-size: 1rem;
+        margin: 0.5rem 0;
+    }
+    .card img{
+        width: 100%;
+        height: auto;
     }
 }

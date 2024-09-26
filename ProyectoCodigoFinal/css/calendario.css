@@ -58,6 +58,11 @@
     margin-left: 5em;
 }
 
+.footer-especial
+{
+    margin-top: 70em;
+}
+
 @media only screen and (max-width: 768px) {
     .calendario {
         width: 100%;
@@ -105,4 +110,10 @@
         font-size: 0.6em;
         padding: 0;
     }
+
+    .footer-especial
+    {
+    margin-top: 30em;
+    }
 }
+
