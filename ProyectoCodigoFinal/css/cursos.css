@@ -206,3 +206,6 @@ h2
         padding: 0;
     }
 }
+.footer-container{
+    display: grid;
+}
