@@ -25,7 +25,6 @@ h2
 }
 
 .contenido-curso {
-    width: auto;
     text-align: center;
     line-height: 1.5;
     background-color: rgba(7, 152, 236, 0.3);
@@ -208,4 +207,10 @@ h2
 }
 .footer-container{
     display: grid;
+}
+.contenedor-cursoJava {
+    display: flex;
+    flex-direction: column; /* Hace que los elementos se apilen verticalmente */
+    justify-content: space-between; /* Distribuye los elementos dejando espacio entre ellos */
+    height: 100%; /* Hace que el contenedor ocupe todo el espacio vertical disponible */
 }
