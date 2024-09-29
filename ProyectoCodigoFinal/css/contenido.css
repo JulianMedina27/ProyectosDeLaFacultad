@@ -394,7 +394,7 @@ footer {
 
     
     .card {
-        width: 90%;
+        width: 100%;
         margin: 10px 0;
         height: 50%;
     }
@@ -489,16 +489,26 @@ footer {
         text-align: center;
         background-color: #666b6d;
     }
-    .card h2, .card h5{
+    .card h2, .card h5 , .card h3, .detalles{
         font-size: 1rem;
         margin: 0.5rem 0;
+        text-align: center;
+        padding-left: 1%;
     }
-    .card img{
+    .card{
+        width: 100%;
+    }
+    .container .card img{
         width: 100%;
         height: auto;
+        padding-right: 0%;
+        padding-left: 0.1rem ;
+        overflow: hidden;
+        align-items: center;
+        align-content: center;
     }
     .container .card{
-        width: 25%;
+        width: 80%;
         height: 50%;
         display: flex;
         flex-direction: column;
@@ -508,5 +518,6 @@ footer {
         justify-content: center;
         align-items: center;
         align-content: center;
+        width: 100%;
     }
 }
