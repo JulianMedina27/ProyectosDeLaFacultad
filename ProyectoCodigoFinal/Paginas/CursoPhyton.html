@@ -58,13 +58,13 @@
 
     <main>
         <section class="cuerpo-principal">
-            <article class="imagen">
+            <div class="imagen">
 
                 <img src="../img/curso-python-imagen.png" alt="curso-java" class="imagen-curso">
 
 
-            </article>
-            <article>
+            </div>
+            <div class="contenedor-cursoJava">
                 <h2>Curso de Phyton</h2>
                 <h3 class="contenido-curso">  <span class="resaltado">Tiempo del curso: </span> <br>
                      86hs distribuido en 5 hs semanales. 
@@ -89,9 +89,8 @@
                         Inscribirse
                     </button>
                 </a>
-        </section>
+            </div>
 
-        <section class="menu-detalles">
             
             <div class="contenedor-acordeon">
 
@@ -145,9 +144,7 @@
                 </div>
 
             </div>
-        </section>
 
-        <section class="prueba">
             <div class="contenedor-descripcion-profesor">
                 
                 <article class="profesor-imagen-ubicacion">
@@ -164,15 +161,25 @@
                 </article>
 
             </div>
-        </section>
     </main>
 
     <footer>
         <div class="footer-container">
-            <div class="footer-section about">
+            <div class="sobre-nosotros">
                 <h2>Sobre Nosotros</h2>
                 <p>Somos una empresa dedicada a proporcionar soluciones innovadoras y efectivas en el campo de la tecnología. Nuestro equipo está comprometido con la excelencia y la satisfacción del cliente.</p>
             </div>
+
+            <div class="footer-section menu">
+                <h2>Menú</h2>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Sobre Nosotros</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+
             <div class="desarrolladores">
                 <div class="fila">
                     <div class="nombre--titulo">Nombre</div>
@@ -195,15 +202,7 @@
                     <div class="dni">45076649</div>
                 </div>
             </div>
-            <div class="footer-section menu">
-                <h2>Menú</h2>
-                <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Sobre Nosotros</a></li>
-                    <li><a href="#">Contacto</a></li>
-                </ul>
-            </div>
+
             <div class="footer-section social">
                 <h2>Redes Sociales</h2>
                 <a href="#" class="social-icon"><img src="../img/facebook-icon.png" alt="Facebook"></a>
@@ -216,12 +215,10 @@
                     <img src="../img/mp-logo.png" alt="mercadopago" class="imagen-pago" >
                     <img src="../img/paypal-logo.png" alt="paypal" class="imagen-pago">
                 </div>
-            
-
             </div>
         </div>
     </footer>
-
+    
 </body>
 <script>
     document.getElementById("menu-hamburguesa").addEventListener("click", function() {

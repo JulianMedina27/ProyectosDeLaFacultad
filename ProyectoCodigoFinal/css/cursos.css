@@ -132,6 +132,14 @@ h2
     grid-template-columns: repeat(1, 1fr);
     padding: 2rem;
 }
+.contenedor-cursoJava h2, a{
+    text-align: center;
+    align-items: center;
+    align-content: center;
+}
+.contenedor-acordeon h2{
+    text-align: center;
+}
 
 
 @media (min-width: 1440px) {
@@ -204,7 +212,16 @@ h2
         background-color: rgba(0, 0, 0, 0.8);
         padding: 0;
     }
+    .contenedor-cursoJava h2, a{
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+    .contenedor-acordeon h2{
+        text-align: center;
+    }
 }
+
 .footer-container{
     display: grid;
 }
