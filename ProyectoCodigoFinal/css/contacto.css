@@ -104,31 +104,20 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-
+    width: auto;
     margin: 0;
     padding: 0;
-
-
-
-
 }
 
-#texto-contacto {
-
-    font-size: 4em;
-
+.contenedor-contacto h1{
+    font-size: 5vw;
 }
 
 .contenedor-contacto_principal {
 
     display: flex;
     flex-direction: row;
-
-
-
-
-
-
+    justify-content: center;
 }
 
 .contenedor-contacto_datos {
@@ -150,7 +139,6 @@ form {
     padding-left: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    margin-left: 5em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -286,10 +274,6 @@ footer {
     .search {
         width: 90%;
         margin: 0 auto;
-    }
-
-    .contenedor-contacto {
-        padding: 1em;
     }
 
     .contenedor-contacto_principal {

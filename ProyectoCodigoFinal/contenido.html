@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Uñemy</title>
-    <link rel="preload" href="css/styles.css" as="style">
     <link rel="stylesheet" href="css/contenido.css">
+    <link rel="stylesheet" href="css/cursos.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
@@ -13,8 +13,8 @@
     <header>
         <div class="nav-background">
             <nav class="navegacion-principal contenedor sombreado">
-                <a href="contenido.html">
-                    <img class="logo" src="./img/uñemy.com.png" alt="logoTipo">
+                <a href="../contenido.html">
+                    <img class="logo" src="img/uñemy.com.png" alt="logoTipo">
                 </a>
                 <div class="search">
                     <span class="search-icon material-symbols-outlined">search</span>
@@ -31,29 +31,29 @@
                     <div class="menu-item">
                         <a href="#" class="menu-link">Detalles Cursos</a>
                         <ul class="menu-vertical">
-                            <li><a href="./Paginas/CursoJava.html">Cursos de Java</a></li>
-                            <li><a href="./Paginas/CursoPhyton.html">Cursos de Phyton</a></li>
-                            <li><a href="./Paginas/CursoHTMLyCSS.html">Cursos de HTML y CSS</a></li>
+                            <li><a href="CursoJava.html">Cursos de Java</a></li>
+                            <li><a href="CursoPhyton.html">Cursos de Phyton</a></li>
+                            <li><a href="CursoHTMLyCSS.html">Cursos de HTML y CSS</a></li>
                         </ul>
                     </div>
                     <div class="menu-item">
-                        <a href="./Paginas/contacto.html">Contacto</a>
+                        <a href="contacto.html">Contacto</a>
                     </div>
                     <div class="menu-item">
-                        <a href="./Paginas/Calendario.html">Calendario</a>
+                        <a href="Calendario.html">Calendario</a>
                     </div>
                     <div class="menu-item">
-                        <a href="./Paginas/giftcard.html">GiftCard</a>
+                        <a href="giftcard.html">GiftCard</a>
                     </div>
                     <div class="menu-item">
-                        <a href="./Paginas/Usuario.html">Usuario</a>
+                        <a href="Usuario.html">Usuario</a>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
 
-    <section class="contendor-imagenes">
+    <section class="contenedor-imagenes">
        
             <a href="./Paginas/CursoJava.html"> <img src="./img/java.jpg" alt="imagen-principal" class="imagen-principal"> </a>
             <a href="./Paginas/CursoHTMLyCSS.html"> <img src="./img/imagen-curso-html-css-50.jpg" alt="imagen-principal" class="imagen-principal"> </a>
@@ -61,7 +61,8 @@
     </section>
 
     <h1 class="cursos">CURSOS DESTACADOS</h1>
-    <div class="container">
+    <div class="contenedor-cursos">
+
         <div class="card">
             <img src="./img/phyton.jpeg" alt="imagen-principal">
             <h2>60hrs</h2>
@@ -116,30 +117,8 @@
             <div class="sobre-nosotros">
                 <h2>Sobre Nosotros</h2>
                 <p>Somos una empresa dedicada a proporcionar soluciones innovadoras y efectivas en el campo de la tecnología. Nuestro equipo está comprometido con la excelencia y la satisfacción del cliente.</p>
-                
-                <div class="desarrolladores">
-                    <div class="fila">
-                        <div class="nombre--titulo">Nombre</div>
-                        <div class="dni--titulo">DNI</div>
-                    </div>
-                    <div class="fila">
-                        <div class="nombre">Agustín Román Favarolo</div>
-                        <div class="dni">43322346</div>
-                    </div>
-                    <div class="fila">
-                        <div class="nombre">Donato Dante Albera</div>
-                        <div class="dni">46212508</div>
-                    </div>
-                    <div class="fila">
-                        <div class="nombre">Julian Rodrigo Medina</div>
-                        <div class="dni">42471680</div>
-                    </div>
-                    <div class="fila">
-                        <div class="nombre">Federico Curuchet</div>
-                        <div class="dni">45076649</div>
-                    </div>
-                </div>
             </div>
+
             <div class="footer-section menu">
                 <h2>Menú</h2>
                 <ul>
@@ -149,20 +128,42 @@
                     <li><a href="#">Contacto</a></li>
                 </ul>
             </div>
+
+            <div class="desarrolladores">
+                <div class="fila">
+                    <div class="nombre--titulo">Nombre</div>
+                    <div class="dni--titulo">DNI</div>
+                </div>
+                <div class="fila">
+                    <div class="nombre">Agustín Román Favarolo</div>
+                    <div class="dni">43322346</div>
+                </div>
+                <div class="fila">
+                    <div class="nombre">Donato Dante Albera</div>
+                    <div class="dni">46212508</div>
+                </div>
+                <div class="fila">
+                    <div class="nombre">Julian Rodrigo Medina</div>
+                    <div class="dni">42471680</div>
+                </div>
+                <div class="fila">
+                    <div class="nombre">Federico Curuchet</div>
+                    <div class="dni">45076649</div>
+                </div>
+            </div>
+
             <div class="footer-section social">
                 <h2>Redes Sociales</h2>
-                <a href="#" class="social-icon"><img src="./img/facebook-icon.png" alt="Facebook"></a>
-                <a href="#" class="social-icon"><img src="./img/twitter-icon.png" alt="Twitter"></a>
-                <a href="#" class="social-icon"><img src="./img/instragram-icon.jpeg" alt="Instagram"></a>
+                <a href="#" class="social-icon"><img src="img/facebook-icon.png" alt="Facebook"></a>
+                <a href="#" class="social-icon"><img src="img/twitter-icon.png" alt="Twitter"></a>
+                <a href="#" class="social-icon"><img src="img/instragram-icon.jpeg" alt="Instagram"></a>
                 <h2>Medios de Pago</h2>
                 <div class="medios-pago">
-                    <img src="./img/visa-logo.png" alt="visa" class="imagen-pago">
-                    <img src="./img/mastercard-logo.png" alt="mastercard" class="imagen-pago">
-                    <img src="./img/mp-logo.png" alt="mercadopago" class="imagen-pago" >
-                    <img src="./img/paypal-logo.png" alt="paypal" class="imagen-pago">
+                    <img src="img/visa-logo.png" alt="visa" class="imagen-pago">
+                    <img src="img/mastercard-logo.png" alt="mastercard" class="imagen-pago">
+                    <img src="img/mp-logo.png" alt="mercadopago" class="imagen-pago" >
+                    <img src="img/paypal-logo.png" alt="paypal" class="imagen-pago">
                 </div>
-            
-
             </div>
         </div>
     </footer>

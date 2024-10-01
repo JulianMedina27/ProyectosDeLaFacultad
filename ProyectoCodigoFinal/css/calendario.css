@@ -63,6 +63,10 @@
     margin-top: 70em;
 }
 
+li{
+    font-size: 3vw;
+}
+
 @media only screen and (max-width: 768px) {
     .calendario {
         width: 100%;
@@ -94,7 +98,9 @@
 @media only screen and (max-width: 480px) {
     .calendario {
         grid-template-columns: repeat(7, 1fr);
+        width: auto;
     }
+
 
     .elemento1,
     .dias {
