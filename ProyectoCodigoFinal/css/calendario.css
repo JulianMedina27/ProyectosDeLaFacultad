@@ -47,6 +47,19 @@
     bottom: 5px;
     left: 0;
     right: 0;
+    text-align: justify;
+    font-size: 1em;
+    background-color: orange;
+    border-radius: 5%;
+    margin: 0.5em;
+    
+}
+.texto2 {
+    display: none;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
     text-align: center;
     font-size: 1em;
     background-color: orange;
@@ -95,7 +108,14 @@ li{
     }
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 1350px)
+{
+    .texto
+    {
+        font-size: 0.6em;
+    }
+}
+@media only screen and (max-width: 500px) {
     .calendario {
         grid-template-columns: repeat(7, 1fr);
         width: auto;
@@ -113,13 +133,19 @@ li{
     }
 
     .texto {
-        font-size: 0.6em;
-        padding: 0;
+        display: none;
     }
 
     .footer-especial
     {
     margin-top: 30em;
+    }
+
+    .texto2
+    {
+        display: flex;
+        font-size: 0.6em;
+        padding: 0;
     }
 }
 
