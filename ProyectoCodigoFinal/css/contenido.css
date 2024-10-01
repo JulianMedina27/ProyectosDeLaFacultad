@@ -418,7 +418,7 @@ footer {
     cursor: pointer;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
     .menu-horizontal {
         display: none;
         flex-direction: column;

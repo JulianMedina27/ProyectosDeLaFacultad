@@ -12,6 +12,7 @@ html, body {
 
 .imagen {
     background-size: cover;
+    width: 100%;
 }
 
 .cuerpo-principal {
@@ -22,6 +23,7 @@ html, body {
 h2
 {
     font-family: "Noto Serif", serif;
+    margin-top: 0;
 }
 
 .contenido-curso {
@@ -62,7 +64,7 @@ h2
     display: block;
     padding: 1em;
     font-size: 1.5em;
-    background: black;
+    background:#004CE6;
     color: white;
     cursor: pointer;
     margin-bottom: 0.5em;
@@ -106,14 +108,18 @@ h2
 }
 
 .profesor-imagen-ubicacion {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     background-color: cadetblue;
-    height: 10em;
+    height: 13em;
+    width: 30%;
 
 }
 
 .profesor-imagen {
     border-radius: 50%;
-    width: 45%;
+    width: 40%;
 }
 
 .contenedor-descripcion-profesor {
@@ -125,12 +131,18 @@ h2
     padding: 2em;
 
 }
+.texto-profesor
+{
+    width: 70%;
+}
 
-.cuerpo-principal {
-    width: auto;
+.contenedor-cuerpo-curso {
+    
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    padding: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    gap: 1.5em; /* Espacio entre columnas */
+    margin: 1em;
 }
 .contenedor-cursoJava h2, a{
     text-align: center;
@@ -154,16 +166,10 @@ h2
     }
 }
 
-    .menu-detalles {
+ .menu-detalles {
         width: 90%;
         margin-left: 1em;
     }
-
-    .profesor-imagen {
-        width: 80%;
-    }
-
-
 
 
 .menu-hamburguesa {
@@ -183,7 +189,7 @@ h2
     background-color:#ffffff;
 }
 
-@media (max-width: 1440px) {
+@media (max-width: 700px) {
     .menu-horizontal {
         display: none;
         flex-direction: column;
@@ -222,6 +228,14 @@ h2
     }
 }
 
+@media (max-width: 700px) 
+{
+.contenedor-cuerpo-curso
+{
+    display: flex;
+    flex-direction: column;
+}
+}
 .footer-container{
     display: grid;
 }
