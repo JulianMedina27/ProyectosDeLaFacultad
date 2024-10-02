@@ -1,5 +1,5 @@
 .calendario {
-    width: 90%;
+    width: 100%;
     height: 5em;
     list-style: none;
     display: grid;
@@ -7,39 +7,34 @@
     gap: 0;
     margin: 0;
     padding: 0;
-    margin-left: 5em;
+    margin-left: 0;
 }
 
 .elemento1 {
     grid-column-start: 7;
-    border: 0.1em;
-    border-style: solid;
-    border-color: black;
+    border: 0.1em solid black;
     height: 8em;
     font-size: 1.5em;
-
 }
 
 .dias {
-    border: 0.1em;
-    border-style: solid;
-    border-color: black;
+    border: 0.1em solid black;
     height: 8em;
     position: relative;
     font-size: 1.5em;
 }
 
 .dias-nombres {
-    width: 90%;
+    width: 100%;
     list-style: none;
-    display: inline-grid;
+    display: grid;
     grid-template-columns: repeat(7, 2fr);
     gap: 0;
     margin: 0;
     background-color: #308791;
     font-size: 2em;
     padding: 0;
-    margin-left: 2.5em;
+    margin-left: 0;
 }
 
 .texto {
@@ -52,8 +47,8 @@
     background-color: orange;
     border-radius: 5%;
     margin: 0.5em;
-    
 }
+
 .texto2 {
     display: none;
     position: absolute;
@@ -68,23 +63,23 @@
 }
 
 .texto-mes {
-    margin-left: 5em;
+    margin-left: 0;
+    text-align: center;
 }
 
-.footer-especial
-{
+.footer-especial {
     margin-top: 70em;
 }
 
-li{
-    font-size: 3vw;
+li {
+    font-size: 1em;
 }
 
 @media only screen and (max-width: 768px) {
     .calendario {
         width: 100%;
         margin-left: 0;
-        grid-template-columns: repeat(7, 1fr);
+        grid-template-columns: repeat(7, 2fr);
     }
 
     .elemento1,
@@ -108,19 +103,38 @@ li{
     }
 }
 
-@media only screen and (max-width: 1350px)
-{
-    .texto
-    {
-        font-size: 0.6em;
-    }
-}
-@media only screen and (max-width: 500px) {
+@media only screen and (min-width: 500px) and (max-width: 580px) {
     .calendario {
-        grid-template-columns: repeat(7, 1fr);
-        width: auto;
+        grid-template-columns: repeat(7, 2fr);
+        width: 100%;
+        margin-left: 0;
     }
 
+    .dias-nombres {
+        width: 100%;
+        margin-left: 0;
+        font-size: 1.2em;
+    }
+
+    .elemento1,
+    .dias {
+        height: 4.5em;
+        font-size: 1em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .calendario {
+        grid-template-columns: repeat(7, 2fr);
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .dias-nombres {
+        width: 100%;
+        margin-left: 0;
+        font-size: 1em;
+    }
 
     .elemento1,
     .dias {
@@ -128,24 +142,17 @@ li{
         font-size: 1em;
     }
 
-    .dias-nombres {
-        font-size: 1em;
-    }
-
     .texto {
         display: none;
     }
 
-    .footer-especial
-    {
-    margin-top: 30em;
+    .footer-especial {
+        margin-top: 30em;
     }
 
-    .texto2
-    {
+    .texto2 {
         display: flex;
         font-size: 0.6em;
         padding: 0;
     }
 }
-
