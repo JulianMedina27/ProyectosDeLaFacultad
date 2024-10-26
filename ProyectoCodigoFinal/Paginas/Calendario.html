@@ -82,16 +82,29 @@
                             <li class="dias" >9</li>
                             <li class="dias" >
                                 10
-                                <h3 class="texto">Inscripcion Cursos HTML y CSS</h3>
-                                <h3 class="texto2">Insc. Cursos HTML y CSS</h3>
+                                <button id="open" class="texto" name="boton-accion">
+                                    <strong>Inscripcion Cursos HTML y CSS</strong>
+                                </button>
+                                <button id="open" class="texto2" name="boton-accion">
+                                    Insc. Cursos HTML y CSS
+                                </button>
+                               
                             </li>
                             <li class="dias" >11 
-                                <h3 class="texto">Inscripcion Cursos Java</h3>
-                                <h3 class="texto2">Insc. Cursos Java</h3>
+                                <button id="open" class="texto" name="boton-accion">
+                                    <strong>  Inscripcion Cursos Java</strong>
+                                </button>
+                                <button id="open" class="texto2" name="boton-accion">
+                                    Insc. Cursos Java
+                                </button>
                              </li>
                             <li class="dias">12 
-                                <h3 class="texto">Inscripcion Cursos Phyton</h3>
-                                <h3 class="texto2">Insc. Cursos Phyton</h3>
+                                <button id="open" class="texto" name="boton-accion">
+                                    <strong> Inscripcion Cursos Python </strong>
+                                </button>
+                                <button id="open" class="texto2" name="boton-accion">
+                                    Insc. Cursos Python
+                                </button>
                             </li>
                             <li class="dias">13</li>
                             <li class="dias">14</li>
@@ -106,16 +119,29 @@
                             <li class="dias" >23</li>
                             <li class="dias" >24</li>
                             <li class="dias" >25 
-                                <h3 class="texto">Inscripcion Cursos HTML y CSS</h3>
-                                <h3 class="texto2">Insc. Cursos HTML y CSS</h3>
+                                <button id="open" class="texto" name="boton-accion">
+                                    
+                                    <strong>Inscripcion Cursos HTML y CSS</strong>
+                                </button>
+                                <button id="open" class="texto2" name="boton-accion">
+                                   <strong> Insc. Cursos HTML y CSS</strong> 
+                                </button>
                             </li>
                             <li class="dias">26
-                                 <h3 class="texto">Inscripcion Cursos Java</h3>
-                                 <h3 class="texto2">Insc. Cursos Java</h3>
+                                <button id="open" class="texto" name="boton-accion">
+                                    <strong>  Inscripcion Cursos Java</strong>
+                                </button>
+                                <button id="open" class="texto2" name="boton-accion">
+                                    Insc. Cursos Java
+                                </button>
                              </li>
                             <li class="dias" >27 
-                                <h3 class="texto">Inscripcion Cursos Phyton</h3>
-                                <h3 class="texto2">Insc. Cursos Phyton</h3>
+                                <button id="open" class="texto" name="boton-accion">
+                                     <strong> Inscripcion Cursos Python </strong>
+                                </button>
+                                <button id="open" class="texto2" name="boton-accion">
+                                    Insc. Cursos Python
+                                </button>
                             </li>
                             <li class="dias" >28</li>
                             <li class="dias" >29</li>
@@ -125,9 +151,35 @@
                     </div>
                    
                 </div>
-            </article>         
+            </article>   
+            
+  
         </section>   
+
+        <div class="modal-container" id="modal-container">
+            <div class="modal">
+                <h1 class="titulo-popup" id="titulo-popup">Curso X</h1>
+                <p class="texto-curso"> Lorem ipsum dolor sit 
+                    amet consectetur, adipisicing elit. 
+                    Tempora voluptates explicabo consequuntur 
+                    repellat quaerat dolor atque cumque, molestias 
+                    ipsum similique eos beatae! Sit voluptatum libero 
+                    totam mollitia accusamus esse. Doloremque!</p>
+                    <div class="contenedor-botones">
+                        
+                        <button class="boton-modal">
+                            <a href="./CursoHTMLyCSS.html" class="vinculo" id="vinculo"> ir al curso</a>
+                        </button>
+                        <button id="close" class="boton-modal">
+                            Cerrar
+                        </button>
+                    </div>
+                
+            </div>
     </main>
+
+    
+    </div>
 
     <footer class="footer-especial">
         <div class="footer-container">
@@ -183,12 +235,12 @@
             </div>
         </div>
     </footer>
+
+
+
+    
 </body>
 
-<script>
-    document.getElementById("menu-hamburguesa").addEventListener("click", function() {
-        var menu = document.getElementById("menu-horizontal");
-        menu.classList.toggle("menu-abierto");
-    });
+<script src="../JS/calendario.js">
 </script>
 </html>

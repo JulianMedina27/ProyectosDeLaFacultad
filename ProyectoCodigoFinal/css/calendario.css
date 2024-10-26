@@ -155,4 +155,69 @@ li {
         font-size: 0.6em;
         padding: 0;
     }
+
+    .modal-container
+    {
+        width: 40%;
+        max-width: 250px;
+    }
 }
+.modal-container{
+    display: none;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 80%; 
+    max-width: 500px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    z-index: 1000;
+    height: auto;
+   
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3), 
+                0px 2px 4px rgba(0, 0, 0, 0.2); 
+                
+    /* Animación suave al aparecer */
+ 
+    transform: translate(-50%, -50%) scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000; 
+    
+}
+.modal
+{}
+.show
+{
+    pointer-events: auto;
+    display: flex;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.contenedor-botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.boton-modal
+{
+  
+  font-size: 2em;
+
+  background-color: green;
+}
+
+.vinculo
+{
+    color: black;
+    text-decoration: none;
+}
+
+.texto-curso
+{
+    font-size: 1em;
+}
+
