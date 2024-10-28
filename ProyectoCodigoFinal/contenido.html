@@ -53,20 +53,50 @@
         </div>
     </header>
 
-    <div class="slider">
-        <div class="slider-interior">
-            <a href="./Paginas/CursoJava.html"> 
-                <img src="./img/java.jpg" alt="imagen-principal" class="imagen-principal active"> 
-            </a>
-            <a href="./Paginas/CursoHTMLyCSS.html"> 
-                <img src="./img/imagen-curso-html-css-50.jpg" alt="imagen-principal" class="imagen-principal"> 
-            </a>
+
+    <div class="carrusel">
+        <div class="atras">
+            <img id="atras" src="img/atras.svg" alt="atras" loading="lazy">
         </div>
-        <div class="slider-nav">
-            <button onclick="selectSlide(0)" class="active"></button>
-            <button onclick="selectSlide(1)"></button>
+    
+        <!-- Contenedor que mostrará una imagen a la vez -->
+        <div class="contenedor-imagenes">
+            <div class="imagenes">
+                <div id="img">
+                    <img class="img" src="./img/java.jpg" alt="imagen 1" loading="lazy">
+                </div>
+                <div id="texto" class="texto">
+                    <h3>Proyecto 01</h3>
+                    <p>Descripción del proyecto 01.</p>
+                </div>
+            </div>
+    
+            <div class="imagenes">
+                <div id="img">
+                    <img class="img" src="./img/curso-python-imagen.png" alt="imagen 2" loading="lazy">
+                </div>
+                <div id="texto" class="texto">
+                    <h3>Proyecto 02</h3>
+                    <p>Descripción del proyecto 02.</p>
+                </div>
+            </div>
+    
+            <div class="imagenes">
+                <div id="img">
+                    <img class="img" src="./img/cursohtmlycss.jpg" alt="imagen 3" loading="lazy">
+                </div>
+                <div id="texto" class="texto">
+                    <h3>Proyecto 03</h3>
+                    <p>Descripción del proyecto 03.</p>
+                </div>
+            </div>
         </div>
     </div>
+
+    <div class="puntos" id="puntos"></div>
+
+    <script src="./JS/slider.js"></script>
+
 
     <h1 class="cursos">CURSOS DESTACADOS</h1>
     <div class="contenedor-cursos">
