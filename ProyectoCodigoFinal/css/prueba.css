@@ -26,4 +26,13 @@
     border: solid 0.1em black;
   }
 
- 
+ .boton-comprar
+ {
+    background-color: black;
+    padding: 1em;
+    color: white;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }

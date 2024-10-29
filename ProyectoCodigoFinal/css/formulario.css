@@ -110,7 +110,7 @@ body {
 
 
 .barra_insc {
-    width: 30%;
+    width: 80%;
     display: inline-block;
     text-align: center;
     padding: 5px;
@@ -122,11 +122,6 @@ body {
     border: 1px solid;
 }
 
-@media (min-width: 1024px) {
-    .barra_insc {
-        width: 30%;
-    }
-}
 
 .barra_insc:focus-within {
     background: #f1f1f1;
@@ -222,9 +217,9 @@ body {
 {
     margin-top: 1em;
     height: 1%;
-    margin-left: 4%;
+    
     margin-bottom: 4%;
-    width: 8%;
+    width: 15%;
 }
 .fondo-negro {
     display: flex;
@@ -539,4 +534,75 @@ footer {
     .alumno {
         margin-bottom: 30px;
     }
+}
+
+.Java
+{   
+    margin: 2em;
+    display: inline-flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: rgba(255, 166, 0, 0.541);
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.Pyhton
+{
+    margin: 2em;
+    display: inline-flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background-color: rgba(0, 17, 255, 0.514);
+    border-radius: 1em;
+    padding: 1em;
+}
+
+.HTMLCSS
+{
+    margin: 2em;
+    display: inline-flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    border-radius: 1em;
+    padding: 1em;
+    background: linear-gradient(to bottom, #f0a400, #060af5);
+}
+
+.boton-comprar
+{
+   background-color: black;
+   padding: 1em;
+   color: white;
+   width: 30%;
+   height: 3vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.alumnos-container{
+    display: flex;
+    gap: 2em;
+}
+
+.menu-seleccionar{
+    width: 10%;
+    position: relative;
+    display: none;
+    left: 4em;
+    bottom: 6em;
+    
+}
+
+.boton-curso{
+    height: 10vh;
+    cursor: pointer;
+}
+
+.precio-total
+{
+    font-size: 1em;
+    font-family: sans-serif;
+    margin-right: 1em;
 }

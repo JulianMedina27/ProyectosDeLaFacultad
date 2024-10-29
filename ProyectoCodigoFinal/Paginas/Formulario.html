@@ -56,40 +56,53 @@
 
     <div class="container">
         <section class="inscripcion">
-            <h1>TITULO CURSO</h1>
-            <h3>Inscripción</h3>
+            <h1>Cursos Seleccionados</h1>
+    
     
             <!-- Contenedor dinámico de alumnos -->
             <div id="alumnos-container">
-                <!-- Alumno inicial -->
-                <div class="alumno">
-                    <div class="barra_insc">
-                        <input class="barra_insc-input" type="text" placeholder="Nombre">
-                    </div>
-                    <div class="barra_insc">
-                        <input class="barra_insc-input" type="text" placeholder="Apellido">
-                    </div>
-                    <div class="barra_insc">
-                        <input class="barra_insc-input" type="text" placeholder="DNI">
-                    </div>
-                </div>
+
+                
             </div>
     
             <!-- Botones para agregar/eliminar alumnos -->
             <aside class="botones_margin">
                 <div class="separacion_botones">
-                    <div><button id="boton-menos" class="botones_aside">-</button></div>
-                    <div><button id="boton-mas" class="botones_aside"> +</button></div>
+                    <div>
+                        <button id="boton-menos" class="botones_aside">-</button>
+                    </div>
+                    <div>
+                        <button id="boton-mas" class="botones_aside"> +</button>
+                        <div class="menu-seleccionar" id="menu-seleccionar">
+                            <button class="boton-curso" id="curso-java"> Java</button>
+                            <button class="boton-curso" id="curso-HYC"> HTML Y CSS</button>
+                            <button class="boton-curso" id="curso-python"> Phyton/button>
+                        </div>
+                    </div>
                 </div>
             </aside>
     
             <!-- Contenedor para mostrar el precio -->
              <div class="fondo-negro-contenedor">
                 <div class="fondo-negro">
+                    <h2 class="precio-total"> Precio Total:</h2>
                     <span id="precio">$1000</span>
                 </div>
              </div>
-          
+             <div>
+                <div class="fondo-negro-contenedor">
+                    <div class="fondo-negro">
+                        <h2 class="precio-total">Contador Alumnos: </h2>
+                        <span id="Contador-Alumnos">1</span>
+                    </div>
+                 </div>
+             </div>
+
+             <div>
+                <button>
+                    
+                </button>
+             </div>
         </section>
     </div>
 
@@ -149,63 +162,5 @@
     </footer>
     
 </body>
-
-<script>
-    document.getElementById("menu-hamburguesa").addEventListener("click", function() {
-        var menu = document.getElementById("menu-horizontal");
-        menu.classList.toggle("menu-abierto");
-    });
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const alumnosContainer = document.getElementById('alumnos-container');
-    const botonMas = document.getElementById('boton-mas');
-    const botonMenos = document.getElementById('boton-menos');
-    const precioElement = document.getElementById('precio');
-
-    let alumnoCount = 1; // Contador de alumnos
-    let precioBase = 1000; // Precio base por alumno
-
-    // Función para agregar un nuevo alumno
-    function agregarAlumno() {
-        alumnoCount++;
-        
-        const nuevoAlumno = document.createElement('div');
-        nuevoAlumno.classList.add('alumno');
-        nuevoAlumno.innerHTML = `
-            <div class="barra_insc">
-                <input class="barra_insc-input" type="text" placeholder="Nombre">
-            </div>
-            <div class="barra_insc">
-                <input class="barra_insc-input" type="text" placeholder="Apellido">
-            </div>
-            <div class="barra_insc">
-                <input class="barra_insc-input" type="text" placeholder="DNI">
-            </div>
-        `;
-        
-        alumnosContainer.appendChild(nuevoAlumno);
-        actualizarPrecio();
-    }
-
-    // Función para eliminar el último alumno
-    function eliminarAlumno() {
-        if (alumnoCount > 1) { // No eliminar el único alumno
-            alumnosContainer.removeChild(alumnosContainer.lastChild);
-            alumnoCount--;
-            actualizarPrecio();
-        }
-    }
-
-    // Función para actualizar el precio
-    function actualizarPrecio() {
-        const nuevoPrecio = alumnoCount * precioBase;
-        precioElement.textContent = `$${nuevoPrecio}`;
-    }
-
-    // Event listeners para los botones
-    botonMas.addEventListener('click', agregarAlumno);
-    botonMenos.addEventListener('click', eliminarAlumno);
-});
-</script>
+ <script src="../JS/Formulario.js"></script>
 </html>
