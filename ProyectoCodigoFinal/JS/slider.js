@@ -2,21 +2,15 @@
 let imagenes = [
     {
         "url": "img/java.jpg",
-        "nombre": "Proyecto 01",
-        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam cupiditate natus officiis hic aperiam sapiente veritatis itaque dicta dolore cumque qui eum quisquam, iusto, facilis modi doloremque enim voluptatem nisi"
 
     },
     {
-        "url": "img/i",
-        "nombre": "Proyecto 02",
-        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam cupiditate natus officiis hic aperiam sapiente veritatis itaque dicta dolore cumque qui eum quisquam, iusto, facilis modi doloremque enim voluptatem nisi"
+        "url": "img/curso-python-imagen.png",
 
     },
     {
-        "url": "img/img3.webp",
-        "nombre": "Proyecto 03",
-        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam cupiditate natus officiis hic aperiam sapiente veritatis itaque dicta dolore cumque qui eum quisquam, iusto, facilis modi doloremque enim voluptatem nisie"
-
+        "url": "img/cursohtmlycss.jpg",
+        
     },
 ]
 
@@ -24,7 +18,6 @@ let atras = document.getElementById('atras');
 let adelante = document.getElementById('adelante');
 let imagen = document.getElementById('img');
 let puntos = document.getElementById('puntos');
-let texto = document.getElementById('texto')
 let actual = 0
 posicionCarrusel()
 
@@ -36,10 +29,6 @@ atras.addEventListener('click', function(){
     }
 
     imagen.innerHTML = ` <img class="img" src="${imagenes[actual].url}" alt="logo pagina" loading="lazy"></img>`
-    texto.innerHTML = `
-    <h3>${imagenes[actual].nombre}</h3>
-    <p>${imagenes[actual].descripcion}</p>
-    `
     posicionCarrusel()
 })  
 adelante.addEventListener('click', function(){
@@ -50,10 +39,7 @@ adelante.addEventListener('click', function(){
     }
 
     imagen.innerHTML = ` <img class="img" src="${imagenes[actual].url}" alt="logo pagina" loading="lazy"></img>`
-    texto.innerHTML = `
-    <h3>${imagenes[actual].nombre}</h3>
-    <p>${imagenes[actual].descripcion}</p>
-    `
+    
     posicionCarrusel()
 })  
 
