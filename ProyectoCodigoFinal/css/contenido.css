@@ -149,11 +149,15 @@ body {
     align-items: center;
     justify-content: center;
     width: 100%;
+    
+}
+#atras, #adelante {
+    cursor: pointer;
 }
 
 .contenedor-imagenes {
     display: flex;
-    transition: transform 0.5s ease; /* Transición para la animación */
+    transition: transform 0.5s ease;
     overflow: hidden;
 }
 
@@ -162,72 +166,42 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: end;
-    min-width: 100%; /* Cada imagen ocupará todo el ancho del contenedor */
+    min-width: 100%;
     overflow: hidden;
 }
 
 .img {
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.85);
-    height: 576px;
-    width: 1134px;
+    height: 50rem;
+    width: 80rem;
     border-radius: 15px;
     margin: 5px;
     object-fit: cover;
 }
 
-.puntos{
+.puntos {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.puntos p{
+.puntos p {
     font-size: 100px;
     font-weight: 500;
     margin-top: -50px;
     color: black;
 }
 
-.puntos .bold{
+.puntos .bold {
     font-weight: 700;
     margin-left: 10px;
     margin-right: 10px;
-    color: #5E17EB ;
+    color: #5E17EB;
 }
 
 
 
-.slider-interior {
-    overflow: hidden;
-    display: flex;
-    transition: transform 0.3s ease-in-out;
-    width: 200%; /* Ajusta al ancho total de las imágenes */
-}
-.slider-interior a {
-    flex: 0 0 50%;
-}
-.slider-interior img {
-    width: 100%;
-    border-radius: 10px;
-}
-.slider-nav {
-    text-align: center;
-    margin-top: 10px;
-    width: 100%;
-    margin-left: 50%;
-}
-.slider-nav button{
-    background-color: #ddd;
-    border: none;
-    border-radius: 50%;
-    width: 15px;
-    height: 15px;
-    margin: 0 5px;
-    cursor: pointer;
-}
-.slider-nav button.active {
-    background-color: #333;
-}
+
 
 
 .cursos{
