@@ -32,14 +32,6 @@
                 <!-- Menú horizontal -->
                 <div class="menu-horizontal" id="menu-horizontal">
                     <div class="menu-item">
-                        <a href="#" class="menu-link">Detalles Cursos</a>
-                        <ul class="menu-vertical">
-                            <li><a href="CursoJava.html">Cursos de Java</a></li>
-                            <li><a href="CursoPhyton.html">Cursos de Phyton</a></li>
-                            <li><a href="CursoHTMLyCSS.html">Cursos de HTML y CSS</a></li>
-                        </ul>
-                    </div>
-                    <div class="menu-item">
                         <a href="contacto.html">Contacto</a>
                     </div>
                     <div class="menu-item">
@@ -82,11 +74,7 @@
                     Haberte inscripto en la Pagina Web. <br>
                     Haber abonado el precio del curso. <br>
                 </h3>
-                <a href="./Formulario.html">
-                    <button class="boton">
-                        Inscribirse
-                    </button>
-                </a>
+              
             </div>
 
 
@@ -144,8 +132,36 @@
 
             </div>
 
-         
-       
+            <div class="contenedor-contador">
+                <a href="#">
+                    <button class="boton" id="boton">
+                       Comprar
+                    </button>
+                </a>
+                <span class="span" id="contador"> Cursos en Carrito: 0</span>
+            </div>
+        
+            
+            <div class="modal-container" id="modal-container">
+                <div class="modal">
+                    <h2 class="titulo-popup">Felicitaciones!</h2>
+                    <h3>
+                        Has eleigdo el curso de <b>JAVA</b> 
+                    </h3>
+                    <p class="texto-curso"> Lorem ipsum dolor sit 
+                        amet consectetur, adipisicing elit. 
+                        Tempora voluptates explicabo consequuntur 
+                        repellat quaerat dolor atque cumque, molestias 
+                        ipsum similique eos beatae! Sit voluptatum libero 
+                        totam mollitia accusamus esse. Doloremque!</p>
+                        <div class="contenedor-botones">
+                
+                            <button id="close" class="boton-modal">
+                                Cerrar
+                            </button>
+                        </div>
+                    
+                </div>
 
         </section>
         <section>
@@ -226,12 +242,9 @@
             </div>
         </div>
     </footer>
+    <script src="../JS/Curso_java.js">
     
+    </script>
 </body>
-<script>
-    document.getElementById("menu-hamburguesa").addEventListener("click", function() {
-        var menu = document.getElementById("menu-horizontal");
-        menu.classList.toggle("menu-abierto");
-    });
-</script>
+
 </html>
