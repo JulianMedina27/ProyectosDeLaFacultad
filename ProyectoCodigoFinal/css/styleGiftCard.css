@@ -254,8 +254,7 @@ footer {
 
 .fondo-negro {
     position: absolute;
-    top: 0;
-    right: 0;
+
     background-color: black;
     color: white;
     padding: 2% 7%;
