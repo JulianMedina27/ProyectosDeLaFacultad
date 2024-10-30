@@ -55,7 +55,7 @@
                         <p class="frame-destinario">Destinatario</p>
                     </div>
                     <div class="fondo-negro">
-                        <span>$0000-</span>
+                        <span id="monto-giftcard" >$0000-</span>
                     </div>
                 </div>
                 <div class="frame-destinario">Vista previa</div>
@@ -65,7 +65,7 @@
                     <h1>Personalización de Giftcard</h1>
                 </div>
                 <div class="destinatario">
-                    <input class="destinario-input" type="text" placeholder="Nombre Destinatario">
+                    <input class="destinario-input" type="text" placeholder="Nombre Destinatario" data-text="destinario">
              </div>
 
                 <div class="opciones">
@@ -73,54 +73,54 @@
                     </div>
                     <div class="circulos">
                         <div class="circulo-container">
-                            <input type="radio" id="color-grey" name="color" value="#gray" checked>
+                            <input type="radio" id="color-grey" name="color" value="#gray" data-color="gray" checked>
                             <label for="color-grey" class="color-option grey"></label>
                         </div>
                         <div class="circulo-container">
-                            <input type="radio" id="color-red" name="color" value="red">
+                            <input type="radio" id="color-red" name="color" value="red" data-color="red">
                             <label for="color-red" class="color-option red"></label>
                         </div>
                         <div class="circulo-container">
-                            <input type="radio" id="color-blue" name="color" value="blue">
+                            <input type="radio" id="color-blue" name="color" value="blue" data-color="blue">
                             <label for="color-blue" class="color-option blue"></label>
                         </div>
                         <div class="circulo-container">
-                            <input type="radio" id="color-green" name="color" value="green">
+                            <input type="radio" id="color-green" name="color" value="green" data-color="green">
                             <label for="color-green" class="color-option green"></label>
                         </div>
                         <div class="circulo-container">
-                            <input type="radio" id="color-violet" name="color" value="violet">
+                            <input type="radio" id="color-violet" name="color" value="violet" data-color="violet">
                             <label for="color-violet" class="color-option violet"></label>
                         </div>
                     </div>
-              
+                  
 
                     <div class="opciones">
                         <h2>Tamaño de la fuente</h2>
                         </div>
                         <div class="fuente">
                             <div class="fuente-container">
-                                <input type="radio" id="20px" name="fuente" checked>
+                                <input type="radio" id="20px" name="fuente" data-fuente="20px" checked>
                                 <label for="20px"><h4>20px</h4></label>
                             </div>
                             
                             <div class="fuente-container">
-                                <input type="radio" id="28px" name="fuente">
+                                <input type="radio" id="28px" name="fuente" data-fuente="28px">
                                 <label for="28px"><h4>28px</h4></label>
                             </div>
                             
                             <div class="fuente-container">
-                                <input type="radio" id="32px" name="fuente">
+                                <input type="radio" id="32px" name="fuente" data-fuente="32px">
                                 <label for="32px"><h3>32px</h3></label>
                             </div>
                             
                             <div class="fuente-container">
-                                <input type="radio" id="48px" name="fuente">
+                                <input type="radio" id="48px" name="fuente" data-fuente="48px">
                                 <label for="48px"> <h3>48px</h3> </label>
                             </div>
                 
                             <div class="fuente-container">
-                                <input type="radio" id="60px" name="fuente">
+                                <input type="radio" id="60px" name="fuente" data-fuente="60px">
                                 <label for="60px"> <h2>60px</h2> </label>
                             </div>
                     </div>
@@ -128,7 +128,7 @@
                         <h2>Monto</h2>
                     <div class="monto">
                         
-                        <input class="search-input" type="text" placeholder="$">
+                        <input class="monto-input" type="number" placeholder="$" data-text="monto">
                     </div>
                 </div>
 
@@ -241,7 +241,7 @@
         </div>
     </footer>
 </body>
-
+<script src="../JS/giftcard.js"></script>
 <script>
     document.getElementById("menu-hamburguesa").addEventListener("click", function() {
         var menu = document.getElementById("menu-horizontal");

@@ -311,6 +311,21 @@ footer {
     color: rgba(0, 0, 0, 0.5);
 }
 
+.monto-input {
+    font-size: 16px;
+    font-family: 'Lexend', sans-serif;
+    color: #333333;
+    margin-left: 14px;
+    outline: none;
+    border: none;
+    background: transparent;
+    width: 100%;
+    text-align: left;
+}
+.monto-input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
 
 .opciones h2 {
     font-weight: lighter;
