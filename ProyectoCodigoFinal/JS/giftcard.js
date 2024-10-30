@@ -8,6 +8,8 @@ const montoTexto = document.getElementById('monto-giftcard');
 const ubicacionInput = document.querySelectorAll('input[name="ubi"]');
 const fondoNegro = document.querySelector('.fondo-negro');
 const textoSpan = fondoNegro.querySelector('.texto');
+const fondos = document.getElementsByName("fondo");
+let frame = document.getElementById("frame");
 
 // Agrega un evento de cambio por cada color que haya
 colorOpciones.forEach(opcion => {
@@ -76,6 +78,9 @@ ubicacionInput.forEach(input => {
         textoSpan.style.transform = 'translateY(-50%)';
  
     });
+});
+fondos.forEach(fondo => {
+    fondo.addEventListener('change', cambiarFondos);
 });
 
 function cambiarUbicacion() {
