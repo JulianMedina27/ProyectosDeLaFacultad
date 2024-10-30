@@ -1,10 +1,13 @@
-// Seleccion de inputs de color y del destinario
+// Seleccion de los elementos de la giftcard
 const colorOpciones = document.querySelectorAll('input[name="color"]');
 const destinatarioTexto = document.querySelector('.frame-destinario');
 const destinatarioInput = document.querySelector('.destinario-input');
-const fuenteOpciones= document.querySelectorAll('input[name="fuente"]');
+const fuenteOpciones = document.querySelectorAll('input[name="fuente"]');
 const montoInput = document.querySelector('.monto-input');
 const montoTexto = document.getElementById('monto-giftcard');
+const ubicacionInput = document.querySelectorAll('input[name="ubi"]');
+const fondoNegro = document.querySelector('.fondo-negro');
+const textoSpan = fondoNegro.querySelector('.texto');
 
 // Agrega un evento de cambio por cada color que haya
 colorOpciones.forEach(opcion => {
@@ -17,10 +20,13 @@ colorOpciones.forEach(opcion => {
     });
 });
 
+// Cambio del nombre del destinario
 destinatarioInput.addEventListener('input', () => {
     destinatarioTexto.textContent = destinatarioInput.value;
 });
 
+
+// Cambio del tamaño de la fuente, mismo argumento que con el color
 fuenteOpciones.forEach(opcion => {
     opcion.addEventListener('change', () => {
         const seleccionTamañoFuente = opcion.getAttribute('data-fuente');
@@ -30,9 +36,48 @@ fuenteOpciones.forEach(opcion => {
 
 });
 
+// Cambia el monto del fondo negro por el que se escriba en el input de monto
 montoInput.addEventListener('input', () => {
-    montoTexto.textContent = `$${montoInput.value}-`; // Este es el texto que debería actualizarse
+    montoTexto.textContent = `$${montoInput.value}-`;
 });
+
+
+// Cambia de posicion el fondo negro segun el input que se elija 
+ubicacionInput.forEach(input => {
+    input.addEventListener('change', (event) => {
+        // Primero se reestablece la posicion del fondo negro
+        fondoNegro.style.top = '';
+        fondoNegro.style.right = '';
+        fondoNegro.style.left = '';
+        fondoNegro.style.bottom = '';
+
+        // Switch que segun el id del input cambia la ubicacion del fondo
+        switch (event.target.id) {
+            case 'ubicacion1': // Ubicacion abajo izquierda
+                fondoNegro.style.bottom = '0'; // Abajo
+                fondoNegro.style.left = '0'; // Izquierda
+                break;
+            case 'ubicacion2': // Ubicacion abajo derecha
+                fondoNegro.style.bottom = '0'; // Abajo
+                fondoNegro.style.right = '0'; // Derecha
+                break;
+            case 'ubicacion3': // Ubicacion arriba izquierda
+                fondoNegro.style.top = '0'; // Arriba
+                fondoNegro.style.left = '0'; // Izquierda
+                break;
+            case 'ubicacion4': // Ubicacion arriba derecha
+                fondoNegro.style.top = '0'; // Arriba
+                fondoNegro.style.right = '0'; // Derecha
+                break;
+        }
+
+        // Esto centra el texto del monto
+        textoSpan.style.top = '50%';
+        textoSpan.style.transform = 'translateY(-50%)';
+ 
+    });
+});
+
 
 
 

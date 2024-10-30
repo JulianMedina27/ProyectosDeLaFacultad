@@ -254,14 +254,14 @@ footer {
 
 .fondo-negro {
     position: absolute;
-    top: 0;
-    right: 0;
     background-color: black;
     color: white;
     padding: 2% 7%;
-    border-radius: 0 0 0 5px;
+    border-radius: 0 0 0 0px;
     font-size: larger;
     z-index: 10;
+    width: 150px;      /* Para el cambio en javascript, habia que darle un tamaño al fondo sino cuando se cambiaba de lugar se marcaba toda la giftcard de negro*/
+    height: 50px;
 }
 
 
