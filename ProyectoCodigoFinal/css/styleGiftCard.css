@@ -538,6 +538,34 @@ input[type="radio"]:checked+label.color-option {
 
 }
 
+.fondo-option.cuadrado1{
+    border-style: solid;
+    border-color: gray;
+    background-color: gray;
+}
+
+.fondo-option.cuadrado2{
+    border-style: solid;
+    border-color: red;
+    background-color: red;
+}
+.fondo-option.cuadrado3{
+    border-style: solid;
+    border-color: blue;
+    background-color: blue;
+}
+.fondo-option.cuadrado4{
+    border-style: solid;
+    border-color: green;
+    background-color: green;
+}
+.fondo-option.cuadrado5{
+    border-style: solid;
+    border-color: violet;
+    background-color: violet;
+}
+
+
 .fondo input {
     display: flex;
     transform: translateY(80%);

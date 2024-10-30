@@ -7,6 +7,8 @@ const montoInput = document.querySelector('.monto-input');
 const montoTexto = document.getElementById('monto-giftcard');
 let ubicaciones = document.getElementsByName("ubi");
 const ubicacion_fondo = document.getElementById('fondo-negro')
+const fondos = document.getElementsByName("fondo");
+let frame = document.getElementById("frame");
 
 // Agrega un evento de cambio por cada color que haya
 colorOpciones.forEach(opcion => {
@@ -70,7 +72,43 @@ function cambiarUbicacion() {
     console.log("Opción seleccionada:", opcionSeleccionada);
 }
 
+function cambiarFondos()
+{
+    let opcionSeleccionada = "";
+
+    for (let fondo of fondos) {
+        if (fondo.checked) {
+            opcionSeleccionada = fondo.id;
+            break;
+        }
+    }
+
+    if(opcionSeleccionada == "fondo1")
+        {
+            frame.style.backgroundColor = "gray"
+
+        } else if(opcionSeleccionada == "fondo2")
+            {
+                frame.style.backgroundColor = "red"
+
+            } else if(opcionSeleccionada == "fondo3")
+                {
+                    frame.style.backgroundColor = "blue"
+
+                } else if(opcionSeleccionada == "fondo4")
+                    {
+                        frame.style.backgroundColor = "green"
+                    } else if(opcionSeleccionada == "fondo5")
+                        {
+                            frame.style.backgroundColor = "violet"
+                        }
+}
+
+
 cambiarUbicacion();
+fondos.forEach(fondo => {
+    fondo.addEventListener('click' , cambiarFondos);
+});
 ubicaciones.forEach(ubicacion => {
     ubicacion.addEventListener('click',cambiarUbicacion);
 });
