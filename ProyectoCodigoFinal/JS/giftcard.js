@@ -78,6 +78,70 @@ ubicacionInput.forEach(input => {
     });
 });
 
+function cambiarUbicacion() {
+    let opcionSeleccionada = "";
 
+    for (let ubicacion of ubicaciones) {
+        if (ubicacion.checked) {
+            opcionSeleccionada = ubicacion.id;
+            break;
+        }
+    }
+
+    // Resetea todas las propiedades
+    ubicacion_fondo.style.removeProperty("top");
+    ubicacion_fondo.style.removeProperty("right");
+    ubicacion_fondo.style.removeProperty("bottom");
+    ubicacion_fondo.style.removeProperty("left");
+
+    // Asigna las propiedades según la opción seleccionada
+    if (opcionSeleccionada === "ubicacion1") {
+        ubicacion_fondo.style.bottom = 0;
+        ubicacion_fondo.style.left = 0;
+    } else if (opcionSeleccionada === "ubicacion2") {
+        ubicacion_fondo.style.bottom = 0;
+        ubicacion_fondo.style.right = 0;
+    } else if (opcionSeleccionada === "ubicacion3") {
+        ubicacion_fondo.style.top = 0;
+        ubicacion_fondo.style.left = 0;
+    } else if (opcionSeleccionada === "ubicacion4") {
+        ubicacion_fondo.style.top = 0;
+        ubicacion_fondo.style.right = 0;
+    }
+
+    console.log("Opción seleccionada:", opcionSeleccionada);
+}
+
+function cambiarFondos()
+{
+    let opcionSeleccionada = "";
+
+    for (let fondo of fondos) {
+        if (fondo.checked) {
+            opcionSeleccionada = fondo.id;
+            break;
+        }
+    }
+
+    if(opcionSeleccionada == "fondo1")
+        {
+            frame.style.backgroundColor = "gray"
+
+        } else if(opcionSeleccionada == "fondo2")
+            {
+                frame.style.backgroundColor = "red"
+
+            } else if(opcionSeleccionada == "fondo3")
+                {
+                    frame.style.backgroundColor = "blue"
+
+                } else if(opcionSeleccionada == "fondo4")
+                    {
+                        frame.style.backgroundColor = "green"
+                    } else if(opcionSeleccionada == "fondo5")
+                        {
+                            frame.style.backgroundColor = "violet"
+                        }
+}
 
 
