@@ -1,3 +1,10 @@
+document.getElementById("menu-hamburguesa").addEventListener("click", function() {
+    var menu = document.getElementById("menu-horizontal");
+    menu.classList.toggle("menu-abierto");
+});
+
+
+
 // Seleccion de los elementos de la giftcard
 const colorOpciones = document.querySelectorAll('input[name="color"]');
 const destinatarioTexto = document.querySelector('.frame-destinario');

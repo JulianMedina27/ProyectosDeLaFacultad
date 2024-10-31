@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     resultados.addEventListener('click', function(event) {
-        if (event.target === resultados) {
+        if (event.target != resultados) {
             cerrarModal();
         }
     });
@@ -145,6 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
         let cursos_comprados = localStorage.getItem("contador_java");
         let cursos_comprados2 = localStorage.getItem("contenedor_python");
         let cursos_comprados3 = localStorage.getItem("contenedor_HYC");
+
 
 
 
