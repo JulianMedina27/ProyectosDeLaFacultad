@@ -380,7 +380,7 @@ footer {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
 
     .inscripcion,
     .fondo-negro,
@@ -412,10 +412,11 @@ footer {
 
     .fondo-negro {
        
+        font-size: 0.9em;
         justify-content: center;
     }
     .fondo-negro-contenedor {
-       width: 30%;
+       width: 40%;
         justify-content: center;
     }
     .botones_margin {
@@ -583,7 +584,9 @@ footer {
 
 .alumnos-container{
     display: flex;
+    flex-direction: column;
     gap: 2em;
+    width: 70%;
 }
 
 .menu-seleccionar{
@@ -605,4 +608,41 @@ footer {
     font-size: 1em;
     font-family: sans-serif;
     margin-right: 1em;
+}
+
+.infomracion_cursos{
+    margin-left: 2em;
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    z-index: 1000;
+    height: auto;
+   
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3), 
+                0px 2px 4px rgba(0, 0, 0, 0.2); 
+                
+    /* Animación suave al aparecer */
+ 
+    transform: translate(-50%, -50%) scale(0.95);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1000; 
+
+    width: 90%; /* Ancho ajustable */
+    max-width: 600px; /* Ancho máximo del modal */
+    max-height: 80vh; /* Altura máxima del modal (viewport height) */
+    overflow-y: auto; /* Activa la barra de desplazamiento vertical */
+}
+
+.alumno{
+    width: 70%;
+    height: auto;
 }

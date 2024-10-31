@@ -40,3 +40,5 @@ const vinculo = document.getElementById('vinculo');
 close.addEventListener('click', () => {
     modal_container.classList.remove('show');
 });
+
+

@@ -10,7 +10,7 @@
 
 </head>
 
-<body>
+<body id="body">
     <header>
         <div class="nav-background">
             <nav class="navegacion-principal contenedor sombreado">
@@ -52,49 +52,90 @@
     
     
             <!-- Contenedor dinámico de alumnos -->
-            <div id="alumnos-container">
-
-                
-            </div>
-    
-            <!-- Botones para agregar/eliminar alumnos -->
-            <aside class="botones_margin">
-                <div class="separacion_botones">
-                    <div>
-                        <button id="boton-menos" class="botones_aside">-</button>
-                    </div>
-                    <div>
-                        <button id="boton-mas" class="botones_aside"> +</button>
-                        <div class="menu-seleccionar" id="menu-seleccionar">
-                            <button class="boton-curso" id="curso-java"> Java</button>
-                            <button class="boton-curso" id="curso-HYC"> HTML Y CSS</button>
-                            <button class="boton-curso" id="curso-python"> Phyton/button>
+            <div>
+                <form action="" id="alumnos-container">
+                    <div id="alumno1" class="alumnos-container" >
+                        <div class="Java" >
+                            <h2>Inscripción a CURSO</h2>
+                            <div class="barra_insc">
+                                <input class="barra_insc-input" type="text" placeholder="Nombre" id="nombre1">
+                            </div>
+                            <div class="barra_insc">
+                                <input class="barra_insc-input" type="text" placeholder="Apellido" id="apellido1">
+                            </div>
+                            <div class="barra_insc">
+                                <input class="barra_insc-input" type="text" placeholder="DNI" id="dni1">
+                            </div>
+                            <div class="barra_insc">
+                                <input class="barra_insc-input" type="email" placeholder="ejemplo@hotmail.com" id="email1">
+                            </div>
+                            <div class="barra_insc">
+                                <input class="barra_insc-input" type="tel" placeholder="Teléfono" id="telefono1">
+                            </div>
+                            <div>
+                                <label>Curso: </label>
+                                <select id="curso1">
+                                    <option value="0">-Seleccione-</option>
+                                    <option value="Java">Java</option>
+                                    <option value="HTML y CSS">HTML y CSS</option>
+                                    <option value="Python">Python</option>
+                                </select>
+                            </div>
+                            <h2>Precio: $1000</h2>
+                        </div>
                         </div>
                     </div>
-                </div>
-            </aside>
-    
-            <!-- Contenedor para mostrar el precio -->
-             <div class="fondo-negro-contenedor">
-                <div class="fondo-negro">
-                    <h2 class="precio-total"> Precio Total:</h2>
-                    <span id="precio">$1000</span>
-                </div>
-             </div>
-             <div>
-                <div class="fondo-negro-contenedor">
+                    
+                </form>
+                
+                
+                
+            </div>
+
+
+            <div class="infomracion_cursos">
+                <aside class="botones_margin">
+                    <!-- Botones para agregar/eliminar alumnos -->
+                    <div class="separacion_botones">
+                        <div>
+                            <button id="boton-menos" class="botones_aside">-</button>
+                        </div>
+                        <div>
+                            <button id="boton-mas" class="botones_aside"> +</button>
+                            <div class="menu-seleccionar" id="menu-seleccionar">
+                                <button class="boton-curso" id="curso-java"> Java</button>
+                                <button class="boton-curso" id="curso-HYC"> HTML Y CSS</button>
+                                <button class="boton-curso" id="curso-python"> Phyton/button>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+        
+                <!-- Contenedor para mostrar el precio -->
+                 <div class="fondo-negro-contenedor">
                     <div class="fondo-negro">
-                        <h2 class="precio-total">Contador Alumnos: </h2>
-                        <span id="Contador-Alumnos">1</span>
+                        <h2 class="precio-total"> Precio Total:</h2>
+                        <span id="precio">$1000</span>
                     </div>
                  </div>
-             </div>
-
-             <div>
-                <button>
+                 <div>
+                    <div class="fondo-negro-contenedor">
+                        <div class="fondo-negro">
+                            <h2 class="precio-total">Contador Alumnos: </h2>
+                            <span id="Contador-Alumnos">1</span>
+                        </div>
+                     </div>
+                 </div>
+                 <div>
+                    <button id="mostrarInformacion">Mostrar Infomracion</button>
+                 </div>
+                 <div class="Resultados" id="resultado">
                     
-                </button>
-             </div>
+                 </div>
+            </div>
+    
+            
+            
         </section>
     </div>
 
