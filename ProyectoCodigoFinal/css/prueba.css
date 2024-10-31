@@ -28,7 +28,7 @@
 
  .boton-comprar
  {
-    background-color: black;
+    background-color: rgb(255, 0, 0);
     padding: 1em;
     color: white;
     height: 3vh;

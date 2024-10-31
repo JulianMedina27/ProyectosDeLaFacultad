@@ -67,17 +67,19 @@
         
             
             <label for="Nombre">Nombre</label>
-            <input type="text" id="Nombre" name="Nombre" placeholder="ingrese tu nombre" required>
+            <input type="text" id="Nombre" name="Nombre" placeholder="Ingrese tu nombre" required>
             
             <label for="Correo electronico">Correo electronico</label>
-            <input type="email" id="Correo electronico" name="Correo electronico"placeholder="ingrese tu correo electronico" required>
+            <input type="email" id="Correo electronico" name="Correo electronico"placeholder="Ingrese tu correo electronico" required>
             
             <label for="Telefono">Telefono</label>
-            <input type="text" id="Telefono" name="Telefono" placeholder="ingrese tu telefono" required> 
+            <input type="text" id="Telefono" name="Telefono" placeholder="Ingrese tu telefono" required> 
             
             <label for="Mensaje">Mensaje</label>
-            <textarea name="Mensaje" id="Mensae" cols="30" rows="10" placeholder="Mensaje"></textarea>
-            
+            <textarea name="Mensaje" id="consulta" cols="30" rows="10" placeholder="Mensaje" maxlength="1000"></textarea>
+            <div>Caracteres restantes: <span id="caracteresRestantes">1000</span></div>
+            <span id="consultaError" class="error"></span><br><br>
+
             <input type="submit" value="Enviar Mensaje" id="boton">
         
         
@@ -85,7 +87,12 @@
         </form>
       
     
-    
+        <div id="popup" class="popup">
+            <h2>Su consulta a sido enviada <br>
+                Muchas gracias por contactarnos!
+            </h2>
+            <a href="../contenido.html"> <button class="boton-popup">Aceptar</button></a>
+          </div>
     </div>
     <div>
         
@@ -153,13 +160,10 @@
         </div>
     </div>
 </footer>
-
+<script src="../JS/Contacto.js">
+  
+</script>
 </body>
 
-<script>
-    document.getElementById("menu-hamburguesa").addEventListener("click", function() {
-        var menu = document.getElementById("menu-horizontal");
-        menu.classList.toggle("menu-abierto");
-    });
-</script>
+
 </html>
