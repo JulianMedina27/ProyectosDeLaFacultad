@@ -1,3 +1,5 @@
+// Los nuevos usuarios se guardan en un array que almacena el mail, la contraseña y el repetir contraseña, pero este ultimo no se vuelve a usar en login
+
 document.addEventListener("DOMContentLoaded", () => {
     const registerForm = document.getElementById("registerForm");
 
