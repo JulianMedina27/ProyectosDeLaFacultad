@@ -21,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (user) {
             // Si encuentra al usuario, inicia sesion
+            localStorage.setItem("currentUser", email);         // El usuario logeado pasa a ser una nueva variable
             alert("¡Inicio de sesión exitoso!");
             window.location.href = "contenido.html";
         } else {
