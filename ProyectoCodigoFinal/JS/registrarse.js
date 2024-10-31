@@ -1,34 +1,34 @@
 // Los nuevos usuarios se guardan en un array que almacena el mail, la contraseña y el repetir contraseña, pero este ultimo no se vuelve a usar en login
 
 document.addEventListener("DOMContentLoaded", () => {
-    const registerForm = document.getElementById("registerForm");
+    const formularioRegistro = document.getElementById("registerForm");
 
-    registerForm.addEventListener("submit", (e) => {
-        e.preventDefault(); // Se detiene el envio automatico del form
+    formularioRegistro.addEventListener("submit", (e) => {
+        e.preventDefault(); // Se detiene el envío automático del formulario
 
-        const email = document.getElementById("correo").value;
-        const password = document.getElementById("password").value;
-        const repPassword = document.getElementById("rep-password").value;
+        const correo = document.getElementById("correo").value;
+        const contraseña = document.getElementById("password").value;
+        const repetirContraseña = document.getElementById("rep-password").value;
 
-        // Verificacion de las contraseñas
-        if (password !== repPassword) {
+        // Verificación de las contraseñas
+        if (contraseña !== repetirContraseña) {
             alert("Las contraseñas no coinciden.");
             return;
         }
 
-        // Recupera usuarios guardados en LocalStorage o inicializa un array vacio
-        let users = JSON.parse(localStorage.getItem("users")) || [];
+        // Recupera usuarios guardados en LocalStorage o inicializa un array vacío
+        let usuarios = JSON.parse(localStorage.getItem("users")) || [];
 
-        // Verifica que el correo no este registrado
-        if (users.some(user => user.email === email)) {
-            alert("Este correo ya está registrado.");   // En caso de que este registrado, dara un mensaje de error
+        // Verifica que el correo no esté registrado
+        if (usuarios.some(usuario => usuario.email === correo)) {
+            alert("Este correo ya está registrado."); // En caso de que esté registrado, dará un mensaje de error
             return;
         }
 
         // Registrar nuevo usuario
-        users.push({ email, password });
-        localStorage.setItem("users", JSON.stringify(users));
-        alert("¡Registro exitoso! Ahora puedes iniciar sesión.");   // Mensaje de registro correcto
-        window.location.href = "../index.html"; // Redirige a inicio de sesion luego de registrarse
+        usuarios.push({ email: correo, password: contraseña });
+        localStorage.setItem("users", JSON.stringify(usuarios));
+        alert("¡Registro exitoso! Ahora puedes iniciar sesión."); // Mensaje de registro correcto
+        window.location.href = "../index.html"; // Redirige a inicio de sesión luego de registrarse
     });
 });

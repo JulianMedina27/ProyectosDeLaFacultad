@@ -53,7 +53,7 @@
                 <div class="prueba">
                     <div class="perfil-container">
                         <h2>Perfil del Usuario</h2>
-                        <form action="/guardar-perfil" method="get">
+                        <form id="perfilForm">
                             <label for="nombre">Nombre:</label>
                             <input type="text" id="nombre" name="nombre" value="Nombre">
                 
@@ -66,7 +66,12 @@
                             
                         </form>
                     </div>
-                    <button class="boton-cambios">Guardar Cambios</button>
+                    <button class="boton-cambios" id="guardarCambios">Guardar Cambios</button>
+                    <br>
+                    <button class="boton-cambios" id="cerrarCuenta">Cerrar Cuenta</button>
+                    <br>
+                    <button class="boton-cambios" id="borrarCuenta">Borrar Cuenta</button>
+
                 </div>
             </div>
         </section>
@@ -127,10 +132,6 @@
 
 </body>
 
-<script>
-    document.getElementById("menu-hamburguesa").addEventListener("click", function() {
-        var menu = document.getElementById("menu-horizontal");
-        menu.classList.toggle("menu-abierto");
-    });
+<script  src="../JS/Usuario.js">
 </script>
 </html>
