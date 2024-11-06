@@ -51,7 +51,7 @@ montoInput.addEventListener('input', () => {
 });
 
 
-// Cambia de posicion el fondo negro segun el input que se elija 
+// Cambia de posicion el fondo negro segun el input que se elija  / Primer metodo
 ubicacionInput.forEach(input => {
     input.addEventListener('change', (event) => {
         // Primero se reestablece la posicion del fondo negro
@@ -90,7 +90,8 @@ fondos.forEach(fondo => {
     fondo.addEventListener('change', cambiarFondos);
 });
 
-function cambiarUbicacion() {
+function cambiarUbicacion() { // Cambia de posicion el fondo negro segun el input que se elija  / Segundo metodo
+
     let opcionSeleccionada = "";
 
     for (let ubicacion of ubicaciones) {
