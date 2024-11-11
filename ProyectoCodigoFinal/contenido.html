@@ -40,11 +40,22 @@
                     <div class="menu-item">
                         <a href="Paginas/Usuario.html">Usuario</a>
                     </div>
+                    <div class="menu-item cart">
+                        <span class="material-symbols-outlined" id="cart-icon">shopping_cart</span>
+                    </div>
                 </div>
-            </nav>
-        </div>
-    </header>
-
+                
+                </nav>
+                </div>
+                </header>
+                
+                <div id="cart-sidebar" class="sidebar">
+                    <h2>Mi Carrito</h2>
+                    <span id="contador">Cursos en Carrito: 0</span>
+                    <div id="cart-items"></div>
+                    <button id="close-sidebar">Cerrar</button>
+                </div>
+    
 
     <div class="carrusel">
         <div class="atras">
@@ -65,8 +76,6 @@
     </div>
 
     <div class="puntos" id="puntos"></div>
-
-    <script src="./JS/slider.js"></script>
 
 
     <h1 class="cursos">CURSOS DESTACADOS</h1>
@@ -176,9 +185,11 @@
             </div>
         </div>
     </footer>
-    <script src="./JS/Contenido.js">
-    
-    </script>
+    <script src="./JS/Contenido.js"></script>
+    <script src="./JS/carrito.js"></script>
+    <script src="./JS/slider.js"></script>
+
+
 </body>
 
 
