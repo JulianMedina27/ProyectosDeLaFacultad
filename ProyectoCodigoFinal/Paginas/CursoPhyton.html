@@ -43,6 +43,9 @@
                     <div class="menu-item">
                         <a href="Usuario.html">Usuario</a>
                     </div>
+                    <div class="menu-item cart">
+                        <span class="material-symbols-outlined" id="cart-icon">shopping_cart</span>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -136,21 +139,30 @@
             </div>
 
             <div class="contenedor-contador">
-                <a href="#">
-                    <button class="boton" id="boton">
-                       Comprar
-                    </button>
+                <a href="#" id="boton-comprar-link">
+                    <button class="boton" id="boton-comprar-phyton">Comprar</button>
                 </a>
-                <span class="span" id="contador"> Cursos en Carrito: 0</span>
+                <span class="span" id="contador">Cursos en Carrito: 0</span>
             </div>
-
+            
             <div>
                 <a href="../Paginas/Formulario.html">
-                    <button class="boton" id="boton">
-                       Ir A Inscripciones
+                    <button class="boton" id="boton-inscripciones">
+                        Ir A Inscripciones
                     </button>
                 </a>
             </div>
+        </section>
+
+        <!-- Sidebar del carrito -->
+        <div id="cart-sidebar" class="sidebar">
+            <h2>Mi Carrito</h2>
+            <span class="span" id="contador-sidebar">Cursos en Carrito: 0</span>
+            <div id="cart-items">
+                <!-- Aquí se agregarán los cursos -->
+            </div>
+            <button id="close-sidebar">Cerrar</button>
+        </div>
             <div class="modal-container" id="modal-container">
                 <div class="modal">
                     <h2 class="titulo-popup">Felicitaciones!</h2>
@@ -252,6 +264,7 @@
         </div>
     </footer>
     <script src="../JS/Curso_python.js"></script>
+    <script src="../JS/carrito.js" ></script>
 </body>
 
 </html>

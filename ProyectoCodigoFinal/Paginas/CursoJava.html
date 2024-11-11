@@ -43,6 +43,9 @@
                     <div class="menu-item">
                         <a href="Usuario.html">Usuario</a>
                     </div>
+                    <div class="menu-item cart">
+                        <span class="material-symbols-outlined" id="cart-icon">shopping_cart</span>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -133,10 +136,9 @@
             </div>
 
             <div class="contenedor-contador">
-                <a href="#">
-                    <button class="boton" id="boton">
-                       Comprar
-                    </button>
+                <a href="#" id="boton-comprar-link">
+                    <button class="boton" id="boton-comprar-java">Comprar</button>
+
                 </a>
                 <span class="span" id="contador"> Cursos en Carrito: 0</span>
 
@@ -148,6 +150,15 @@
                     </button>
                 </a>
             </div>
+             <!-- Sidebar del carrito -->
+        <div id="cart-sidebar" class="sidebar">
+            <h2>Mi Carrito</h2>
+            <span class="span" id="contador-sidebar">Cursos en Carrito: 0</span>
+            <div id="cart-items">
+                <!-- Aquí se agregarán los cursos -->
+            </div>
+            <button id="close-sidebar">Cerrar</button>
+        </div>
         
             
             <div class="modal-container" id="modal-container">
@@ -250,9 +261,8 @@
             </div>
         </div>
     </footer>
-    <script src="../JS/Curso_java.js">
-    
-    </script>
+    <script src="../JS/Curso_java.js"> </script>
+    <script src="../JS/carrito.js"></script>
 </body>
 
 </html>

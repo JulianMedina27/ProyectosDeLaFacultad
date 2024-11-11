@@ -54,23 +54,51 @@ document.addEventListener('DOMContentLoaded', function() {
         setContador();
     }
 
-    // Contador específico de HTML y CSS
-    function actualizarContadorEspecifico() {
-        const cursosHtmlCss = cursosEnCarrito.filter(curso => curso.name === 'Curso de HTML y CSS');
-        const contadorHtmlCss = cursosHtmlCss.length;
+    // Función para actualizar el contador específico
+    function actualizarContadorEspecifico(cursoName) {
+        const cursosFiltrados = cursosEnCarrito.filter(curso => curso.name === cursoName);
+        const contadorEspecifico = cursosFiltrados.length;
 
         // Actualiza el contador específico del curso en el contador visible
-        contadorElement.textContent = `Cursos HTML en Carrito: ${contadorHtmlCss}`;
+        contadorElement.textContent = `Cursos ${cursoName} en Carrito: ${contadorEspecifico}`;
     }
 
-    // Evento para el botón de compra
-    const botonComprar = document.getElementById('boton-comprar');
-    botonComprar.addEventListener('click', () => {
-        const curso = {
-            name: 'Curso de HTML y CSS',
-            hours: '86 horas'
-        };
-        agregarCurso(curso);
-        actualizarContadorEspecifico();
-    });
+    // Evento para el botón de compra HTML
+    const botonComprarHtml = document.getElementById('boton-comprar-html');
+    if (botonComprarHtml) {
+        botonComprarHtml.addEventListener('click', () => {
+            const cursoHtml = {
+                name: 'Curso de HTML y CSS',
+                hours: '86 horas'
+            };
+            agregarCurso(cursoHtml);
+            actualizarContadorEspecifico('Curso de HTML y CSS');
+        });
+    }
+
+    // Evento para el botón de compra Java
+    const botonComprarJava = document.getElementById('boton-comprar-java');
+    if (botonComprarJava) {
+        botonComprarJava.addEventListener('click', () => {
+            const cursoJava = {
+                name: 'Curso de Java',
+                hours: '86 horas'
+            };
+            agregarCurso(cursoJava);
+            actualizarContadorEspecifico('Curso de Java');
+        });
+    }
+
+    // Evento para el botón de compra Python
+    const botonComprarPhyton = document.getElementById('boton-comprar-phyton');
+    if (botonComprarPhyton) {
+        botonComprarPhyton.addEventListener('click', () => {
+            const cursoPhyton = {
+                name: 'Curso de Python',
+                hours: '80 horas'
+            };
+            agregarCurso(cursoPhyton);
+            actualizarContadorEspecifico('Curso de Python');
+        });
+    }
 });

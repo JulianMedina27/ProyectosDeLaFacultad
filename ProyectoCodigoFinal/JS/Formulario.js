@@ -67,47 +67,47 @@ document.addEventListener('DOMContentLoaded', function() {
         actualizarPrecio();
     }
 
-   // Eliminar un alumno del formulario
-   function eliminarAlumno() {
-    if (alumnoCount > 1) {
-        // Elimina el último alumno del DOM
-        alumnosContainer.removeChild(alumnosContainer.lastChild);
-        alumnoCount--;
+    // Eliminar un alumno del formulario
+    function eliminarAlumno() {
+        if (alumnoCount > 1) {
+            // Elimina el último alumno del DOM
+            alumnosContainer.removeChild(alumnosContainer.lastChild);
+            alumnoCount--;
 
-        // Actualiza el precio y el contador de alumnos en la página
-        actualizarPrecio();
+            // Actualiza el precio y el contador de alumnos en la página
+            actualizarPrecio();
 
-        // Actualiza los datos en el localStorage
-        localStorage.setItem("contenedorAlumnos", alumnoCount);  // Actualiza el contador total de alumnos
+            // Actualiza los datos en el localStorage
+            localStorage.setItem("contenedorAlumnos", alumnoCount);  // Actualiza el contador total de alumnos
 
-        // Elimina el último curso agregado del carrito de localStorage
-        let cursos_comprados = JSON.parse(localStorage.getItem("cursosEnCarrito")) || [];
-        cursos_comprados.pop();  // Elimina el último curso
+            // Elimina el último curso agregado del carrito de localStorage
+            let cursos_comprados = JSON.parse(localStorage.getItem("cursosEnCarrito")) || [];
+            cursos_comprados.pop();  // Elimina el último curso
 
-        // Actualiza localStorage con la lista de cursos actualizada
-        localStorage.setItem("cursosEnCarrito", JSON.stringify(cursos_comprados)); 
+            // Actualiza localStorage con la lista de cursos actualizada
+            localStorage.setItem("cursosEnCarrito", JSON.stringify(cursos_comprados)); 
 
-        // Actualiza los cursos específicos si es necesario (Java, Python, HTML y CSS)
-        let contadorJava = localStorage.getItem("contenedor_java");
-        let contadorPython = localStorage.getItem("contenedor_python");
-        let contadorHYC = localStorage.getItem("contenedor_HYC");
+            // Actualiza los cursos específicos si es necesario (Java, Python, HTML y CSS)
+            let contadorJava = localStorage.getItem("contador_java");
+            let contadorPython = localStorage.getItem("contenedor_python");
+            let contadorHYC = localStorage.getItem("contenedor_HYC");
 
-        // Ejemplo de lógica para disminuir el contador específico
-        if (contadorJava > 0) {
-            localStorage.setItem("contenedor_java", contadorJava);
-        } else if (contadorPython > 0) {
-            localStorage.setItem("contenedor_python", contadorPython);
-        } else if (contadorHYC > 0) {
-            localStorage.setItem("contenedor_HYC", contadorHYC);
+            // Ejemplo de lógica para disminuir el contador específico
+            if (contadorJava > 0) {
+                localStorage.setItem("contador_java", contadorJava - 1);
+            } else if (contadorPython > 0) {
+                localStorage.setItem("contenedor_python", contadorPython - 1);
+            } else if (contadorHYC > 0) {
+                localStorage.setItem("contenedor_HYC", contadorHYC - 1);
+            }
         }
     }
-}
 
     // Actualizar el precio total
     function actualizarPrecio() {
         const nuevoPrecio = alumnoCount * precioBase;
         precioElement.textContent = `$${nuevoPrecio}`;
-        alumnoContenedor.textContent = `${alumnoCount}`;
+        alumnoContenedor.textContent = alumnoCount;
         localStorage.setItem("contenedorAlumnos", alumnoCount);
     }
 
@@ -135,6 +135,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 curso: curso
             });
         }
+
+        // Guardar la información de los alumnos en localStorage
+        localStorage.setItem("datosAlumnos", JSON.stringify(datosPersonas));
     }
 
     // Mostrar la información de los estudiantes en una ventana modal
@@ -175,30 +178,27 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Cargar los cursos comprados desde localStorage
     function obtenerCursosComprados() {
-        let cursos_comprados = localStorage.getItem("contenedor_java");
-        let cursos_comprados2 = localStorage.getItem("contenedor_python");
-        let cursos_comprados3 = localStorage.getItem("contenedor_HYC");
+        let cursos_comprados_java = localStorage.getItem("contador_java");
+        let cursos_comprados_python = localStorage.getItem("contenedor_python");
+        let cursos_comprados_hyc = localStorage.getItem("contenedor_HYC");
 
         // Cargar los cursos de Java
-        if (cursos_comprados != null) {
-            document.getElementById('curso1').value = "Java";
-            if (cursos_comprados > 1) {
-                for (let i = 2; i <= cursos_comprados; i++) {
-                    agregarAlumno("Java");
-                }
+        if (cursos_comprados_java != null && cursos_comprados_java > 0) {
+            for (let i = 1; i <= cursos_comprados_java; i++) {
+                agregarAlumno("Java");
             }
         }
 
         // Cargar los cursos de Python
-        if (cursos_comprados2 != null) {
-            for (let i = 1; i <= cursos_comprados2; i++) {
+        if (cursos_comprados_python != null && cursos_comprados_python > 0) {
+            for (let i = 1; i <= cursos_comprados_python; i++) {
                 agregarAlumno("Python");
             }
         }
 
         // Cargar los cursos de HTML y CSS
-        if (cursos_comprados3 != null) {
-            for (let i = 1; i <= cursos_comprados3; i++) {
+        if (cursos_comprados_hyc != null && cursos_comprados_hyc > 0) {
+            for (let i = 1; i <= cursos_comprados_hyc; i++) {
                 agregarAlumno("HTML y CSS");
             }
         }
