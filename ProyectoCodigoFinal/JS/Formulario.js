@@ -14,13 +14,15 @@ document.addEventListener('DOMContentLoaded', function() {
     const alumnoContenedor = document.getElementById('Contador-Alumnos');
     const menu_seleccionar = document.getElementById('menu-seleccionar');
     const resultados = document.getElementById('resultado');
-    let alumnoCount = 1; 
-    let precioBase = 1000; 
+    let alumnoCount = 1;  // Contador de alumnos
+    let precioBase = 1000; // Precio base por alumno
 
+    // Mostrar u ocultar el menú de selección de curso
     function mostrarMenu() {
         menu_seleccionar.style.display = menu_seleccionar.style.display === "flex" ? "none" : "flex";
     }
 
+    // Agregar un alumno al formulario
     function agregarAlumno(selected) {
         alumnoCount++;
         const nuevoAlumno = document.createElement('div');
@@ -56,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h2>Precio: $1000</h2>
             </div>
         `;
-
+        
         alumnosContainer.appendChild(nuevoAlumno);
         
         let selector = `curso${alumnoCount}`;
@@ -65,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         actualizarPrecio();
     }
 
+    // Eliminar un alumno del formulario
     function eliminarAlumno() {
         if (alumnoCount > 1) {
             alumnosContainer.removeChild(alumnosContainer.lastChild);
@@ -73,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Actualizar el precio total
     function actualizarPrecio() {
         const nuevoPrecio = alumnoCount * precioBase;
         precioElement.textContent = `$${nuevoPrecio}`;
@@ -80,12 +84,14 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem("contenedorAlumnos", alumnoCount);
     }
 
+    // Función para mostrar el menú de selección de cursos
     botonMas.addEventListener('click', () => agregarAlumno("0"));
     botonMenos.addEventListener('click', eliminarAlumno);
 
+    // Recopilar información de todos los alumnos en el formulario
     function informacionIntegrantes() {
-        datosPersonas = []; 
-        for (let i = 1; i <= alumnoCount; i++) { 
+        datosPersonas = [];  // Limpiar el array de personas
+        for (let i = 1; i <= alumnoCount; i++) {
             const nombre = document.getElementById(`nombre${i}`).value;
             const apellido = document.getElementById(`apellido${i}`).value;
             const dni = document.getElementById(`dni${i}`).value;
@@ -104,10 +110,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Mostrar la información de los estudiantes en una ventana modal
     function mostrarInformacion() {
         informacionIntegrantes();
         resultados.classList.add('modal');
-        resultados.innerHTML = ""; 
+        resultados.innerHTML = "";  // Limpiar los resultados previos
 
         datosPersonas.forEach((persona, index) => {
             resultados.innerHTML += `
@@ -127,6 +134,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     boton_inf.addEventListener('click', mostrarInformacion);
 
+    // Cerrar la ventana modal de información
     function cerrarModal() {
         resultados.innerHTML = "";
         resultados.classList.remove('modal');
@@ -138,44 +146,37 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Cargar los cursos comprados desde localStorage
     function obtenerCursosComprados() {
-
-       
-        
         let cursos_comprados = localStorage.getItem("contador_java");
         let cursos_comprados2 = localStorage.getItem("contenedor_python");
         let cursos_comprados3 = localStorage.getItem("contenedor_HYC");
 
-
-
-
-        if(cursos_comprados != null) {
-             document.getElementById('curso1').value = "Java"
-             if(cursos_comprados > 1)
-             
-                    for(let i = 2; i <= cursos_comprados; i++) {
-               
-                        agregarAlumno("Java");
-                    }
-                
-           
+        // Cargar los cursos de Java
+        if (cursos_comprados != null) {
+            document.getElementById('curso1').value = "Java";
+            if (cursos_comprados > 1) {
+                for (let i = 2; i <= cursos_comprados; i++) {
+                    agregarAlumno("Java");
+                }
+            }
         }
 
-       
-        if(cursos_comprados2 != null) {
-            for(let i = 1; i <= cursos_comprados2; i++) {
+        // Cargar los cursos de Python
+        if (cursos_comprados2 != null) {
+            for (let i = 1; i <= cursos_comprados2; i++) {
                 agregarAlumno("Python");
             }
         }
 
-       
-        if(cursos_comprados3 != null) {
-            for(let i = 1; i <= cursos_comprados3; i++) {
+        // Cargar los cursos de HTML y CSS
+        if (cursos_comprados3 != null) {
+            for (let i = 1; i <= cursos_comprados3; i++) {
                 agregarAlumno("HTML y CSS");
             }
         }
-        
     }
 
-    obtenerCursosComprados();
+    obtenerCursosComprados(); // Llamar a la función para cargar los cursos al iniciar
+
 });

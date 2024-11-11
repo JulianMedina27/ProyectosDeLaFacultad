@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="nav-background">
@@ -42,49 +44,31 @@
                     <div class="menu-item">
                         <a href="Usuario.html">Usuario</a>
                     </div>
+                    <div class="menu-item cart">
+                        <span class="material-symbols-outlined" id="cart-icon">shopping_cart</span>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
 
     <main>
-        <section class= "contenedor-cuerpo-curso">
+        <section class="contenedor-cuerpo-curso">
             <div class="imagen">
                 <img src="../img/cursohtmlycss.jpg" alt="curso-java" class="imagen-curso">
             </div>
             <div class="contenedor-cursoJava">
                 <h2>Curso de HTML y CSS</h2>
-                <h3 class="contenido-curso">  <span class="resaltado">Tiempo del curso: </span> <br>
-                     86hs distribuido en 5 hs semanales. 
-                    </h3>
-                <h3 class="contenido-curso">
-                    
-                   <span class="resaltado"> Descripcion del curso: </span> <br> 
-                   En este curso de Phyton aprenderás a manejar de manera eficiente los conceptos y técnicas de programación en HTML y CSS, 
-                    y dominar de manera práctica los elementos de la sintaxis del lenguaje, la programación orientada a objetos, estructuras de datos, 
-                    y el desarrollo de aplicaciones avanzadas.
-                    
-                  
-                </h3>
-                <h3 class="contenido-curso">
-                    <span class="resaltado">Requisitos previos:  </span> <br>
-                    
-                    Haberte inscripto en la Pagina Web. <br>
-                    Haber abonado el precio del curso. <br>
-                </h3>
-               
+                <h3 class="contenido-curso"><span class="resaltado">Tiempo del curso: </span><br> 86hs distribuido en 5 hs semanales.</h3>
+                <h3 class="contenido-curso"><span class="resaltado">Descripcion del curso: </span><br> En este curso de Phyton aprenderás a manejar de manera eficiente los conceptos y técnicas de programación en HTML y CSS, y dominar de manera práctica los elementos de la sintaxis del lenguaje, la programación orientada a objetos, estructuras de datos, y el desarrollo de aplicaciones avanzadas.</h3>
+                <h3 class="contenido-curso"><span class="resaltado">Requisitos previos: </span><br> Haberte inscripto en la Pagina Web.<br> Haber abonado el precio del curso.</h3>
             </div>
 
-            
             <div class="contenedor-acordeon">
-
                 <h2>Contendio de la Cursada</h2>
                 <div class="acordeon">
                     <input type="radio" name="acordeon" id="btn-acordeon1" class="btn-acordeon">
-
-                    <label for="btn-acordeon1">
-                      Unidad 1
-                    </label>
+                    <label for="btn-acordeon1">Unidad 1</label>
                     <div class="contenido-acordeon">
                         <p class="elementos-acordeon">
                             &#x1f5ce; PDF: Introduccion a HTML y CSS <br>
@@ -97,11 +81,7 @@
 
                 <div class="acordeon">
                     <input type="radio" name="acordeon" id="btn-acordeon2" class="btn-acordeon">
-
-                    <label for="btn-acordeon2">
-                      Unidad 2
-                    </label>
-
+                    <label for="btn-acordeon2">Unidad 2</label>
                     <div class="contenido-acordeon">
                         <p class="elementos-acordeon"> 
                             &#x1f5d6; Clase virtual <br>
@@ -110,14 +90,11 @@
                             &#x1f5cf; Parcial 2 <br>
                         </p>
                     </div>
-
                 </div>
 
                 <div class="acordeon">
                     <input type="radio" name="acordeon" id="btn-acordeon3" class="btn-acordeon">
-                    <label for="btn-acordeon3">
-                      Unidad 3
-                    </label>
+                    <label for="btn-acordeon3">Unidad 3</label>
                     <div class="contenido-acordeon">
                         <p class="elementos-acordeon">
                             &#x1f5ce; PDF: Portafolio <br>
@@ -130,63 +107,58 @@
             </div>
 
             <div class="contenedor-contador">
-                <a href="#">
-                    <button class="boton" id="boton">
-                       Comprar
-                    </button>
+                <a href="#" id="boton-comprar-link">
+                    <button class="boton" id="boton-comprar">Comprar</button>
                 </a>
-                <span class="span" id="contador"> Cursos en Carrito: 0</span>
+                <span class="span" id="contador">Cursos en Carrito: 0</span>
             </div>
+            
             <div>
                 <a href="../Paginas/Formulario.html">
-                    <button class="boton" id="boton">
-                       Ir A Inscripciones
+                    <button class="boton" id="boton-inscripciones">
+                        Ir A Inscripciones
                     </button>
                 </a>
             </div>
-            <div class="modal-container" id="modal-container">
-                <div class="modal">
-                    <h2 class="titulo-popup">Felicitaciones!</h2>
-                    <h3>
-                        Has eleigdo el curso de <b>JAVA</b> 
-                    </h3>
-                    <p class="texto-curso"> Lorem ipsum dolor sit 
-                        amet consectetur, adipisicing elit. 
-                        Tempora voluptates explicabo consequuntur 
-                        repellat quaerat dolor atque cumque, molestias 
-                        ipsum similique eos beatae! Sit voluptatum libero 
-                        totam mollitia accusamus esse. Doloremque!</p>
-                        <div class="contenedor-botones">
-                
-                            <button id="close" class="boton-modal">
-                                Cerrar
-                            </button>
-                        </div>
-                    
-                </div>
-            </section>
+        </section>
 
-            <section>
-                <div>
-                    <div class="contenedor-descripcion-profesor">
-                    
-                        <article class="profesor-imagen-ubicacion">
-                            <img src="../img/profesorsinfondo.jpg" alt="docente" class="profesor-imagen">
-        
-                        </article>
-                        
-                        <article class="texto-profesor">
-                            <h2>Docente</h2>
-                            <p class="texto-descripcion">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nobis repellat maxime explicabo tempore? 
-                                Distinctio vel minima beatae ipsa? Explicabo laudantium voluptatum optio tenetur architecto quasi vero quidem accusantium nam.
-                            </p>
-                        </article>
-        
-                    </div>
-        
+        <!-- Sidebar del carrito -->
+        <div id="cart-sidebar" class="sidebar">
+            <h2>Mi Carrito</h2>
+            <span id="contador-sidebar">Cursos en Carrito: 0</span> <!-- Contador dentro del sidebar -->
+            <div id="cart-items">
+                <!-- Aquí se agregarán los cursos -->
+            </div>
+            <button id="close-sidebar">Cerrar</button>
+        </div>
+
+        <div class="modal-container" id="modal-container">
+            <div class="modal">
+                <h2 class="titulo-popup">Felicitaciones!</h2>
+                <h3>Has elegido el curso de <b>HTML y CSS</b></h3>
+                <p class="texto-curso"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora voluptates explicabo consequuntur repellat quaerat dolor atque cumque, molestias ipsum similique eos beatae! Sit voluptatum libero totam mollitia accusamus esse. Doloremque!</p>
+                <div class="contenedor-botones">
+                    <button id="close" class="boton-modal">Cerrar</button>
                 </div>
-            </section>
+            </div>
+        </div>
+
+        <section>
+            <div>
+                <div class="contenedor-descripcion-profesor">
+                    <article class="profesor-imagen-ubicacion">
+                        <img src="../img/profesorsinfondo.jpg" alt="docente" class="profesor-imagen">
+                    </article>
+
+                    <article class="texto-profesor">
+                        <h2>Docente</h2>
+                        <p class="texto-descripcion">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam nobis repellat maxime explicabo tempore? Distinctio vel minima beatae ipsa? Explicabo laudantium voluptatum optio tenetur architecto quasi vero quidem accusantium nam.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -238,13 +210,15 @@
                 <div class="medios-pago">
                     <img src="../img/visa-logo.png" alt="visa" class="imagen-pago">
                     <img src="../img/mastercard-logo.png" alt="mastercard" class="imagen-pago">
-                    <img src="../img/mp-logo.png" alt="mercadopago" class="imagen-pago" >
+                    <img src="../img/mp-logo.png" alt="mercadopago" class="imagen-pago">
                     <img src="../img/paypal-logo.png" alt="paypal" class="imagen-pago">
                 </div>
             </div>
         </div>
     </footer>
+
     <script src="../JS/Curso_HTMLYCSS.js"></script>
+    <script src="../JS/carrito.js"></script>
 </body>
 
 </html>
