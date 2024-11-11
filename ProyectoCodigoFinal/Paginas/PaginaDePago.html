@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago</title>
+    <link rel="stylesheet" href="../css/pago.css">
+    <link rel="stylesheet" href="../css/contenido.css">
+    <link rel="stylesheet" href="../css/cursos.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <header>
+        <div class="nav-background">
+            <nav class="navegacion-principal contenedor sombreado">
+                <a href="../contenido.html">
+                    <img class="logo" src="../img/uñemy.com.png" alt="logoTipo">
+                </a>
+                <div class="search">
+                    <span class="search-icon material-symbols-outlined">search</span>
+                    <input class="search-input" type="search" placeholder="Buscar">
+                </div>
+        
+                <!-- Botón de menú hamburguesa -->
+                <button class="menu-hamburguesa" id="menu-hamburguesa">
+                    ☰
+                </button>
+        
+                <!-- Menú horizontal -->
+                <div class="menu-horizontal" id="menu-horizontal">
+            
+                    <div class="menu-item">
+                        <a href="contacto.html">Contacto</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="Calendario.html">Calendario</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="giftcard.html">GiftCard</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="Usuario.html">Usuario</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="cuerpo">
+            <div class="form-container">
+                <h2>Método de Pago</h2>
+                <form id="paymentForm">
+                  <label for="cardName">Nombre Titular de la Tarjeta</label>
+                  <input type="text" id="cardName" name="cardName" required placeholder="Nombre Completo">
+              
+                  <label for="cardNumber">Número de Tarjeta</label>
+                  <input type="number" id="cardNumber" name="cardNumber" maxlength="16" placeholder="XXX-XXX-XXX-XXX" required>
+              
+                  <label for="expiryDate">Fecha de Expiración</label>
+                  <input type="date" id="expiryDate" name="expiryDate" required>
+              
+                  <label for="cvv">CVV</label>
+                  <input type="number" id="cvv" name="cvv" maxlength="3" required placeholder="XXX">
+              
+                  <button type="submit" class="submit-button">Pagar</button>
+                </form>
+              </div>
+        </div>
+        
+    </main>
+    
+
+    <script src="../JS/pago.js"></script>
+     
+</body>
+
+</html>
