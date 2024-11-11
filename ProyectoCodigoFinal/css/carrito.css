@@ -1,0 +1,113 @@
+.fondo-carrito{
+    background-color: rgba(0, 255, 255, 0.486);
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    padding: 1em;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.carrito-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cursos_a_pagar{
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.11);
+    gap: 2em;
+    height: 20vh;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.botonmenos{
+    border-radius: 8px;
+    width: 5em;
+    height: 3vh;
+}
+
+.imagen-curso{
+    width: 30%;
+}
+.botones{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    gap: 2em;
+    margin-bottom: 1em;
+}
+.cursos_a_pagar h3{
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.contenedor-2{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.descripcion{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.cursos_a_pagar h3 span{
+    font-size: 1em;
+}
+
+
+@media (max-width: 900px){
+.descripcion{
+    flex-direction: column;
+}
+
+.imagen-curso{
+    width: 20%;
+}
+
+.cursos_a_pagar h3 span{
+    font-size: 0.5em;
+}
+
+.cursos_a_pagar h3{
+    margin: 0;
+    font-size: 1em;
+}
+}
+
+
+@media (max-width: 600px){
+    .cursos_a_pagar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+        height: auto;
+        
+    }
+
+    .imagen-curso{
+        width: 40%;
+        margin-top: 0.5em;
+    }
+
+    .botones{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2em;
+        margin-bottom: 1em;
+    }
+}

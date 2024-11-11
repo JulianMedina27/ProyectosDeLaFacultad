@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito</title>
+    <link rel="stylesheet" href="../css/contenido.css">
+    <link rel="stylesheet" href="../css/carrito.css">
+</head>
+<body>
+    <header>
+        <div class="nav-background">
+            <nav class="navegacion-principal contenedor sombreado">
+                <a href="../contenido.html">
+                    <img class="logo" src="../img/uñemy.com.png" alt="logoTipo">
+                </a>
+                <div class="search">
+                    <span class="search-icon material-symbols-outlined">search</span>
+                    <input class="search-input" type="search" placeholder="Buscar">
+                </div>
+        
+                <!-- Botón de menú hamburguesa -->
+                <button class="menu-hamburguesa" id="menu-hamburguesa">
+                    ☰
+                </button>
+        
+                <!-- Menú horizontal -->
+                <div class="menu-horizontal" id="menu-horizontal">
+            
+                    <div class="menu-item">
+                        <a href="contacto.html">Contacto</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="Calendario.html">Calendario</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="giftcard.html">GiftCard</a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="Usuario.html">Usuario</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="carrito-titulo">
+            <h2>Carrito</h2>
+        </div>
+        <div  class="main">
+       
+          
+            <div class="fondo-carrito">
+    
+                <h2>Total cursos adiquiridos: </h2>
+    
+                <div class="cursos_a_pagar">
+
+                    <img src="../img/curso-programacion-java.jpg" alt="" class="imagen-curso">
+             
+                    <div class="descripcion"> 
+                        <div >
+                            <h3 >Cursos Java: </h3>
+                            <h3 id="cursos_java"></h3>
+                            <h3>Precio Individual: 1000</h3>
+                            <h3 id="precio_total_java">Precio Total: </h3>
+                        </div>
+                       
+                        <div class="botones">
+                            <button class="botonmenos">Eliminar </button>
+                            <button class="botonmenos">Agregar </button>
+                        </div>
+                    </div>
+                   
+               
+                </div>
+
+
+
+
+                <div class="cursos_a_pagar">
+                    <img src="../img/curso-python-imagen.png" alt="" class="imagen-curso">
+
+                    <div class="descripcion">
+                        <div>
+                            <h3>Cursos Python: </h3>
+                            <h3 id="cursos_python"></h3>
+                            <h3>Precio Individual: 1000</h3>
+                            <h3 id="precio_total_python">Precio Total: </h3>
+                        </div>
+
+                        <div class="botones">
+                            <button class="botonmenos">Eliminar </button>
+                            <button class="botonmenos">Agregar </button>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+                <div class="cursos_a_pagar">
+                    <img src="../img/imagen-curso-html-css-50.jpg" alt="" class="imagen-curso">
+                    
+                    <div class="descripcion">
+                        <div>
+                            <h3 >Cursos HTML y CSS: </h3>
+                            <h3 id="cursos_HYC"></h3>
+                            <h3>Precio Individual: 1000</h3>
+                            <h3 id="precio_total_HYC">Precio Total: </h3>
+                        </div>
+    
+                        <div class="botones">
+                            <button class="botonmenos">Eliminar </button>
+                            <button class="botonmenos">Agregar </button>
+                        </div>
+            
+                </div>
+               
+                
+             
+            </div>
+
+           <div>
+            <div>
+                <h3>Total Cursos: <span id="total_cursos"> </span> </h3>
+                <h3 >Precio total: <span id="total_precio"></span> </h3>
+                <a href="../Paginas/PaginaDePago.html"> <button>Pagar</button></a>
+            </div>
+            
+           </div>
+        </div>
+        
+    </main>
+
+    <script src="../JS/carritCompras.js"></script>
+</body>
+</html>

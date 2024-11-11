@@ -88,17 +88,17 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem("cursosEnCarrito", JSON.stringify(cursos_comprados)); 
 
         // Actualiza los cursos específicos si es necesario (Java, Python, HTML y CSS)
-        let contadorJava = localStorage.getItem("contador_java");
+        let contadorJava = localStorage.getItem("contenedor_java");
         let contadorPython = localStorage.getItem("contenedor_python");
         let contadorHYC = localStorage.getItem("contenedor_HYC");
 
         // Ejemplo de lógica para disminuir el contador específico
         if (contadorJava > 0) {
-            localStorage.setItem("contador_java", contadorJava - 1);
+            localStorage.setItem("contenedor_java", contadorJava);
         } else if (contadorPython > 0) {
-            localStorage.setItem("contenedor_python", contadorPython - 1);
+            localStorage.setItem("contenedor_python", contadorPython);
         } else if (contadorHYC > 0) {
-            localStorage.setItem("contenedor_HYC", contadorHYC - 1);
+            localStorage.setItem("contenedor_HYC", contadorHYC);
         }
     }
 }
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Cargar los cursos comprados desde localStorage
     function obtenerCursosComprados() {
-        let cursos_comprados = localStorage.getItem("contador_java");
+        let cursos_comprados = localStorage.getItem("contenedor_java");
         let cursos_comprados2 = localStorage.getItem("contenedor_python");
         let cursos_comprados3 = localStorage.getItem("contenedor_HYC");
 
