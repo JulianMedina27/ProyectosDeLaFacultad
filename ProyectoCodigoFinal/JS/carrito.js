@@ -7,18 +7,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartItems = document.getElementById('cart-items');
 
     let cursosEnCarrito = JSON.parse(localStorage.getItem("cursosEnCarrito")) || [];
-    let contadorInscripcion = cursosEnCarrito.length;
+    let giftcardsEnCarrito = JSON.parse(localStorage.getItem("giftcardsEnCarrito")) || [];  // Recuperamos las giftcards
+    let contadorInscripcion = cursosEnCarrito.length + giftcardsEnCarrito.length;  // Contamos cursos + giftcards
 
-    // Cargar los items del carrito en el sidebar
+    // Cargar los items del carrito en el sidebar (incluyendo cursos y giftcards)
     function loadCartItems() {
         cartItems.innerHTML = '';
-        if (cursosEnCarrito.length === 0) {
-            cartItems.innerHTML = '<p>No hay cursos en el carrito.</p>';
+        
+        if (cursosEnCarrito.length === 0 && giftcardsEnCarrito.length === 0) {
+            cartItems.innerHTML = '<p>No hay cursos o giftcards en el carrito.</p>';
         } else {
+            // Mostrar cursos en el carrito
             cursosEnCarrito.forEach(curso => {
                 const item = document.createElement('div');
                 item.classList.add('cart-item');
                 item.innerHTML = `<h3>${curso.name}</h3><p>${curso.hours} hrs</p>`;
+                cartItems.appendChild(item);
+            });
+
+            // Mostrar giftcards en el carrito
+            giftcardsEnCarrito.forEach(giftcard => {
+                const item = document.createElement('div');
+                item.classList.add('cart-item');
+                item.innerHTML = `<h3>Giftcard para: ${giftcard.destinatario}</h3><p>Monto: $${giftcard.monto}</p>`;
                 cartItems.appendChild(item);
             });
         }
@@ -35,10 +46,10 @@ document.addEventListener('DOMContentLoaded', function() {
         cartSidebar.classList.remove('open');  // Quitar la clase 'open' para ocultar el sidebar
     });
 
-    // Actualizar el contador total de cursos en el carrito
+    // Actualizar el contador total de cursos y giftcards en el carrito
     function setContador() {
-        contadorElement.textContent = `Cursos en Carrito: ${contadorInscripcion}`;
-        contadorSidebarElement.textContent = `Cursos en Carrito: ${cursosEnCarrito.length}`;
+        contadorElement.textContent = `Cursos y Giftcards en Carrito: ${contadorInscripcion}`;
+        contadorSidebarElement.textContent = `Cursos y Giftcards en Carrito: ${contadorInscripcion}`;
     }
 
     setContador();
@@ -48,19 +59,21 @@ document.addEventListener('DOMContentLoaded', function() {
         cursosEnCarrito.push(curso);
         localStorage.setItem("cursosEnCarrito", JSON.stringify(cursosEnCarrito));
 
-        contadorInscripcion = cursosEnCarrito.length;
+        contadorInscripcion = cursosEnCarrito.length + giftcardsEnCarrito.length;  // Actualiza el contador
         localStorage.setItem("contenedor_HYC", contadorInscripcion);
 
         setContador();
     }
 
-    // Función para actualizar el contador específico
-    function actualizarContadorEspecifico(cursoName) {
-        const cursosFiltrados = cursosEnCarrito.filter(curso => curso.name === cursoName);
-        const contadorEspecifico = cursosFiltrados.length;
+    // Función para agregar una giftcard al carrito
+    function agregarGiftcard(giftcard) {
+        giftcardsEnCarrito.push(giftcard);
+        localStorage.setItem("giftcardsEnCarrito", JSON.stringify(giftcardsEnCarrito));
 
-        // Actualiza el contador específico del curso en el contador visible
-        contadorElement.textContent = `Cursos ${cursoName} en Carrito: ${contadorEspecifico}`;
+        contadorInscripcion = cursosEnCarrito.length + giftcardsEnCarrito.length;  // Actualiza el contador
+        localStorage.setItem("contenedor_HYC", contadorInscripcion);
+
+        setContador();
     }
 
     // Evento para el botón de compra HTML
@@ -72,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 hours: '86 horas'
             };
             agregarCurso(cursoHtml);
-            actualizarContadorEspecifico('Curso de HTML y CSS');
         });
     }
 
@@ -85,7 +97,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 hours: '86 horas'
             };
             agregarCurso(cursoJava);
-            actualizarContadorEspecifico('Curso de Java');
         });
     }
 
@@ -98,7 +109,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 hours: '80 horas'
             };
             agregarCurso(cursoPhyton);
-            actualizarContadorEspecifico('Curso de Python');
+        });
+    }
+
+    // Evento para agregar la giftcard al carrito
+    const agregarGiftcardBtn = document.getElementById('agregar-giftcard');
+    if (agregarGiftcardBtn) {
+        agregarGiftcardBtn.addEventListener('click', () => {
+            const destinatario = document.querySelector('.destinario-input').value;
+            const monto = document.querySelector('.monto-input').value;
+
+            const giftcard = {
+                destinatario: destinatario,
+                monto: monto
+            };
+
+            agregarGiftcard(giftcard);
         });
     }
 });

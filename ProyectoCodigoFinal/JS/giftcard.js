@@ -3,9 +3,7 @@ document.getElementById("menu-hamburguesa").addEventListener("click", function()
     menu.classList.toggle("menu-abierto");
 });
 
-
-
-// Seleccion de los elementos de la giftcard
+// Selección de los elementos de la giftcard
 const colorOpciones = document.querySelectorAll('input[name="color"]');
 const destinatarioTexto = document.querySelector('.frame-destinario');
 const destinatarioInput = document.querySelector('.destinario-input');
@@ -21,28 +19,22 @@ let frame = document.getElementById("frame");
 // Agrega un evento de cambio por cada color que haya
 colorOpciones.forEach(opcion => {
     opcion.addEventListener('change', () => {
-        // Obtiene el color por data-color
         const selectedColor = opcion.getAttribute('data-color');
-        
-        // Cambia el color
         destinatarioTexto.style.color = selectedColor;
     });
 });
 
-// Cambio del nombre del destinario
+// Cambio del nombre del destinatario
 destinatarioInput.addEventListener('input', () => {
     destinatarioTexto.textContent = destinatarioInput.value;
 });
 
-
-// Cambio del tamaño de la fuente, mismo argumento que con el color
+// Cambio del tamaño de la fuente
 fuenteOpciones.forEach(opcion => {
     opcion.addEventListener('change', () => {
         const seleccionTamañoFuente = opcion.getAttribute('data-fuente');
-
         destinatarioTexto.style.fontSize = seleccionTamañoFuente;
     })
-
 });
 
 // Cambia el monto del fondo negro por el que se escriba en el input de monto
@@ -50,83 +42,44 @@ montoInput.addEventListener('input', () => {
     montoTexto.textContent = `$${montoInput.value}-`;
 });
 
-
-// Cambia de posicion el fondo negro segun el input que se elija  / Primer metodo
+// Cambia de posición el fondo negro según el input que se elija
 ubicacionInput.forEach(input => {
     input.addEventListener('change', (event) => {
-        // Primero se reestablece la posicion del fondo negro
         fondoNegro.style.top = '';
         fondoNegro.style.right = '';
         fondoNegro.style.left = '';
         fondoNegro.style.bottom = '';
 
-        // Switch que segun el id del input cambia la ubicacion del fondo
         switch (event.target.id) {
-            case 'ubicacion1': // Ubicacion abajo izquierda
-                fondoNegro.style.bottom = '0'; // Abajo
-                fondoNegro.style.left = '0'; // Izquierda
+            case 'ubicacion1':
+                fondoNegro.style.bottom = '0';
+                fondoNegro.style.left = '0';
                 break;
-            case 'ubicacion2': // Ubicacion abajo derecha
-                fondoNegro.style.bottom = '0'; // Abajo
-                fondoNegro.style.right = '0'; // Derecha
+            case 'ubicacion2':
+                fondoNegro.style.bottom = '0';
+                fondoNegro.style.right = '0';
                 break;
-            case 'ubicacion3': // Ubicacion arriba izquierda
-                fondoNegro.style.top = '0'; // Arriba
-                fondoNegro.style.left = '0'; // Izquierda
+            case 'ubicacion3':
+                fondoNegro.style.top = '0';
+                fondoNegro.style.left = '0';
                 break;
-            case 'ubicacion4': // Ubicacion arriba derecha
-                fondoNegro.style.top = '0'; // Arriba
-                fondoNegro.style.right = '0'; // Derecha
+            case 'ubicacion4':
+                fondoNegro.style.top = '0';
+                fondoNegro.style.right = '0';
                 break;
         }
 
-        // Esto centra el texto del monto
         textoSpan.style.top = '50%';
         textoSpan.style.transform = 'translateY(-50%)';
- 
     });
 });
+
 fondos.forEach(fondo => {
     fondo.addEventListener('change', cambiarFondos);
 });
 
-function cambiarUbicacion() { // Cambia de posicion el fondo negro segun el input que se elija  / Segundo metodo
-
-    let opcionSeleccionada = "";
-
-    for (let ubicacion of ubicaciones) {
-        if (ubicacion.checked) {
-            opcionSeleccionada = ubicacion.id;
-            break;
-        }
-    }
-
-    // Resetea todas las propiedades
-    ubicacion_fondo.style.removeProperty("top");
-    ubicacion_fondo.style.removeProperty("right");
-    ubicacion_fondo.style.removeProperty("bottom");
-    ubicacion_fondo.style.removeProperty("left");
-
-    // Asigna las propiedades según la opción seleccionada
-    if (opcionSeleccionada === "ubicacion1") {
-        ubicacion_fondo.style.bottom = 0;
-        ubicacion_fondo.style.left = 0;
-    } else if (opcionSeleccionada === "ubicacion2") {
-        ubicacion_fondo.style.bottom = 0;
-        ubicacion_fondo.style.right = 0;
-    } else if (opcionSeleccionada === "ubicacion3") {
-        ubicacion_fondo.style.top = 0;
-        ubicacion_fondo.style.left = 0;
-    } else if (opcionSeleccionada === "ubicacion4") {
-        ubicacion_fondo.style.top = 0;
-        ubicacion_fondo.style.right = 0;
-    }
-
-    console.log("Opción seleccionada:", opcionSeleccionada);
-}
-
-function cambiarFondos()
-{
+// Función que cambia los fondos según la selección
+function cambiarFondos() {
     let opcionSeleccionada = "";
 
     for (let fondo of fondos) {
@@ -136,25 +89,42 @@ function cambiarFondos()
         }
     }
 
-    if(opcionSeleccionada == "fondo1")
-        {
-            frame.style.backgroundColor = "gray"
-
-        } else if(opcionSeleccionada == "fondo2")
-            {
-                frame.style.backgroundColor = "red"
-
-            } else if(opcionSeleccionada == "fondo3")
-                {
-                    frame.style.backgroundColor = "blue"
-
-                } else if(opcionSeleccionada == "fondo4")
-                    {
-                        frame.style.backgroundColor = "green"
-                    } else if(opcionSeleccionada == "fondo5")
-                        {
-                            frame.style.backgroundColor = "violet"
-                        }
+    if(opcionSeleccionada == "fondo1") {
+        frame.style.backgroundColor = "gray";
+    } else if(opcionSeleccionada == "fondo2") {
+        frame.style.backgroundColor = "red";
+    } else if(opcionSeleccionada == "fondo3") {
+        frame.style.backgroundColor = "blue";
+    } else if(opcionSeleccionada == "fondo4") {
+        frame.style.backgroundColor = "green";
+    } else if(opcionSeleccionada == "fondo5") {
+        frame.style.backgroundColor = "violet";
+    }
 }
 
+// Evento para agregar la giftcard al carrito
+document.addEventListener('DOMContentLoaded', () => {
+    const agregarAlCarritoBtn = document.getElementById('agregarcarrito');
 
+    agregarAlCarritoBtn.addEventListener('click', () => {
+        const destinatario = document.querySelector('.destinario-input').value;
+        const monto = document.querySelector('.monto-input').value;
+        const color = document.querySelector('input[name="color"]:checked').value;
+        const fuente = document.querySelector('input[name="fuente"]:checked').value;
+
+        const giftcard = {
+            destinatario: destinatario,
+            monto: monto,
+            color: color,
+            fuente: fuente
+        };
+
+        // Guardar la giftcard en el carrito (localStorage o variable global)
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        carrito.push(giftcard);
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+
+        // Puedes agregar una función para actualizar el carrito visualmente en esta página si es necesario
+        alert("Giftcard agregada al carrito");
+    });
+});
