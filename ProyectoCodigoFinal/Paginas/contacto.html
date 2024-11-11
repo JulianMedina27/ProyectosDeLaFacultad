@@ -63,27 +63,32 @@
         </div>
         
     
-        <form id="formulario">
+        <form id="formulario" onsubmit="return validarFormulario()">
         
             
             <label for="Nombre">Nombre</label>
-            <input type="text" id="Nombre" name="Nombre" placeholder="Ingresa tu nombre" required>
-            
-            <label for="Apellido">Apellido</label>
-            <input type="text" id="Apellido" name="Apellido" placeholder="Ingresa tu Apellido" required>
+            <input type="text" id="Nombre" name="Nombre" placeholder="Ingresa tu nombre" >
+            <small id="errorNombre" class="error"></small>
 
-            <label for="Correo electronico">Correo electronico</label>
-            <input type="email" id="Correo electronico" name="Correo electronico"placeholder="Ingrese tu correo electronico" required>
-            
+            <label for="Apellido">Apellido</label>
+            <input type="text" id="Apellido" name="Apellido" placeholder="Ingresa tu Apellido" >
+            <small id="errorApellido" class="error"></small>
+
+            <label for="Email">Correo electronico</label>
+            <input type="email" id="Email" name="Email"     placeholder="Ingrese tu correo electronico" >
+            <small id="errorEmail" class="error"></small>
+
             <label for="Telefono">Telefono</label>
-            <input type="text" id="Telefono" name="Telefono" placeholder="Ingrese tu telefono" required> 
-            
+            <input type="text" id="Telefono" name="Telefono" placeholder="Ingrese tu telefono" > 
+            <small id="errorTelefono" class="error"></small>
+
             <label for="Mensaje">Mensaje</label>
             <textarea name="Mensaje" id="consulta" cols="30" rows="10" placeholder="Mensaje" maxlength="1000"></textarea>
             <div>Caracteres restantes: <span id="caracteresRestantes">1000</span></div>
             <span id="consultaError" class="error"></span><br><br>
 
-            <input type="submit" value="Enviar Mensaje" id="boton">
+            <button type="submit" class="boton-enviar">Enviar Formulario</button>
+           
         
         
         

@@ -11,6 +11,11 @@ body {
     box-sizing: border-box;
 }
 
+.error{
+    margin-bottom: 1em;
+    color: red;
+    margin-left: 0.5em;
+}
 .nav-background {
     background-color: white;
 }
@@ -145,19 +150,19 @@ form {
     text-align: left;
     width: 40%;
     font-weight: bold;
-
+    margin-bottom: 1em;
 }
 
 input,
 textarea {
-    width: 100%;
+    width: 95%;
     margin-bottom: 20px;
     padding: 7px;
     box-sizing: border-box;
     font-size: 17px;
     border: none;
     border-radius: 20px;
-
+    margin: 0;
 }
 
 #boton {
@@ -332,4 +337,13 @@ footer {
   .boton-popup{
     width: 100%;
     height: 6vh;
+  }
+
+  .boton-enviar{
+    background-color: rgb(6, 243, 6);
+    border-radius: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 1em;
+    width: 95%;
+
   }

@@ -36,10 +36,41 @@ document.getElementById("consulta").addEventListener("input", function () {
 
   document.getElementById("formulario").addEventListener("submit", function(event) {
     // Llama a la función de validación y previene el envío si hay errores
-    if (!verificarTelefono()) {
+    if (!validarFormulario()) {
       event.preventDefault(); // Evita el envío si hay errores
     } else {
       event.preventDefault();
       mostrarPopUp();
     }
   });
+
+  function validarFormulario(){
+    let esValido = true;
+    const nombre = document.getElementById("Nombre").value;
+    const apellido = document.getElementById("Apellido").value;
+    const email = document.getElementById("Email").value;
+    const telefono = document.getElementById("Telefono").value;
+
+    if(nombre.length <= 0){
+      esValido = false;
+      document.getElementById("errorNombre").innerText = "El nombre no puede estar vacio";
+    }
+
+    
+    if(apellido.length <= 0){
+      esValido = false;
+      document.getElementById("errorApellido").innerText = "El apellido no puede estar vacio";
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        document.getElementById("errorEmail").innerText = "Ingrese un email válido.";
+        esValido = false;
+    }
+    const regexTelefono = /^\d{4}-\d{4}$/;
+    if (!regexTelefono.test(telefono)) {
+      document.getElementById("errorTelefono").innerText = "Ingrese un numero de telefono válido.";
+      esValido = false;
+  }
+  return esValido;
+  }
