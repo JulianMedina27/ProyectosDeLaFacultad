@@ -6,7 +6,7 @@ document.getElementById("menu-hamburguesa").addEventListener("click", function()
 const boton_inscribirse = document.getElementById('boton');
 const contenedor_contador = document.getElementById('contador');
 
-let contador_inscripcion = localStorage.getItem("contador_java");
+let contador_inscripcion = localStorage.getItem("contenedor_java");
 
 function setContador()
 {
@@ -17,7 +17,7 @@ setContador();
 function agregarCurso()
 {
     contador_inscripcion ++;
-    localStorage.setItem("contador_java",contador_inscripcion);
+    localStorage.setItem("contenedor_java",contador_inscripcion);
     contenedor_contador.textContent = `Cursos en Carrito: ${contador_inscripcion}`;
 }
 
