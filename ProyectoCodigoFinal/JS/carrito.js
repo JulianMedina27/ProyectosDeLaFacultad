@@ -3,11 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const cartSidebar = document.getElementById('cart-sidebar');
     const closeSidebarButton = document.getElementById('close-sidebar');
     const contadorElement = document.getElementById('contador');
+    const contadorSidebarElement = document.getElementById('contador-sidebar');
     const cartItems = document.getElementById('cart-items');
 
     let cursosEnCarrito = JSON.parse(localStorage.getItem("cursosEnCarrito")) || [];
     let contadorInscripcion = cursosEnCarrito.length;
 
+    // Cargar los items del carrito en el sidebar
     function loadCartItems() {
         cartItems.innerHTML = '';
         if (cursosEnCarrito.length === 0) {
@@ -33,13 +35,15 @@ document.addEventListener('DOMContentLoaded', function() {
         cartSidebar.classList.remove('open');  // Quitar la clase 'open' para ocultar el sidebar
     });
 
-    // Actualizar el contador de cursos
+    // Actualizar el contador total de cursos en el carrito
     function setContador() {
         contadorElement.textContent = `Cursos en Carrito: ${contadorInscripcion}`;
+        contadorSidebarElement.textContent = `Cursos en Carrito: ${cursosEnCarrito.length}`;
     }
 
     setContador();
 
+    // Función para agregar un curso al carrito
     function agregarCurso(curso) {
         cursosEnCarrito.push(curso);
         localStorage.setItem("cursosEnCarrito", JSON.stringify(cursosEnCarrito));
@@ -50,6 +54,16 @@ document.addEventListener('DOMContentLoaded', function() {
         setContador();
     }
 
+    // Contador específico de HTML y CSS
+    function actualizarContadorEspecifico() {
+        const cursosHtmlCss = cursosEnCarrito.filter(curso => curso.name === 'Curso de HTML y CSS');
+        const contadorHtmlCss = cursosHtmlCss.length;
+
+        // Actualiza el contador específico del curso en el contador visible
+        contadorElement.textContent = `Cursos HTML en Carrito: ${contadorHtmlCss}`;
+    }
+
+    // Evento para el botón de compra
     const botonComprar = document.getElementById('boton-comprar');
     botonComprar.addEventListener('click', () => {
         const curso = {
@@ -57,5 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
             hours: '86 horas'
         };
         agregarCurso(curso);
+        actualizarContadorEspecifico();
     });
 });
