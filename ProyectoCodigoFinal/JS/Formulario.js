@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Cargar los cursos comprados desde localStorage
     function obtenerCursosComprados() {
-        let cursos_comprados_java = localStorage.getItem("contador_java");
+        let cursos_comprados_java = localStorage.getItem("contenedor_java");
         let cursos_comprados_python = localStorage.getItem("contenedor_python");
         let cursos_comprados_hyc = localStorage.getItem("contenedor_HYC");
 

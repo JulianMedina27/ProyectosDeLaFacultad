@@ -12,20 +12,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Cargar los items del carrito en el sidebar (incluyendo cursos y giftcards)
     function loadCartItems() {
-        cartItems.innerHTML = '';
-        
+        cartItems.innerHTML = '';  // Limpiar los elementos previos del carrito
+    
         if (cursosEnCarrito.length === 0 && giftcardsEnCarrito.length === 0) {
             cartItems.innerHTML = '<p>No hay cursos o giftcards en el carrito.</p>';
         } else {
-            // Mostrar cursos en el carrito
-            cursosEnCarrito.forEach(curso => {
-                const item = document.createElement('div');
-                item.classList.add('cart-item');
-                item.innerHTML = `<h3>${curso.name}</h3><p>${curso.hours} hrs</p>`;
-                cartItems.appendChild(item);
+            // Mostrar cursos del carrito
+            ["java", "python", "HYC"].forEach(curso => {
+                let contador = parseInt(localStorage.getItem(`contenedor_${curso}`) || "0");
+    
+                if (contador > 0) {
+                    const item = document.createElement('div');
+                    item.classList.add('cart-item');
+                    item.innerHTML = `<h3>${curso.charAt(0).toUpperCase() + curso.slice(1)} (Cantidad: ${contador})</h3><p>Precio Total: $${contador * 1000}</p>`;
+                    cartItems.appendChild(item);
+                }
             });
-
-            // Mostrar giftcards en el carrito
+    
+            // Mostrar las giftcards en el carrito
             giftcardsEnCarrito.forEach(giftcard => {
                 const item = document.createElement('div');
                 item.classList.add('cart-item');
@@ -46,23 +50,40 @@ document.addEventListener('DOMContentLoaded', function() {
         cartSidebar.classList.remove('open');  // Quitar la clase 'open' para ocultar el sidebar
     });
 
-    // Actualizar el contador total de cursos y giftcards en el carrito
-    function setContador() {
-        contadorElement.textContent = `Cursos y Giftcards en Carrito: ${contadorInscripcion}`;
-        contadorSidebarElement.textContent = `Cursos y Giftcards en Carrito: ${contadorInscripcion}`;
-    }
+  // Función para actualizar el contador total de cursos y giftcards en el carrito
+function setContador() {
+    // Sumar la cantidad total de cursos
+    let totalCursos = 0;
+    ["java", "python", "HYC"].forEach(curso => {
+        totalCursos += parseInt(localStorage.getItem(`contenedor_${curso}`) || "0");
+    });
+
+    // Obtener la cantidad total de giftcards
+    let totalGiftcards = giftcardsEnCarrito.length;
+
+    // Sumar los totales de cursos y giftcards
+    let totalItems = totalCursos + totalGiftcards;
+
+    // Actualizar los contadores en el HTML
+    contadorElement.textContent = `Cursos y Giftcards en Carrito: ${totalItems}`;
+    contadorSidebarElement.textContent = `Cursos y Giftcards en Carrito: ${totalItems}`;
+}
+
 
     setContador();
 
     // Función para agregar un curso al carrito
     function agregarCurso(curso) {
-        cursosEnCarrito.push(curso);
-        localStorage.setItem("cursosEnCarrito", JSON.stringify(cursosEnCarrito));
-
-        contadorInscripcion = cursosEnCarrito.length + giftcardsEnCarrito.length;  // Actualiza el contador
-        localStorage.setItem("contenedor_HYC", contadorInscripcion);
-
-        setContador();
+        let contador = parseInt(localStorage.getItem(`contenedor_${curso}`) || "0");
+        localStorage.setItem(`contenedor_${curso}`, contador + 1);
+        loadCartItems(); // Llamar a la función para actualizar el carrito en el sidebar
+    }
+    function eliminarCurso(curso) {
+        let contador = parseInt(localStorage.getItem(`contenedor_${curso}`) || "0");
+        if (contador > 0) {
+            localStorage.setItem(`contenedor_${curso}`, contador - 1);
+        }
+        loadCartItems(); // Llamar a la función para actualizar el carrito en el sidebar
     }
 
     // Función para agregar una giftcard al carrito
