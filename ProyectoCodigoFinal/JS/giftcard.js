@@ -102,7 +102,6 @@ function cambiarFondos() {
     }
 }
 
-// Evento para agregar la giftcard al carrito
 document.addEventListener('DOMContentLoaded', () => {
     const agregarAlCarritoBtn = document.getElementById('agregarcarrito');
 
@@ -119,12 +118,11 @@ document.addEventListener('DOMContentLoaded', () => {
             fuente: fuente
         };
 
-        // Guardar la giftcard en el carrito (localStorage o variable global)
-        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-        carrito.push(giftcard);
-        localStorage.setItem('carrito', JSON.stringify(carrito));
+        let giftcardsEnCarrito = JSON.parse(localStorage.getItem('giftcardsEnCarrito')) || [];
+        giftcardsEnCarrito.push(giftcard);
+        localStorage.setItem('giftcardsEnCarrito', JSON.stringify(giftcardsEnCarrito));
 
-        // Puedes agregar una función para actualizar el carrito visualmente en esta página si es necesario
         alert("Giftcard agregada al carrito");
     });
 });
+
