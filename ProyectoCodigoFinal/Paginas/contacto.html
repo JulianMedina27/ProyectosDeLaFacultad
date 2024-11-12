@@ -42,10 +42,20 @@
                     <div class="menu-item">
                         <a href="Usuario.html">Usuario</a>
                     </div>
+                    <div class="menu-item cart">
+                        <span class="material-symbols-outlined" id="cart-icon">shopping_cart</span>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
+    <div id="cart-sidebar" class="sidebar">
+        <h2>Mi Carrito</h2>
+        <span id="contador">Cursos en Carrito: 0</span>
+        <div id="cart-items"></div>
+        <button id="close-sidebar">Cerrar</button>
+        <a href="../Paginas/Carrito.html">  <button id="close-sidebar">Ir al Carrito</button></a>
+    </div>
     
 <main>
     <div class="contenedor-contacto">
@@ -168,9 +178,8 @@
         </div>
     </div>
 </footer>
-<script src="../JS/Contacto.js">
-  
-</script>
+<script src="../JS/Contacto.js"></script>
+<script src="../JS/carrito.js" ></script>
 </body>
 
 

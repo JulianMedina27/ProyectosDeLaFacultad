@@ -6,6 +6,12 @@
     <title>Carrito</title>
     <link rel="stylesheet" href="../css/contenido.css">
     <link rel="stylesheet" href="../css/carrito.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -39,10 +45,20 @@
                     <div class="menu-item">
                         <a href="Usuario.html">Usuario</a>
                     </div>
+                    <div class="menu-item cart">
+                        <span class="material-symbols-outlined" id="cart-icon">shopping_cart</span>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
+    <div id="cart-sidebar" class="sidebar">
+        <h2>Mi Carrito</h2>
+        <span id="contador">Cursos en Carrito: 0</span>
+        <div id="cart-items"></div>
+        <button id="close-sidebar">Cerrar</button>
+        <a href="../Paginas/Carrito.html">  <button id="close-sidebar">Ir al Carrito</button></a>
+    </div>
 
     <main>
         <div class="carrito-titulo">
@@ -133,5 +149,6 @@
     </main>
 
     <script src="../JS/carritCompras.js"></script>
+    <script src="../JS/carrito.js" ></script>
 </body>
 </html>
