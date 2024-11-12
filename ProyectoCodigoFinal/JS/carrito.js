@@ -31,14 +31,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Mostrar las giftcards en el carrito
         if (giftcardsEnCarrito.length > 0) {
-            giftcardsEnCarrito.forEach(giftcard => {
+            giftcardsEnCarrito.forEach((giftcard, index) => {
                 const item = document.createElement('div');
                 item.classList.add('cart-item');
-                item.innerHTML = `<h3>Giftcard para: ${giftcard.destinatario}</h3><p>Monto: $${giftcard.monto}</p>`;
+                item.innerHTML = `
+                    <h3>Giftcard para: ${giftcard.destinatario}</h3>
+                    <p>Monto: $${giftcard.monto}</p>
+                    <button id="eliminar-giftcard" class="eliminar-giftcard" data-index="${index}">Eliminar Giftcard</button>
+                `;
                 cartItems.appendChild(item);
 
                 totalCursos += 1;  // Contabilizamos cada giftcard como un item
                 totalPrecio += parseInt(giftcard.monto, 10);  // Sumar el monto de la giftcard al total
+            });
+
+            // Añadir evento para eliminar giftcards
+            document.querySelectorAll('.eliminar-giftcard').forEach(button => {
+                button.addEventListener('click', function() {
+                    const index = parseInt(this.getAttribute('data-index'), 10);
+                    eliminarGiftcard(index);  // Llamar a la función que elimina la giftcard
+                });
             });
         }
 
@@ -108,6 +120,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
         setContador();  // Actualiza el contador de items en el carrito
         loadCartItems();  // Vuelve a cargar los items del carrito (incluyendo las giftcards)
+    }
+
+    // Función para eliminar una giftcard del carrito
+    function eliminarGiftcard(index) {
+        // Eliminar la giftcard del arreglo
+        giftcardsEnCarrito.splice(index, 1);
+
+        // Guardar el arreglo actualizado en localStorage
+        localStorage.setItem("giftcardsEnCarrito", JSON.stringify(giftcardsEnCarrito));
+
+        // Actualizar el carrito y contador
+        setContador();
+        loadCartItems();
     }
 
     // Evento para el botón de compra HTML
