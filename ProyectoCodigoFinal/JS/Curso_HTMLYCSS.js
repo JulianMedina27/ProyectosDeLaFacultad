@@ -5,7 +5,7 @@ document.getElementById("menu-hamburguesa").addEventListener("click", function()
 
 // Inicialización del contador
 let contador_inscripcion = parseInt(localStorage.getItem("contenedor_HYC")) || 0;
-const contenedor_contador = document.getElementById('contador');
+const contenedor_contador = document.getElementById('contador_cursos_comprados');
 
 // Función para actualizar el contador en pantalla
 function setContador() {
@@ -22,8 +22,7 @@ function agregarCurso() {
     setContador(); // Actualiza el contador en la página
 }
 
-// Botón para inscribirse y agregar curso
-const boton_inscribirse = document.getElementById('boton');
+const boton_inscribirse = document.getElementById('boton-comprar-html');
 boton_inscribirse.addEventListener('click', agregarCurso);
 
 // Modal - Manejo de la ventana emergente

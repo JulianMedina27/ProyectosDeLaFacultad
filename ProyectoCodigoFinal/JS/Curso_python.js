@@ -3,8 +3,8 @@ document.getElementById("menu-hamburguesa").addEventListener("click", function()
     menu.classList.toggle("menu-abierto");
 });
 
-const boton_inscribirse = document.getElementById('boton');
-const contenedor_contador = document.getElementById('contador');
+const boton_inscribirse = document.getElementById('boton-comprar-phyton');
+const contenedor_contador = document.getElementById('contador_cursos_comprados');
 
 let contador_inscripcion = localStorage.getItem("contenedor_python");
 

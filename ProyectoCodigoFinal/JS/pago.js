@@ -14,21 +14,4 @@ document.getElementById("paymentForm").addEventListener("submit", function(event
       alert("Por favor, complete todos los campos correctamente.");
     }
   });
-  const cardNumber = document.getElementById("cardNumber").value;
-  cardNumber.addEventListener("keypress", function(event) {
-    const charCode = event.keyCode || event.which;
 
-    if (charCode < 48 || charCode > 57) {
-      event.preventDefault(); 
-    }
-  });
-  
-  const cvv = document.getElementById("cvv").value;
-  const cvvInput = document.getElementById("cvv");
-
-  cvv.addEventListener("keypress", function(event) {
-    const charCode = event.keyCode || event.which;
-
-    if (charCode < 48 || charCode > 57 || cvvInput.value.length > 3) {
-      event.preventDefault();
-  });
